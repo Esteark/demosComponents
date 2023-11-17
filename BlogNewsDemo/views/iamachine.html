@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>IA</title>
+  </head>
+  <body>
+    <!-- Nav  -->
+    <nav class="py-6 px-6 md:px-0">
+      <section
+        class="container:lg mx-auto bg-white border-gray-200 dark:bg-gray-900"
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a href="/" class="flex items-center">
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Blog News</span
+            >
+          </a>
+          <div class="flex items-center md:order-2">
+            <button
+              type="button"
+              class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="user-dropdown"
+              data-dropdown-placement="bottom"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img
+                class="w-8 h-8 rounded-full object-cover"
+                src="https://img.freepik.com/foto-gratis/retrato-hombre-blanco-aislado_53876-40306.jpg?w=2000"
+                alt="user photo"
+              />
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+              id="user-dropdown"
+            >
+              <div class="px-4 py-3">
+                <span class="block text-sm text-gray-900 dark:text-white"
+                  >Blog News User</span
+                >
+                <span
+                  class="block text-sm text-gray-500 truncate dark:text-gray-400"
+                  >BlogNew@news.com</span
+                >
+              </div>
+              <ul class="py-2" aria-labelledby="user-menu-button">
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Settings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Earnings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <button
+              data-collapse-toggle="navbar-user"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-user"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-user"
+          >
+            <ul
+              class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="/"
+                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/design.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/tech.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Technology</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/sports.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Sports</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/games.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Games</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/travel.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Travel</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/iamachine.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >IA</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <!-- Nav  -->
+    <!-- header  -->
+    <header class="px-6">
+      <section
+        class="lg:container mx-auto bg-cover max-w-screen-lg h-[300px] md:h-[400px] rounded-lg flex flex-col gap-3 items-center justify-center px-6"
+        style="
+          background-image: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.9458158263305322) 29%,
+              rgba(0, 0, 0, 0.06486344537815125) 100%
+            ),
+            url(https://www.segurilatam.com/wp-content/uploads/sites/5/2023/01/robots-humanoides-blancos.jpg);
+        "
+      >
+        <article class="flex flex-col items-center gap-1 md:gap-3">
+          <article
+            class="flex items-center justify-center gap-1 md:gap-3 w-20 h-auto md:w-24 bg-[#4F9EF8] rounded-lg px-2 py-1"
+          >
+            <div
+              class="w-[8px] h-[8px] md:w-[14px] md:h-[14px] bg-[#fff] rounded-full"
+            ></div>
+            <p
+              class="text-white font-bold md:font-normal text-[10px] md:text-[16px]"
+            >
+              IA
+            </p>
+          </article>
+          <h2
+            class="text-3xl text-center md:text-4xl xl:text-6xl text-white font-bold"
+          >
+            Exploring the Boundaries of Vocal Replication
+          </h2>
+        </article>
+        <article
+          class="flex justify-center flex-wrap gap-3 xl:gap-6 items-center"
+        >
+          <img
+            src="https://homme.mx/wp-content/uploads/2021/01/nuevo-look-para-hombres-en-2021-homme-luxury-barbers.jpg"
+            class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full object-cover"
+            alt=""
+          />
+          <p class="text-sm md:font-bold xl:text-lg text-white">by Esteban</p>
+          <span class="bg-white w-[5px] h-[5px] rounded-full"></span>
+          <p class="text-sm md:font-bold xl:text-lg text-white">Nov 10,2023</p>
+          <span class="bg-white w-[5px] h-[5px] rounded-full"></span>
+          <p class="text-sm md:font-bold md:text-[14px] xl:text-lg text-white">
+            5 min read
+          </p>
+        </article>
+      </section>
+    </header>
+    <!-- header  -->
+    <main class="my-6 px-6">
+      <section
+        class="max-w-screen-lg lg:container mx-auto grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-10 2xl:gap-20"
+      >
+        <div class="col-span-12 xl:col-span-9 w-full">
+          <article
+            class="flex flex-col gap-3 text-[#706e74] text-sm md:text-[16px] leading-relaxed md:leading-7 text-justify"
+          >
+            <p>
+              <span
+                class="bg-[#191a1f] text-white font-bold py-1 px-2 text-2xl md:mb-[3px]"
+                >N</span
+              >
+              eural networks have been employed by Artificial Intelligences to
+              recognize and synthesize patterns in the human voice, enabling the
+              imitation of an artist. Techniques such as voice synthesis, vocal
+              cloning, and style transfer have been utilized to replicate
+              voices. Through these advancements, the possibility has been
+              created for people to sing like their idols, capturing specific
+              vocal nuances.
+            </p>
+            <p>
+              In addition to the aforementioned developments, the latest AI
+              voice modulation protocols have been accessed, bringing the
+              opportunity to recreate iconic singers' voices within reach. By
+              utilizing these innovative techniques, the ideal vocal simulation
+              can be obtained, allowing for a more personalized and engaging
+              auditory experience,
+              <span class="font-bold text-black"
+                >Ethical concerns, however, may be raised regarding the use of
+                these technologies.</span
+              >
+              The potential to create false content or be used maliciously poses
+              challenges in the application and regulation of such advancements.
+              Therefore, in addition to embracing these cutting-edge
+              capabilities, it is imperative to establish careful consideration
+              and ethical guidelines to ensure responsible use and prevent
+              misuse of these powerful voice modulation technologies.
+            </p>
+            <!-- galeria  -->
+            <div
+              class="flex flex-col md:grid md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-2"
+            >
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2019/06/hipertextual-maldicion-ros-mundo-oculto-sabrina-que-enfermedades-te-pueden-producir-ceguera-2019544112-scaled.jpg?fit=1200%2C801&quality=50&strip=all&ssl=1"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://unir.edu.co/wp-content/uploads/sites/2/2023/06/2305_fcol_landing_IA_ficha_1920x1080-1.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://imagenes.muyinteresante.es/files/composte_image/uploads/2023/05/26/6470898f62de3.jpeg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://genotipia.com/wp-content/uploads/2019/03/NASA-DNA-3.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://media.licdn.com/dms/image/D4D12AQHD5UGBnseSkw/article-cover_image-shrink_720_1280/0/1692949340780?e=2147483647&v=beta&t=bCqaD22aNTm56OsnJS7gfehSDpbkSINP1vnlxRih9SI"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://www.lavanguardia.com/files/content_image_mobile_filter/files/fp/uploads/2023/03/07/64075e8311c8f.r_d.795-838.jpeg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+            </div>
+            <!-- galeria  -->
+          </article>
+        </div>
+
+        <div class="col-span-12 xl:col-span-3 w-full">
+          <article class="w-full flex flex-col gap-3">
+            <h3 class="text-lg font-bold">Categories</h3>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#fef6e0] px-4"
+            >
+              <h3 class="text-[#f7c32e] font-bold text-[16px]">Photography</h3>
+              <span class="px-2 text-black bg-[#f7c32e] rounded-md text-sm"
+                >09</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#edf5fe] px-4"
+            >
+              <h3 class="text-[#4f9ef8] font-bold text-[16px]">Travel</h3>
+              <span class="px-2 text-white bg-[#4f9ef8] rounded-md text-sm"
+                >08</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#fbe9eb] px-4"
+            >
+              <h3 class="text-[#d6293e] font-bold text-[16px]">Technology</h3>
+              <span class="px-2 text-white bg-[#d6293e] rounded-md text-sm"
+                >10</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#edf5fe] px-4"
+            >
+              <h3 class="text-[#2163e8] font-bold text-[16px]">Video</h3>
+              <span class="px-2 text-white bg-[#2163e8] rounded-md text-sm"
+                >08</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#e6f8f3] px-4"
+            >
+              <h3 class="text-[#0cbc87] font-bold text-[16px]">Design</h3>
+              <span class="px-2 text-white bg-[#0cbc87] rounded-md text-sm"
+                >11</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="rounded-t-md shadow bg-gray-900 mt-10">
+      <div class="w-full max-w-screen-xl mx-auto p-10 xl:p-4 xl:py-12 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center mb-4 sm:mb-0"
+          >
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+              >Blog News</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 text-white"
+          >
+            <li>
+              <a href="/views/design.html" class="mr-4 hover:underline md:mr-6"
+                >Design</a
+              >
+            </li>
+            <li>
+              <a
+                href="/views/iamachine.html"
+                class="mr-4 hover:underline md:mr-6"
+                >IA</a
+              >
+            </li>
+            <li>
+              <a href="/views/sports.html" class="mr-4 hover:underline md:mr-6"
+                >Sports</a
+              >
+            </li>
+            <li>
+              <a href="/views/games.html" class="hover:underline">Games</a>
+            </li>
+          </ul>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span class="block text-sm text-gray-500 sm:text-center text-white"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">Blog News™</a
+          >. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+    <!-- footer  -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- script ppal  -->
+    <script src="../main.js"></script>
+  </body>
+</html>

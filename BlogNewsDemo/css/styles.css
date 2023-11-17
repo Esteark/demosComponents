@@ -1,0 +1,26 @@
+.mySwiper .swiper-button-next,
+.mySwiper .swiper-button-prev {
+  color: #595d69;
+  background: #fff;
+  border-radius: 100%;
+  transition: 0.5s ease-in-out;
+  padding: 0;
+  height: 30px;
+  top: 80%;
+}
+
+.mySwiper .swiper-wrapper {
+  padding: 0 5%;
+}
+
+.mySwiper .swiper-button-next:hover,
+.mySwiper .swiper-button-prev:hover {
+  color: #fff;
+  background: #2163e8;
+}
+
+.mySwiper .swiper-button-next:after,
+.mySwiper .swiper-button-prev:after {
+  font-size: 8px;
+  font-weight: bold;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body class="flex w-full flex-col h-screen items-end">
+    <main class="h-screen w-full py-[10%]"></main>
+
+    <footer class="fondoFooter w-full h-auto flex flex-col justify-between">
+      <section class="px-6 xl:px-0">
+        <section class="container mx-auto bg-white rounded-lg -translate-y-24">
+          <article class="w-full h-80">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3975.0966278192554!2d-75.0675824232154!3d4.923495789682088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1salcaldia%20de%20libano!5e0!3m2!1ses!2sco!4v1698152896345!5m2!1ses!2sco"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full rounded-t-lg"
+            ></iframe>
+          </article>
+          <article
+            class="w-full px-[5%] py-[6%] h-auto rounded-b-lg flex flex-col"
+          >
+            <article class="flex flex-col gap-6 justify-between">
+              <article
+                class="flex flex-col-reverse xl:flex-row justify-between gap-6"
+              >
+                <section class="flex flex-col gap-6 xl:w-[50%]">
+                  <div class="text-sm text-center xl:text-start">
+                    <p class="font-bold">
+                      Alcaldia del <span>{Nombre alcaldia}-</span>
+                      <br />
+                      Sede Principal
+                    </p>
+                    <p>{Dirección}</p>
+                    <p>{Departamento}</p>
+                    <p><span class="font-bold"> Código postal: </span>{code}</p>
+                  </div>
+                  <div
+                    class="flex gap-3 text-sm flex-wrap justify-center xl:justify-start"
+                  >
+                    <span class="flex gap-1 items-center"
+                      ><i class="fab fa-facebook text-[#4064ac]"></i>
+                      <a
+                        href="#"
+                        target="_blank"
+                        class="transition duration-10 underline cursor-pointer hover:text-[#3366cc] cursor-pointer"
+                        >@Facebook</a
+                      ></span
+                    >
+                    <span class="flex gap-1 items-center"
+                      ><i class="fab fa-twitter text-[#1c9cea]"></i>
+                      <a
+                        href="#"
+                        target="_blank"
+                        class="transition duration-10 underline cursor-pointer hover:text-[#3366cc] cursor-pointer"
+                        >@X twitter</a
+                      ></span
+                    >
+                    <span class="flex gap-1 items-center"
+                      ><i class="fab fa-youtube text-[#f70000]"></i>
+                      <a
+                        href="#"
+                        target="_blank"
+                        class="transition duration-10 underline cursor-pointer hover:text-[#3366cc] cursor-pointer"
+                        >@Youtube</a
+                      ></span
+                    >
+                  </div>
+                </section>
+                <section class="flex gap-3 justify-center xl:w-[50%]">
+                  <img
+                    src="https://www.libano-tolima.gov.co/SiteAssets/Redise%C3%B1o/assets/img/colombia.png"
+                    alt=""
+                    class="w-16 h-16 object-cover"
+                  />
+                  <img
+                    src="https://www.libano-tolima.gov.co/SiteAssets/Redise%C3%B1o/assets/img/municipio-header.png"
+                    alt=""
+                    class="w-32 h-16 object-contain"
+                  />
+                </section>
+              </article>
+              <article class="flex gap-6 flex-col md:flex-row justify-between">
+                <section class="text-sm md:w-[50%]">
+                  <p>
+                    <span class="font-bold">Horario de atención:</span>
+                    {horario}
+                  </p>
+                  <p>
+                    <span class="font-bold">Conmutador:</span>
+                    {conmutador}
+                  </p>
+                  <p>
+                    <span class="font-bold">Linea Fax:</span>
+                    {linea fax}
+                  </p>
+                  <p>
+                    <span class="font-bold">Linea anticorrupción:</span>
+                    {linea anticorrupción}
+                  </p>
+                  <p>
+                    <span class="font-bold"
+                      >Linea de servicio a la ciudadanía:</span
+                    >
+                    {linea ciudadanía}
+                  </p>
+                  <p>
+                    <span class="font-bold">Correo Electrónico:</span>
+                    {correo@gmail.com}
+                  </p>
+                  <p>
+                    <span class="font-bold">Otras Sedes</span>
+                  </p>
+                  <p>Mapa de sitio</p>
+                  <p>
+                    <span class="font-bold">Notificaciones Judiciales:</span>
+                    <br />{Notificaciones}
+                  </p>
+                </section>
+                <section
+                  class="text-sm break-words md:w-[50%] flex flex-col gap-1"
+                >
+                  <h2 class="text-lg font-bold text-[#1d59c9] 2xl:text-center">
+                    ALCALDÍA DE EL {NOMBRE ALCALDIA}
+                  </h2>
+                  <article class="flex flex-col gap-3 text-justify">
+                    <p class="">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Est quia deleniti tempore ut nulla. Ullam natus hic nisi
+                      temporibus necessitatibus. Iusto laboriosam sunt, fuga
+                      explicabo ut impedit iste. Animi, deserunt?
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Odit beatae ipsa, culpa omnis veniam consequuntur possimus
+                      labore nobis molestias, laboriosam deleniti dignissimos
+                      itaque eum eaque magnam voluptas asperiores quo
+                      architecto.
+                    </p>
+                  </article>
+                </section>
+              </article>
+            </article>
+          </article>
+        </section>
+      </section>
+
+      <section class="flex flex-col">
+        <section
+          class="w-full h-24 flex justify-center items-center gap-3 md:gap-5 bg-black text-white text-xs md:text-md px-6 text-center xl:text-start"
+        >
+          <p class="">Asesorado, diseñado y desarrollado por:</p>
+          <a href="http://www.1cero1.com/" target="_blank" class="footerWeb__a">
+            <img
+              id="idfirma"
+              src="https://www.alcaldiadesincelejo.gov.co/SiteAssets/V2/images/home/1cero1b.png"
+              class="w-32 h-16 object-contain"
+          /></a>
+          <p class="">© Copyright <span class="">...</span> 101 S.A.S.</p>
+        </section>
+        <section class="bg-[#3366cc] w-full h-24">
+          <div
+            class="flex items-center pl-0 md:pl-16 justify-center md:justify-start h-full w-full gap-4"
+          >
+            <a href="https://www.colombia.co/" target="_blank">
+              <img
+                src="https://www.mosquera-cundinamarca.gov.co/content/images/co-colombia.png"
+                alt="Co-Colombia"
+                class="w-10 h-10 object-contain"
+              />
+            </a>
+            <span class="w-[2px] h-10 bg-white"></span>
+            <a href="https://www.gov.co/" target="_blank">
+              <img
+                src="https://www.mosquera-cundinamarca.gov.co/content/images/logo-gov-w.svg"
+                alt="Gov"
+                class="w-32 h-7 object-contain"
+              />
+            </a>
+          </div>
+        </section>
+      </section>
+    </footer>
+    <!-- Incluir para poder usar tailwind css -->
+    <script src="./js/tailwindcss3.3.3.js"></script>
+    <!-- Incluir para poder usar tailwind css -->
+  </body>
+</html>

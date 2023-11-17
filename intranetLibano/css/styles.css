@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --mainColor: #f5f5f5;
+  --navbarColor: #294550;
+  --gray: #f1f1f1;
+  --gray2: #b6b5b7;
+  --yellow: #ff9c04;
+  --item1: #00a79d;
+  --item2: #a376d3;
+  --item3: #ff713f;
+  --item4: #00adf3;
+  --item5: #ff6295;
+  --item6: #996f63;
+  --item7: #7e5045;
+}
+body {
+  background-color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mySwiperMenu .swiper-button-prev,
+.mySwiperMenu .swiper-button-next {
+  width: 30px; /* Ajusta el ancho según tus necesidades */
+  height: 30px;
+  background-color: var(--yellow);
+  font-size: 24px;
+  color: #333;
+
+  border-radius: 30px;
+}
+.mySwiperMenu .swiper-button-next:after,
+.mySwiperMenu .swiper-button-prev:after {
+  color: white;
+  font-size: 12px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <title>Grid de 12 Columnas en Tailwind CSS</title>
+  </head>
+  <body class="bg-gray-200 p-4">
+    <div class="grid grid-cols-12 gap-4">
+      <!-- Elemento 1 -->
+      <div
+        class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2"
+      >
+        <!-- Contenido del elemento -->
+        <div class="p-4 bg-white border">Elemento 1</div>
+      </div>
+
+      <!-- Elemento 2 -->
+      <div
+        class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2"
+      >
+        <!-- Contenido del elemento -->
+        <div class="p-4 bg-white border">Elemento 2</div>
+      </div>
+
+      <!-- ... Otros elementos ... -->
+    </div>
+  </body>
+</html>

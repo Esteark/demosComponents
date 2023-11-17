@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Travel</title>
+  </head>
+  <body>
+    <!-- Nav  -->
+    <nav class="py-6 px-6 md:px-0">
+      <section
+        class="container:lg mx-auto bg-white border-gray-200 dark:bg-gray-900"
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a href="/" class="flex items-center">
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Blog News</span
+            >
+          </a>
+          <div class="flex items-center md:order-2">
+            <button
+              type="button"
+              class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="user-dropdown"
+              data-dropdown-placement="bottom"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img
+                class="w-8 h-8 rounded-full object-cover"
+                src="https://img.freepik.com/foto-gratis/retrato-hombre-blanco-aislado_53876-40306.jpg?w=2000"
+                alt="user photo"
+              />
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+              id="user-dropdown"
+            >
+              <div class="px-4 py-3">
+                <span class="block text-sm text-gray-900 dark:text-white"
+                  >Blog News User</span
+                >
+                <span
+                  class="block text-sm text-gray-500 truncate dark:text-gray-400"
+                  >BlogNew@news.com</span
+                >
+              </div>
+              <ul class="py-2" aria-labelledby="user-menu-button">
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Settings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Earnings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <button
+              data-collapse-toggle="navbar-user"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-user"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-user"
+          >
+            <ul
+              class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="/"
+                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/design.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/tech.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Technology</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/sports.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Sports</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/games.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Games</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/travel.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Travel</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/iamachine.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >IA</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <!-- Nav  -->
+    <!-- header  -->
+    <header class="px-6">
+      <section
+        class="lg:container mx-auto bg-cover max-w-screen-lg h-[300px] md:h-[400px] rounded-lg flex flex-col gap-3 items-center justify-center px-6"
+        style="
+          background-image: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.9458158263305322) 29%,
+              rgba(0, 0, 0, 0.06486344537815125) 100%
+            ),
+            url(https://mexicorutamagica.mx/wp-content/uploads/2021/09/piedra-del-penol.jpg);
+        "
+      >
+        <article class="flex flex-col items-center gap-1 md:gap-3">
+          <article
+            class="flex items-center justify-center gap-1 md:gap-3 w-20 h-auto md:w-24 bg-[#ff7a05] rounded-lg px-2 py-1"
+          >
+            <div
+              class="w-[8px] h-[8px] md:w-[14px] md:h-[14px] bg-[#fff] rounded-full"
+            ></div>
+            <p
+              class="text-white font-bold md:font-normal text-[10px] md:text-[16px]"
+            >
+              Travel
+            </p>
+          </article>
+          <h2
+            class="text-3xl md:text-4xl xl:text-6xl text-center text-white font-bold"
+          >
+            Detachment at Piedra del Peñol: Response and Prevention
+          </h2>
+        </article>
+        <article
+          class="flex justify-center flex-wrap gap-3 xl:gap-6 items-center"
+        >
+          <img
+            src="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2023/01/27/16748338939527.jpg"
+            class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full object-cover"
+            alt=""
+          />
+          <p class="text-sm md:font-bold xl:text-lg text-white">by Juan</p>
+          <span class="bg-white w-[5px] h-[5px] rounded-full"></span>
+          <p class="text-sm md:font-bold xl:text-lg text-white">Nov 10,2023</p>
+          <span class="bg-white w-[5px] h-[5px] rounded-full"></span>
+          <p class="text-sm md:font-bold md:text-[14px] xl:text-lg text-white">
+            5 min read
+          </p>
+        </article>
+      </section>
+    </header>
+    <!-- header  -->
+    <main class="mx-auto my-6 px-6">
+      <section
+        class="max-w-screen-lg lg:container mx-auto grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-10 2xl:gap-20"
+      >
+        <div class="col-span-12 xl:col-span-9 w-full">
+          <article
+            class="flex flex-col gap-3 text-[#706e74] text-sm md:text-[16px] leading-relaxed md:leading-7 text-justify"
+          >
+            <p>
+              <span
+                class="bg-[#191a1f] text-white font-bold py-1 px-2 text-2xl md:mb-[3px]"
+                >A</span
+              >
+              detachment of material from the upper part of Piedra del Peñol in
+              Guatapé led to injuries for 15 people, with nine requiring
+              hospitalization and six receiving initial treatment on-site.
+              Dagran, the Administrative Department of Risk Management of
+              Antioquia, is actively involved in response and communication.
+            </p>
+            <p>
+              A Dagran commission, including geologists, civil engineers, and
+              drone pilots, is en route to the site to investigate the incident,
+              attributed to the ongoing weathering process of the rock,
+              potentially accelerated by rain.
+              <span class="font-bold text-black"
+                >The director of Dagran suggested that the detachment occurred
+                due to weathering, a natural decomposition process that affects
+                the surface.</span
+              >Preventive measures might have altered the outcome, particularly
+              in walking areas. Despite warnings, authorities might have had
+              difficulty predicting and preventing this event due to the dynamic
+              nature of such geological changes.
+            </p>
+            <p>
+              Ultimately, the Dagran commission's assessment aims to uncover the
+              causes and aid in preventing similar incidents in the future.
+              place.
+            </p>
+            <p>
+              Had the detachment at Piedra del Peñol not occurred, tourists
+              would have continued enjoying the scenic beauty of the area.
+              Experience the wonders of this destination with the new safety
+              protocols in
+            </p>
+            <!-- galeria  -->
+            <div
+              class="flex flex-col md:grid md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-2"
+            >
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://www.elpais.com.co/resizer/PcdkOVBBtQrqM9mLVUHJ5jxNs-k=/1920x1080/smart/filters:format(jpg):quality(80)/cloudfront-us-east-1.images.arcpublishing.com/semana/2GKQQ6KMRNELPHUTRHCRI7W2BU.png"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://www.triviantes.com/wp-content/uploads/2021/03/Piedra-del-Penol-2.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://t4.ftcdn.net/jpg/04/14/06/39/360_F_414063904_ZBlJo1VbxiSXLexhmwnwfmM2oNcALFAl.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://t3.ftcdn.net/jpg/01/30/67/14/360_F_130671456_gZv2NpiKW9DcvNL2RVHGgbW00O2EzBWW.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://www.wamanadventures.com/blog/wp-content/uploads/2020/06/piedra-pe%C3%B1ol.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://viajareacolombia.com/wp-content/uploads/2020/07/piedra-del-penol-1000x563.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+            </div>
+            <!-- galeria  -->
+          </article>
+        </div>
+
+        <div class="col-span-12 xl:col-span-3 w-full">
+          <article class="w-full flex flex-col gap-3">
+            <h3 class="text-lg font-bold">Categories</h3>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#fef6e0] px-4"
+            >
+              <h3 class="text-[#f7c32e] font-bold text-[16px]">Photography</h3>
+              <span class="px-2 text-black bg-[#f7c32e] rounded-md text-sm"
+                >09</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#edf5fe] px-4"
+            >
+              <h3 class="text-[#4f9ef8] font-bold text-[16px]">Travel</h3>
+              <span class="px-2 text-white bg-[#4f9ef8] rounded-md text-sm"
+                >08</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#fbe9eb] px-4"
+            >
+              <h3 class="text-[#d6293e] font-bold text-[16px]">Technology</h3>
+              <span class="px-2 text-white bg-[#d6293e] rounded-md text-sm"
+                >10</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#edf5fe] px-4"
+            >
+              <h3 class="text-[#2163e8] font-bold text-[16px]">Video</h3>
+              <span class="px-2 text-white bg-[#2163e8] rounded-md text-sm"
+                >08</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#e6f8f3] px-4"
+            >
+              <h3 class="text-[#0cbc87] font-bold text-[16px]">Design</h3>
+              <span class="px-2 text-white bg-[#0cbc87] rounded-md text-sm"
+                >11</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="rounded-t-md shadow bg-gray-900 mt-10">
+      <div class="w-full max-w-screen-xl mx-auto p-10 xl:p-4 xl:py-12 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center mb-4 sm:mb-0"
+          >
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+              >Blog News</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 text-white"
+          >
+            <li>
+              <a href="./design.html" class="mr-4 hover:underline md:mr-6"
+                >Design</a
+              >
+            </li>
+            <li>
+              <a href="./iamachine.html" class="mr-4 hover:underline md:mr-6"
+                >IA</a
+              >
+            </li>
+            <li>
+              <a href="./sports.html" class="mr-4 hover:underline md:mr-6"
+                >Sports</a
+              >
+            </li>
+            <li>
+              <a href="./games.html" class="hover:underline">Games</a>
+            </li>
+          </ul>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span class="block text-sm text-gray-500 sm:text-center text-white"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">Blog News™</a
+          >. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+    <!-- footer  -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- script ppal  -->
+    <script src="../main.js"></script>
+  </body>
+</html>
