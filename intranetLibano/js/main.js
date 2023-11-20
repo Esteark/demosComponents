@@ -36,7 +36,7 @@ const animations = {
     close: "scale-out-ver-top",
   },
 };
-
+// funcion para agregar o quitar animaciones
 const showQuitAnimation = (element, op, animation) => {
   if (op) {
     element.classList.remove("hidden");
@@ -54,34 +54,57 @@ const showQuitAnimation = (element, op, animation) => {
 };
 
 //Funciones navbar
+//evento click boton de GROUPLIST
+
 const dropDownGroupBtn = document.getElementById("dropDownGroupBtn");
+const dropDownGroup = document.getElementById("dropDownGroup");
 let showmenuGroup = true;
-dropDownGroupBtn.addEventListener("click", () => {
-  const dropDownGroup = document.getElementById("dropDownGroup");
+actionbtn(dropDownGroupBtn, dropDownGroup, showmenuGroup);
+//evento click boton de GROUPLIST
 
-  if (showmenuGroup) {
-    showQuitAnimation(dropDownGroup, showmenuGroup, animations.menu.open);
-    showmenuGroup = false;
-  } else {
-    showQuitAnimation(dropDownGroup, false, animations.menu.close);
-    showmenuGroup = true;
-  }
-
-  //  dropDownGroup.classList.toggle("hidden");
-});
-
+// evento del primer boton de ajuste
 const toolbtn1 = document.getElementById("toolbtn1");
+const dropDowntool1 = document.getElementById("dropDowntool1");
 let showTool1 = true;
-toolbtn1.addEventListener("click", () => {
-  const dropDowntool1 = document.getElementById("dropDowntool1");
-  if (showTool1) {
-    showQuitAnimation(dropDowntool1, showTool1, animations.menu.open);
-    showTool1 = false;
-  } else {
-    showQuitAnimation(dropDowntool1, false, animations.menu.close);
-    showTool1 = true;
-  }
-});
+actionbtn(toolbtn1, dropDowntool1, showTool1);
+
+// evento del boton de mensajes
+const btnMensaje = document.getElementById("btnMensaje");
+const dropDownMessage = document.getElementById("dropDownMessage");
+let showMensaje = true;
+actionbtn(btnMensaje, dropDownMessage, showMensaje);
+// evento del primer boton de ajuste
+
+//evento boton info user
+const btnInfoUser = document.getElementById("btnInfoUser");
+const dropDownInfoUser = document.getElementById("dropDownInfoUser");
+let showInfoUser = true;
+actionbtn(btnInfoUser, dropDownInfoUser, showInfoUser);
+//evento boton info user
+
+// evento boton tool 2
+const toolbtn2 = document.getElementById("toolbtn2");
+const dropDowntool2 = document.getElementById("dropDowntool2");
+let showTool2 = true;
+actionbtn(toolbtn2, dropDowntool2, showTool2);
+// evento boton tool 2
+
+// Funcion agregadora de listeners
+function actionbtn(btn, submenu, op) {
+  btn.addEventListener("click", () => {
+    if (op) {
+      showQuitAnimation(submenu, op, animations.menu.open);
+      op = false;
+    } else {
+      showQuitAnimation(submenu, false, animations.menu.close);
+      op = true;
+    }
+  });
+}
+// Funcion agregadora de listeners
+
+//funcion para ocultar submenus simultaneos
+function closeSubmenu(element, op) {}
 
 document.addEventListener("DOMContentLoaded", () => {
   sliderMenu();
