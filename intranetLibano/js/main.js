@@ -12,7 +12,7 @@ const sliderMenu = () => {
         spaceBetween: 30,
       },
     },
-
+    // centeredSlides: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true, // Deshabilita la paginación clickeable
@@ -31,9 +31,13 @@ const sliderMenu = () => {
 //Fin Carrusel galeria
 
 const animations = {
-  menu: {
+  subMenu: {
     open: "scale-in-ver-top",
     close: "scale-out-ver-top",
+  },
+  menu: {
+    open: "scale-in-hor-right",
+    close: "scale-out-hor-right",
   },
 };
 // funcion para agregar o quitar animaciones
@@ -93,19 +97,74 @@ actionbtn(toolbtn2, dropDowntool2, showTool2);
 function actionbtn(btn, submenu, op) {
   btn.addEventListener("click", () => {
     if (op) {
-      showQuitAnimation(submenu, op, animations.menu.open);
+      showQuitAnimation(submenu, op, animations.subMenu.open);
       op = false;
+      //closeSubmenu(submenu);
+      slideMobileMenu(submenu, true);
     } else {
-      showQuitAnimation(submenu, false, animations.menu.close);
+      showQuitAnimation(submenu, false, animations.subMenu.close);
+      slideMobileMenu(submenu, false);
       op = true;
     }
   });
 }
 // Funcion agregadora de listeners
 
+//Array con los submenus que me servira para ocultarlos
+const submenus = [
+  dropDownGroup,
+  dropDowntool1,
+  dropDownMessage,
+  dropDownInfoUser,
+  dropDowntool2,
+];
+
 //funcion para ocultar submenus simultaneos
-function closeSubmenu(element, op) {}
+function closeSubmenu(element) {
+  submenus.forEach((item) => {
+    if (item !== element) {
+      item.classList.add("hidden");
+    }
+  });
+}
+
+//acciones para abrir o cerrar el menu
+const navMenu = document.getElementById("navMenu");
+const btnOpenMenu = document.getElementById("btnOpenMenu");
+btnOpenMenu.addEventListener("click", () => {
+  showQuitAnimation(navMenu, true, animations.menu.open);
+});
+const btnCloseMenu = document.getElementById("btnCloseMenu");
+btnCloseMenu.addEventListener("click", () => {
+  showQuitAnimation(navMenu, false, animations.menu.close);
+});
+
+function OpenCloseMenu() {
+  showQuitAnimation(navMenu, false, animations.menu.close);
+}
+
+function slideMobileMenu(element, op) {
+  if (op) {
+    const heightsub = navMenu.children[2].offsetHeight;
+
+    if (element === dropDownGroup || dropDowntool1) {
+      const heightSlide = element.offsetHeight;
+      navMenu.children[2].style.transform = `translateY(${heightSlide}px)`;
+    }
+  } else {
+    if (element === dropDownGroup || dropDowntool1) {
+      navMenu.children[2].style.transform = `translateY(0px)`;
+    }
+  }
+}
+
+console.log(navMenu.children[2]);
 
 document.addEventListener("DOMContentLoaded", () => {
   sliderMenu();
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 992) {
+      OpenCloseMenu();
+    }
+  });
 });

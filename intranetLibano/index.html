@@ -36,15 +36,19 @@
 
         <!-- main menu  -->
         <article
-          class="bg-white lg:bg-[#294550] absolute top-0 bottom-0 right-0 left-0 lg:relative lg:w-auto z-10 p-12 lg:p-0 hidden lg:flex lg:w-[70%]"
+          class="bg-[#294550] absolute top-0 bottom-0 right-0 left-0 lg:relative lg:w-auto z-10 hidden flex flex-col lg:flex lg:flex-row lg:w-[70%]"
+          id="navMenu"
         >
           <!-- logo mobile  -->
-          <section class="flex justify-between items-center lg:hidden">
-            <img
-              src="https://pbs.twimg.com/profile_images/1621227522380763139/AcBaxTU1_400x400.jpg"
-              alt=""
-              class="w-16 h-16 rounded-xl"
-            />
+          <section class="flex justify-between items-center lg:hidden p-6">
+            <article class="flex items-center gap-3">
+              <img
+                src="https://pbs.twimg.com/profile_images/1621227522380763139/AcBaxTU1_400x400.jpg"
+                alt=""
+                class="w-16 h-16 rounded-xl"
+              />
+              <h3 class="text-xl">Líbano</h3>
+            </article>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +56,8 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-8 h-8"
+              class="w-8 h-8 cursor-pointer"
+              id="btnCloseMenu"
             >
               <path
                 stroke-linecap="round"
@@ -63,9 +68,9 @@
           </section>
           <!-- logo mobile  -->
           <!-- main menu sec1  -->
-          <section class="flex items-center">
+          <section class="flex flex-col lg:flex-row lg:items-center">
             <a
-              class="bg-[#325863] hover:bg-[#ceebf8] h-full flex items-center justify-center px-4 cursor-pointer transition duration-300 hover:text-black"
+              class="bg-[#325863] hover:bg-[#ceebf8] h-full flex items-center lg:justify-center px-4 py-4 cursor-pointer transition duration-300 hover:text-black gap-3 lg:gap-0 lg:py-0"
               href="/"
             >
               <svg
@@ -81,10 +86,13 @@
                   d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z"
                 />
               </svg>
+              <h3 class="text-sm lg:hidden">Inicio</h3>
             </a>
-            <article class="bg-[#ff9c04] h-full cursor-pointer relative">
+            <article
+              class="hover:bg-[#ceebf8] hover:text-black transition duration-300 lg:bg-[#ff9c04] h-full cursor-pointer relative"
+            >
               <section
-                class="flex items-center gap-3 px-3 h-full select-none"
+                class="flex items-center gap-3 px-4 py-4 lg:py-0 h-full select-none"
                 id="dropDownGroupBtn"
               >
                 <svg
@@ -97,9 +105,7 @@
                     d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z"
                   />
                 </svg>
-                <h3 class="text-white hidden xl:block text-[12px]">
-                  GRUPO PLUS
-                </h3>
+                <h3 class="lg:hidden xl:block text-[12px]">GRUPO PLUS</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -117,7 +123,7 @@
               </section>
               <!-- dropdowMenu  -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-36 xl:w-full shadow-md text-[14px] hidden"
+                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden z-10"
                 id="dropDownGroup"
               >
                 <li
@@ -146,9 +152,12 @@
           </section>
           <!-- main menu sec1 -->
           <!-- main menu sec2  -->
-          <section class="flex relative cursor-pointer select-none">
+          <section
+            class="flex relative cursor-pointer select-none menuTransition"
+            id="sec2menu"
+          >
             <article
-              class="flex items-center px-3 gap-2 bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black"
+              class="flex items-center px-4 py-4 lg:py-0 gap-2 bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black w-full lg:w-auto menuTransition"
               id="toolbtn1"
             >
               <svg
@@ -163,7 +172,7 @@
                   clip-rule="evenodd"
                 />
               </svg>
-
+              <h3 class="text-sm lg:hidden">Configuración Grupos</h3>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -181,7 +190,7 @@
             </article>
             <!-- dropDownMenu -->
             <ul
-              class="absolute rounded flex flex-col bg-white text-black top-[50px] w-36 shadow-md text-[14px] hidden"
+              class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden z-10"
               id="dropDowntool1"
             >
               <li
@@ -209,7 +218,7 @@
           </section>
           <!-- main menu sec2  -->
           <!-- text input  -->
-          <section class="flex items-center gap-2 px-4">
+          <section class="flex items-center gap-2 px-4 py-4 lg:py-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -227,17 +236,17 @@
 
             <input
               type="text"
-              class="bg-transparent w-full"
+              class="bg-transparent w-full outline-none"
               placeholder="Asociaciones"
             />
           </section>
           <!-- text input  -->
           <!-- main menu sec 3 -->
-          <section class="flex">
+          <section class="flex flex-col lg:flex-row">
             <!-- section dropDownMensajes  -->
             <section class="relative">
               <article
-                class="flex gap-2 items-center bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black font-bold px-2 xl:px-3 h-full"
+                class="flex gap-2 items-center bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black font-bold px-4 py-4 lg:py-0 lg:px-3 h-full"
                 id="btnMensaje"
               >
                 <svg
@@ -254,6 +263,7 @@
                     d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"
                   />
                 </svg>
+                <h3 class="text-sm font-normal lg:hidden">Notificaciones</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -271,7 +281,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] md:right-0 xl:right-auto w-full lg:w-64 shadow-md text-[14px] hidden"
+                class="absolute rounded flex flex-col bg-white text-black top-[50px] md:right-0 xl:right-auto w-full lg:w-64 shadow-md text-[14px] hidden z-10"
                 id="dropDownMessage"
               >
                 <li
@@ -368,7 +378,7 @@
             <!-- section dropdownUser -->
             <section class="relative">
               <article
-                class="flex items-center justify-center gap-1 xl:gap-4 h-full px-4 cursor-pointer select-none"
+                class="flex items-center lg:justify-center gap-3 xl:gap-4 h-full px-4 py-4 lg:py-0 cursor-pointer select-none hover:bg-[#ceebf8] hover:text-black transition duration-300"
                 id="btnInfoUser"
               >
                 <img
@@ -376,8 +386,8 @@
                   class="w-6 h-6 xl:w-8 xl:h-8 object-cover rounded-full"
                   alt=""
                 />
-                <div class="flex items-center xl:gap-3">
-                  <h3 class="font-light hidden xl:block text-[14px]">
+                <div class="flex items-center gap-4 xl:gap-3 w-full lg:w-auto">
+                  <h3 class="font-light lg:hidden xl:block text-[14px]">
                     Jaime Montez Gonzáles
                   </h3>
                   <svg
@@ -398,7 +408,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-36 xl:w-full shadow-md text-[14px] hidden md:right-0 xl:right-auto"
+                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden md:right-0 xl:right-auto z-10"
                 id="dropDownInfoUser"
               >
                 <li
@@ -429,7 +439,7 @@
             <!-- section dropdownconfig2 -->
             <section class="relative">
               <article
-                class="flex items-center px-1 xl:px-3 gap-2 bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black h-full"
+                class="flex items-center px-4 py-4 lg:py-4 xl:px-3 gap-2 bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black h-full"
                 id="toolbtn2"
               >
                 <svg
@@ -444,7 +454,7 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-
+                <h3 class="text-sm lg:hidden">Configuración Usuario</h3>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -462,7 +472,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-36 shadow-md text-[14px] hidden md:right-0 2xl:right-auto"
+                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden md:right-0 2xl:right-auto z-10"
                 id="dropDowntool2"
               >
                 <li
@@ -497,6 +507,7 @@
         <!-- icon mobile  -->
         <article
           class="flex justify-center items-center lg:hidden cursor-pointer"
+          id="btnOpenMenu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
