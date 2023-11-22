@@ -100,7 +100,9 @@ function actionbtn(btn, submenu, op) {
       showQuitAnimation(submenu, op, animations.subMenu.open);
       op = false;
       //closeSubmenu(submenu);
-      slideMobileMenu(submenu, true);
+      if (window.innerWidth <= 768) {
+        slideMobileMenu(submenu, true);
+      }
     } else {
       showQuitAnimation(submenu, false, animations.subMenu.close);
       slideMobileMenu(submenu, false);
@@ -165,6 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     if (window.innerWidth <= 992) {
       OpenCloseMenu();
+    } else {
+      navMenu.classList.remove(animations.menu.close);
     }
   });
 });
