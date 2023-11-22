@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/animations.css" />
+
     <title>Intranet Libano</title>
   </head>
   <body>
@@ -89,10 +90,10 @@
               <h3 class="text-sm lg:hidden">Inicio</h3>
             </a>
             <article
-              class="hover:bg-[#ceebf8] hover:text-black transition duration-300 lg:bg-[#ff9c04] h-full cursor-pointer relative"
+              class="lg:bg-[#ff9c04] h-full cursor-pointer relative flex flex-col"
             >
               <section
-                class="flex items-center gap-3 px-4 py-4 lg:py-0 h-full select-none"
+                class="flex items-center gap-3 px-4 py-4 lg:py-0 h-full select-none hover:bg-[#ceebf8] hover:text-black transition duration-300"
                 id="dropDownGroupBtn"
               >
                 <svg
@@ -123,7 +124,7 @@
               </section>
               <!-- dropdowMenu  -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden z-10"
+                class="rounded-none lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden z-10"
                 id="dropDownGroup"
               >
                 <li
@@ -153,11 +154,11 @@
           <!-- main menu sec1 -->
           <!-- main menu sec2  -->
           <section
-            class="flex relative cursor-pointer select-none menuTransition"
+            class="flex flex-col relative cursor-pointer select-none menuTransition"
             id="sec2menu"
           >
             <article
-              class="flex items-center px-4 py-4 lg:py-0 gap-2 bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black w-full lg:w-auto menuTransition"
+              class="flex items-center px-4 py-4 lg:py-0 gap-2 bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black w-full lg:w-auto menuTransition lg:h-full"
               id="toolbtn1"
             >
               <svg
@@ -190,7 +191,7 @@
             </article>
             <!-- dropDownMenu -->
             <ul
-              class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden z-10"
+              class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden z-10"
               id="dropDowntool1"
             >
               <li
@@ -244,7 +245,7 @@
           <!-- main menu sec 3 -->
           <section class="flex flex-col lg:flex-row">
             <!-- section dropDownMensajes  -->
-            <section class="relative">
+            <section class="relative flex flex-col">
               <article
                 class="flex gap-2 items-center bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black font-bold px-4 py-4 lg:py-0 lg:px-3 h-full"
                 id="btnMensaje"
@@ -281,7 +282,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] md:right-0 xl:right-auto w-full lg:w-64 shadow-md text-[14px] hidden z-10"
+                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] md:right-0 xl:right-auto w-full lg:w-64 shadow-md text-[14px] hidden z-10"
                 id="dropDownMessage"
               >
                 <li
@@ -376,7 +377,7 @@
             <!-- section dropDownMensajes  -->
 
             <!-- section dropdownUser -->
-            <section class="relative">
+            <section class="relative flex flex-col">
               <article
                 class="flex items-center lg:justify-center gap-3 xl:gap-4 h-full px-4 py-4 lg:py-0 cursor-pointer select-none hover:bg-[#ceebf8] hover:text-black transition duration-300"
                 id="btnInfoUser"
@@ -408,7 +409,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden md:right-0 xl:right-auto z-10"
+                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden md:right-0 xl:right-auto z-10"
                 id="dropDownInfoUser"
               >
                 <li
@@ -437,7 +438,7 @@
             <!-- section dropDownUser  -->
 
             <!-- section dropdownconfig2 -->
-            <section class="relative">
+            <section class="relative flex flex-col">
               <article
                 class="flex items-center px-4 py-4 lg:py-4 xl:px-3 gap-2 bg-[#325863] hover:bg-[#ceebf8] transition duration-300 hover:text-black h-full"
                 id="toolbtn2"
@@ -472,7 +473,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="absolute rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden md:right-0 2xl:right-auto z-10"
+                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden md:right-0 2xl:right-auto z-10"
                 id="dropDowntool2"
               >
                 <li

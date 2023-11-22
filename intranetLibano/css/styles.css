@@ -38,5 +38,5 @@ body {
 }
 
 .menuTransition {
-  transition: transform 0.3s;
+  transition: height 0.3s;
 }

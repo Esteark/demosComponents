@@ -53,7 +53,7 @@ const showQuitAnimation = (element, op, animation) => {
     setTimeout(() => {
       element.classList.remove(`${animation}`);
       element.classList.add("hidden");
-    }, 500);
+    }, 200);
   }
 };
 
@@ -101,11 +101,11 @@ function actionbtn(btn, submenu, op) {
       op = false;
       //closeSubmenu(submenu);
       if (window.innerWidth <= 768) {
-        slideMobileMenu(submenu, true);
+        toggleDropdown(submenu);
       }
     } else {
       showQuitAnimation(submenu, false, animations.subMenu.close);
-      slideMobileMenu(submenu, false);
+
       op = true;
     }
   });
@@ -145,22 +145,10 @@ function OpenCloseMenu() {
   showQuitAnimation(navMenu, false, animations.menu.close);
 }
 
-function slideMobileMenu(element, op) {
-  if (op) {
-    const heightsub = navMenu.children[2].offsetHeight;
-
-    if (element === dropDownGroup || dropDowntool1) {
-      const heightSlide = element.offsetHeight;
-      navMenu.children[2].style.transform = `translateY(${heightSlide}px)`;
-    }
-  } else {
-    if (element === dropDownGroup || dropDowntool1) {
-      navMenu.children[2].style.transform = `translateY(0px)`;
-    }
-  }
+function toggleDropdown(element) {
+  console.log("me ejecute");
+  element.classList.toggle("menuTransition");
 }
-
-console.log(navMenu.children[2]);
 
 document.addEventListener("DOMContentLoaded", () => {
   sliderMenu();
