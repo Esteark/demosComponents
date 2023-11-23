@@ -82,9 +82,9 @@
 
 /*Animation out*/
 .scale-out-ver-top {
-  -webkit-animation: scale-out-ver-top 0.2s
+  -webkit-animation: scale-out-ver-top 0.1s
     cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  animation: scale-out-ver-top 0.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-ver-top 0.1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @-webkit-keyframes scale-out-ver-top {

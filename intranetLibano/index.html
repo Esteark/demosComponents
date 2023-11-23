@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/animations.css" />
+    <script src="./js/tailwindcss3.3.3.js"></script>
 
     <title>Intranet Libano</title>
   </head>
-  <body>
+  <body id="body">
     <!-- nav  -->
     <nav class="px-6 bg-[#294550]">
       <section
@@ -37,7 +38,7 @@
 
         <!-- main menu  -->
         <article
-          class="bg-[#294550] fixed top-0 bottom-0 right-0 left-0 lg:relative lg:w-auto z-10 hidden flex flex-col lg:flex lg:flex-row lg:w-[70%]"
+          class="bg-[#294550] fixed top-0 bottom-0 right-0 left-0 h-screen lg:h-auto lg:relative lg:w-auto z-10 hidden flex flex-col lg:flex lg:flex-row lg:w-[70%] overflow-y-auto lg:overflow-y-visible"
           id="navMenu"
         >
           <!-- logo mobile  -->
@@ -124,7 +125,7 @@
               </section>
               <!-- dropdowMenu  -->
               <ul
-                class="rounded-none lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden z-10"
+                class="rounded-none lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden z-10 menuTransition"
                 id="dropDownGroup"
               >
                 <li
@@ -154,7 +155,7 @@
           <!-- main menu sec1 -->
           <!-- main menu sec2  -->
           <section
-            class="flex flex-col relative cursor-pointer select-none menuTransition"
+            class="flex flex-col relative cursor-pointer select-none"
             id="sec2menu"
           >
             <article
@@ -191,7 +192,7 @@
             </article>
             <!-- dropDownMenu -->
             <ul
-              class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden z-10"
+              class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden z-10 menuTransition"
               id="dropDowntool1"
             >
               <li
@@ -282,7 +283,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] md:right-0 xl:right-auto w-full lg:w-64 shadow-md text-[14px] hidden z-10"
+                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] md:right-0 xl:right-auto w-full lg:w-64 shadow-md text-[14px] hidden z-10 menuTransition"
                 id="dropDownMessage"
               >
                 <li
@@ -409,7 +410,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden md:right-0 xl:right-auto z-10"
+                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 xl:w-full shadow-md text-[14px] hidden md:right-0 xl:right-auto z-10 menuTransition"
                 id="dropDownInfoUser"
               >
                 <li
@@ -473,7 +474,7 @@
               </article>
               <!-- dropDownMenu -->
               <ul
-                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden md:right-0 2xl:right-auto z-10"
+                class="lg:absolute lg:rounded flex flex-col bg-white text-black top-[50px] w-full lg:w-36 shadow-md text-[14px] hidden right-0 2xl:right-auto z-10 menuTransition"
                 id="dropDowntool2"
               >
                 <li
@@ -545,7 +546,7 @@
 
       <!-- main section  -->
       <section
-        class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:container mx-auto"
+        class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:container mx-auto mb-10 lg:mb-0"
       >
         <!-- col 1  -->
         <article class="col-span-1 lg:col-span-2 flex flex-col gap-6">
@@ -835,13 +836,13 @@
               <!-- seccion de cards de anuncios  -->
 
               <article
-                class="border-t-2 border-[#f1f1f1] p-3 pr-4 bg-[#fcfcfc] flex justify-end"
+                class="border-t-2 border-[#f1f1f1] py-3 pr-4 bg-[#fcfcfc] flex justify-end"
               >
-                <section
-                  class="bg-[#00a79d] text-white p-4 py-2 rounded-md hover:bg-[#00adf3] transition duration-300 cursor-pointer"
+                <button
+                  class="text-[12px] bg-[#00a79d] text-white py-2 px-3 rounded-md hover:bg-[#00adf3] transition duration-300 cursor-pointer"
                 >
-                  <h3 class="text-[12px]">Ver todos los anuncios</h3>
-                </section>
+                  Ver todos los anuncios
+                </button>
               </article>
             </section>
             <section
@@ -926,13 +927,13 @@
               <!-- seccion de cards de anuncios  -->
 
               <article
-                class="border-t-2 border-[#f1f1f1] p-3 pr-4 bg-[#fcfcfc] flex justify-end"
+                class="border-t-2 border-[#f1f1f1] py-3 pr-4 bg-[#fcfcfc] flex justify-end"
               >
-                <section
-                  class="bg-[#ff713f] text-white p-4 py-2 rounded-md hover:bg-[#7e5045] transition duration-300 cursor-pointer"
+                <button
+                  class="text-[12px] bg-[#ff713f] text-white py-2 px-3 rounded-md hover:bg-[#7e5045] transition duration-300 cursor-pointer"
                 >
-                  <h3 class="text-[12px]">Todas las Agoras</h3>
-                </section>
+                  Todas las Agoras
+                </button>
               </article>
             </section>
           </article>
@@ -999,7 +1000,6 @@
     </main>
     <!-- sec ppal  -->
 
-    <script src="./js/tailwindcss3.3.3.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>

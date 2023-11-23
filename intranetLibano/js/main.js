@@ -45,11 +45,13 @@ const showQuitAnimation = (element, op, animation) => {
   if (op) {
     element.classList.remove("hidden");
     element.classList.add(`${animation}`);
+
     element.addEventListener("animationend", () => {
       element.classList.remove(`${animation}`);
     });
   } else {
     element.classList.add(`${animation}`);
+
     setTimeout(() => {
       element.classList.remove(`${animation}`);
       element.classList.add("hidden");
@@ -62,51 +64,46 @@ const showQuitAnimation = (element, op, animation) => {
 
 const dropDownGroupBtn = document.getElementById("dropDownGroupBtn");
 const dropDownGroup = document.getElementById("dropDownGroup");
-let showmenuGroup = true;
-actionbtn(dropDownGroupBtn, dropDownGroup, showmenuGroup);
+actionbtn(dropDownGroupBtn, dropDownGroup);
 //evento click boton de GROUPLIST
 
 // evento del primer boton de ajuste
 const toolbtn1 = document.getElementById("toolbtn1");
 const dropDowntool1 = document.getElementById("dropDowntool1");
-let showTool1 = true;
-actionbtn(toolbtn1, dropDowntool1, showTool1);
+actionbtn(toolbtn1, dropDowntool1);
 
 // evento del boton de mensajes
 const btnMensaje = document.getElementById("btnMensaje");
 const dropDownMessage = document.getElementById("dropDownMessage");
-let showMensaje = true;
-actionbtn(btnMensaje, dropDownMessage, showMensaje);
+actionbtn(btnMensaje, dropDownMessage);
 // evento del primer boton de ajuste
 
 //evento boton info user
 const btnInfoUser = document.getElementById("btnInfoUser");
 const dropDownInfoUser = document.getElementById("dropDownInfoUser");
-let showInfoUser = true;
-actionbtn(btnInfoUser, dropDownInfoUser, showInfoUser);
+actionbtn(btnInfoUser, dropDownInfoUser);
 //evento boton info user
 
 // evento boton tool 2
 const toolbtn2 = document.getElementById("toolbtn2");
 const dropDowntool2 = document.getElementById("dropDowntool2");
-let showTool2 = true;
-actionbtn(toolbtn2, dropDowntool2, showTool2);
+actionbtn(toolbtn2, dropDowntool2);
 // evento boton tool 2
 
 // Funcion agregadora de listeners
-function actionbtn(btn, submenu, op) {
+function actionbtn(btn, submenu) {
   btn.addEventListener("click", () => {
-    if (op) {
-      showQuitAnimation(submenu, op, animations.subMenu.open);
-      op = false;
-      //closeSubmenu(submenu);
-      if (window.innerWidth <= 768) {
-        toggleDropdown(submenu);
-      }
+    if (window.innerWidth <= 1024) {
+      toggleDropdown(submenu);
     } else {
-      showQuitAnimation(submenu, false, animations.subMenu.close);
-
-      op = true;
+      if (submenu.classList.contains("hidden")) {
+        showQuitAnimation(submenu, true, animations.subMenu.open);
+        if (window.innerWidth > 1024) {
+          closeSubmenu(submenu);
+        }
+      } else {
+        showQuitAnimation(submenu, false, animations.subMenu.close);
+      }
     }
   });
 }
@@ -120,43 +117,79 @@ const submenus = [
   dropDownInfoUser,
   dropDowntool2,
 ];
+//Array con los submenus que me servira para ocultarlos
 
 //funcion para ocultar submenus simultaneos
-function closeSubmenu(element) {
-  submenus.forEach((item) => {
-    if (item !== element) {
-      item.classList.add("hidden");
-    }
-  });
+function closeSubmenu(element = "") {
+  if (element) {
+    submenus.forEach((item) => {
+      if (item !== element) {
+        showQuitAnimation(item, false, animations.subMenu.close);
+      }
+    });
+  } else {
+    submenus.forEach((item) => {
+      showQuitAnimation(item, false, animations.subMenu.close);
+    });
+  }
 }
+//funcion para ocultar submenus simultaneos
 
-//acciones para abrir o cerrar el menu
+//acciones para abrir o cerrar el menu en versión mobile
 const navMenu = document.getElementById("navMenu");
 const btnOpenMenu = document.getElementById("btnOpenMenu");
+const body = document.getElementById("body");
 btnOpenMenu.addEventListener("click", () => {
-  showQuitAnimation(navMenu, true, animations.menu.open);
+  if (window.innerWidth <= 1024) {
+    showQuitAnimation(navMenu, true, animations.menu.open);
+  }
+  body.style.overflowY = "hidden";
 });
 const btnCloseMenu = document.getElementById("btnCloseMenu");
 btnCloseMenu.addEventListener("click", () => {
-  showQuitAnimation(navMenu, false, animations.menu.close);
+  if (window.innerWidth <= 1024) {
+    showQuitAnimation(navMenu, false, animations.menu.close);
+  }
+  body.style.overflowY = "auto";
 });
+//acciones para abrir o cerrar el menu en versión mobile
 
 function OpenCloseMenu() {
   showQuitAnimation(navMenu, false, animations.menu.close);
+  body.style.overflowY = "auto";
 }
 
 function toggleDropdown(element) {
-  console.log("me ejecute");
-  element.classList.toggle("menuTransition");
+  let subMenu = element;
+  let height = 0;
+
+  if (subMenu.classList.contains("hidden")) {
+    subMenu.classList.remove("hidden");
+    height = subMenu.scrollHeight;
+    subMenu.style.height = `${height}px`;
+  } else {
+    subMenu.style.height = `${0}px`;
+    setTimeout(() => {
+      subMenu.classList.contains("hidden");
+    }, 200);
+  }
+}
+
+function removeToogle() {
+  submenus.forEach((item) => {
+    item.removeAttribute("style");
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   sliderMenu();
   window.addEventListener("resize", () => {
+    closeSubmenu();
     if (window.innerWidth <= 992) {
       OpenCloseMenu();
     } else {
       navMenu.classList.remove(animations.menu.close);
+      body.style.overflowY = "auto";
     }
   });
 });
