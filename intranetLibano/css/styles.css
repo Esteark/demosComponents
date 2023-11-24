@@ -51,5 +51,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background-color: #fff;
+}
+
+.secSumary {
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
+.secSumary > p {
+  overflow: hidden;
 }

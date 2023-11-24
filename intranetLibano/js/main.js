@@ -62,7 +62,6 @@ const showQuitAnimation = (element, op, animation) => {
 
 //Funciones navbar
 //evento click boton de GROUPLIST
-
 const dropDownGroupBtn = document.getElementById("dropDownGroupBtn");
 const dropDownGroup = document.getElementById("dropDownGroup");
 actionbtn(dropDownGroupBtn, dropDownGroup);
@@ -183,50 +182,46 @@ function removeToogle() {
 //Funcion para remover el estilo delos submenus puestos en la version mobile
 
 //Acciones para mostrar mas cards
-//agregar clase de alto h-[300px]
-let cards = 1;
 
-const secAnuncions = document.getElementById("secAnuncios");
+const secAnuncios = document.getElementById("secAnuncios");
+const secAgoras = document.getElementById("secAgoras");
 const btnAllEvents = document.getElementById("btnAllEvents");
-btnAllEvents.addEventListener("click", () => {
-  if (cards <= 5) {
-    btnAllEvents.innerText = "Ver más anuncios";
-    cards += 1;
-  } else {
-    btnAllEvents.innerText = "Ocultar anuncions";
-    cards = 1;
-  }
+const btnAllAgoras = document.getElementById("btnAllAgoras");
+let showauncios = false;
+let showAgoras = false;
 
-  secAnuncions.innerHTML = "";
-  [...Array(cards)].forEach((_) => {
-    secAnuncions.innerHTML += `<!-- cards de anuncios  -->
-                <figure class="border-2 border-[#f1f1f1]">
-                  <section class="border-l-2 border-[#00a79d]">
-                    <!-- sec 1 card  -->
-                    <section class="flex flex-col gap-6 p-3">
-                      <section
-                        class="flex flex-col xl:flex-row xl:gap-5 border-b-1"
-                      >
-                        <div class="w-full xl:w-[70%]">
-                          <h4 class="text-[#00a79d] font-bold">Empleo</h4>
-                          <p class="text-[12px] text-justify">
-                            Empleo para empresas públicas de limpieza los
-                            jóvenes queremos trabajar y nuestra ciudad cada vez
-                            más sucia y cada vez más los privados
-                          </p>
-                        </div>
-                        <div class="flex gap-3 xl:flex-col w-full xl:w-[30%]">
-                          <p class="text-[12px] w-full">
-                            <span class="text-4xl">. </span>Juan Carlos Romero
-                            Osuna
-                          </p>
-
-                          <p class="text-[12px] w-full">
-                            <span class="text-4xl">. </span>28/01/2023
-                          </p>
-                        </div>
-                      </section>
-                      <details class="flex flex-col gap-1 pb-2">
+//Funcion para pintado de más cards
+const paintCards = (cards, element, op) => {
+  if (op) {
+    [...Array(cards)].forEach((_) => {
+      element.innerHTML += `<!-- cards de anuncios  -->
+                  <figure class="border-2 border-[#f1f1f1] cardAnuncios cardTransition ">
+                    <section class="border-l-2 border-[#00a79d]">
+                      <!-- sec 1 card  -->
+                      <section class="flex flex-col gap-6 p-3 h-full">
+                        <section
+                          class="flex flex-col xl:flex-row xl:gap-5 border-b-1"
+                        >
+                          <div class="w-full xl:w-[70%]">
+                            <h4 class="text-[#00a79d] font-bold">Empleo</h4>
+                            <p class="text-[12px] text-justify">
+                              Empleo para empresas públicas de limpieza los
+                              jóvenes queremos trabajar y nuestra ciudad cada vez
+                              más sucia y cada vez más los privados
+                            </p>
+                          </div>
+                          <div class="flex gap-3 xl:flex-col w-full xl:w-[30%]">
+                            <p class="text-[12px] w-full">
+                              <span class="text-4xl">. </span>Juan Carlos Romero
+                              Osuna
+                            </p>
+  
+                            <p class="text-[12px] w-full">
+                              <span class="text-4xl">. </span>28/01/2023
+                            </p>
+                          </div>
+                        </section>
+                        <details class="flex flex-col gap-1 pb-2">
                         <summary class="cursor-pointer list-none mb-2">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +229,7 @@ btnAllEvents.addEventListener("click", () => {
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            class="w-4 h-4 grow"
+                            class="w-4 h-4 grow btnDetailEvent"
                           >
                             <path
                               stroke-linecap="round"
@@ -253,21 +248,133 @@ btnAllEvents.addEventListener("click", () => {
                           placeat.
                         </p>
                       </details>
+                      </section>
+                      <!-- sec 1 card  -->
+                      <!-- sec 2 card  -->
+                      <section
+                        class="pl-3 py-3 border-t-2 border-[#f1f1f1] bg-[#fcfcfc]"
+                      >
+                        <h3 class="text-[12px]">Finaliza en 23 horas</h3>
+                      </section>
+                      <!-- sec 2 card  -->
                     </section>
-                    <!-- sec 1 card  -->
-                    <!-- sec 2 card  -->
-                    <section
-                      class="pl-3 py-3 border-t-2 border-[#f1f1f1] bg-[#fcfcfc]"
-                    >
-                      <h3 class="text-[12px]">Finaliza en 23 horas</h3>
-                    </section>
-                    <!-- sec 2 card  -->
-                  </section>
-                </figure>
-                <!-- cards de anuncios  -->`;
-  });
-});
+                  </figure>
+                  <!-- cards de anuncios  -->`;
+    });
+  } else {
+    [...Array(cards)].forEach((_) => {
+      element.innerHTML += `<!-- cards de agoras  -->
+      <figure class="border-2 border-[#f1f1f1] cardAgoras cardTransition">
+        <section class="border-l-2 border-[#ff713f]">
+          <!-- sec 1 card  -->
+          <section class="flex flex-col gap-6 p-3">
+            <section
+              class="flex flex-col xl:flex-row xl:gap-6 border-b-1"
+            >
+              <div class="w-full xl:w-[70%]">
+                <h4 class="text-[#00adf3] font-bold">Stop ley ppp</h4>
+                <p class="text-[12px] text-justify">
+                  Por una ley absurda que señala a razas que realmente
+                  no son peligrosas.
+                </p>
+              </div>
+              <div class="flex gap-3 xl:flex-col w-full xl:w-[30%]">
+                <p class="text-[12px] w-full">
+                  <span class="text-4xl">. </span>Juan Carlos Romero
+                  Osuna
+                </p>
 
+                <p class="text-[12px] w-full">
+                  <span class="text-4xl">. </span>28/01/2023
+                </p>
+              </div>
+            </section>
+            <details class="flex flex-col gap-2 pb-2">
+              <summary class="cursor-pointer list-none mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4 grow"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+                <!-- Puedes agregar texto u otro contenido aquí si lo deseas -->
+              </summary>
+              <p class="text-[10px] text-justify 2xl:pr-10">
+                Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. Perspiciatis voluptatem, aperiam neque
+                praesentium, accusamus, alias a dolorum quaerat
+                obcaecati molestias recusandae accusantium hic
+                veritatis deleniti porro molestiae totam delectus
+                placeat.
+              </p>
+            </details>
+          </section>
+          <!-- sec 1 card  -->
+          <!-- sec 2 card  -->
+          <section
+            class="pl-3 py-3 border-t-2 border-[#f1f1f1] bg-[#fcfcfc]"
+          >
+            <h3 class="text-[12px]">Finaliza en 23 horas</h3>
+          </section>
+          <!-- sec 2 card  -->
+        </section>
+      </figure>
+      <!-- cards de agoras  -->`;
+    });
+  }
+};
+//Funcion para pintado de más cards
+
+//Accion boton para mostrar mas eventos
+btnAllEvents.addEventListener("click", () => {
+  btnAllEvents.innerText = "Ocultar anuncios";
+  secAnuncios.innerHTML = "";
+  secAnuncios.classList.add("h-[200px]");
+  secAnuncios.classList.remove("justify-center");
+  if (showauncios) {
+    paintCards(1, secAnuncios, true);
+    btnAllEvents.innerText = "Ver todos los anuncios";
+    secAnuncios.classList.remove("h-200px]");
+    secAnuncios.classList.add("justify-center");
+    showauncios = false;
+  } else {
+    paintCards(10, secAnuncios, true);
+    showauncios = true;
+  }
+  console.log("click");
+});
+paintCards(1, secAnuncios, true);
+//Accion boton para mostrar mas eventos
+
+//Accion boton para mostrar mas agoras
+btnAllAgoras.addEventListener("click", () => {
+  btnAllAgoras.innerText = "Ocultar Agoras";
+  secAgoras.innerHTML = "";
+  secAgoras.classList.add("h-[200px]");
+  secAgoras.classList.remove("justify-center");
+  if (showAgoras) {
+    paintCards(1, secAgoras, false);
+    btnAllAgoras.innerText = "Todas las Agoras";
+    secAgoras.classList.remove("h-[200px]");
+    secAgoras.classList.add("justify-center");
+    showAgoras = false;
+  } else {
+    paintCards(10, secAgoras, false);
+    showAgoras = true;
+  }
+});
+paintCards(1, secAgoras, false);
+//Accion boton para mostrar mas agoras
+
+//Acciones para mostrar mas cards
 document.addEventListener("DOMContentLoaded", () => {
   sliderMenu();
   window.addEventListener("resize", () => {
