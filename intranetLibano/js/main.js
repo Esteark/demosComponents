@@ -4,15 +4,16 @@ const sliderMenu = () => {
     breakpoints: {
       // when window width is >= 320px
       0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+
+      340: {
         slidesPerView: 2,
         spaceBetween: 10,
       },
-      540: {
-        slidesPerView: 2,
-        spaceBetween: 30,
-      },
     },
-    // centeredSlides: true,
+    centeredSlides: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true, // Deshabilita la paginación clickeable
@@ -93,17 +94,18 @@ actionbtn(toolbtn2, dropDowntool2);
 // Funcion agregadora de listeners
 function actionbtn(btn, submenu) {
   btn.addEventListener("click", () => {
-    if (window.innerWidth <= 1024) {
+    if (window.innerWidth < 1024) {
       toggleDropdown(submenu);
     } else {
       if (submenu.classList.contains("hidden")) {
         showQuitAnimation(submenu, true, animations.subMenu.open);
-        if (window.innerWidth > 1024) {
+        if (window.innerWidth >= 1024) {
           closeSubmenu(submenu);
         }
       } else {
         showQuitAnimation(submenu, false, animations.subMenu.close);
       }
+      removeToogle();
     }
   });
 }
@@ -160,26 +162,111 @@ function OpenCloseMenu() {
 }
 
 function toggleDropdown(element) {
-  let subMenu = element;
   let height = 0;
-
-  if (subMenu.classList.contains("hidden")) {
-    subMenu.classList.remove("hidden");
-    height = subMenu.scrollHeight;
-    subMenu.style.height = `${height}px`;
+  if (element.classList.contains("hidden")) {
+    element.classList.remove("hidden");
+    height = element.scrollHeight;
+    element.style.height = `${height}px`;
   } else {
-    subMenu.style.height = `${0}px`;
+    element.style.height = `${0}px`;
     setTimeout(() => {
-      subMenu.classList.contains("hidden");
-    }, 200);
+      element.classList.add("hidden");
+    }, 80);
   }
 }
-
+//Funcion para remover el estilo delos submenus puestos en la version mobile
 function removeToogle() {
   submenus.forEach((item) => {
     item.removeAttribute("style");
   });
 }
+//Funcion para remover el estilo delos submenus puestos en la version mobile
+
+//Acciones para mostrar mas cards
+//agregar clase de alto h-[300px]
+let cards = 1;
+
+const secAnuncions = document.getElementById("secAnuncios");
+const btnAllEvents = document.getElementById("btnAllEvents");
+btnAllEvents.addEventListener("click", () => {
+  if (cards <= 5) {
+    btnAllEvents.innerText = "Ver más anuncios";
+    cards += 1;
+  } else {
+    btnAllEvents.innerText = "Ocultar anuncions";
+    cards = 1;
+  }
+
+  secAnuncions.innerHTML = "";
+  [...Array(cards)].forEach((_) => {
+    secAnuncions.innerHTML += `<!-- cards de anuncios  -->
+                <figure class="border-2 border-[#f1f1f1]">
+                  <section class="border-l-2 border-[#00a79d]">
+                    <!-- sec 1 card  -->
+                    <section class="flex flex-col gap-6 p-3">
+                      <section
+                        class="flex flex-col xl:flex-row xl:gap-5 border-b-1"
+                      >
+                        <div class="w-full xl:w-[70%]">
+                          <h4 class="text-[#00a79d] font-bold">Empleo</h4>
+                          <p class="text-[12px] text-justify">
+                            Empleo para empresas públicas de limpieza los
+                            jóvenes queremos trabajar y nuestra ciudad cada vez
+                            más sucia y cada vez más los privados
+                          </p>
+                        </div>
+                        <div class="flex gap-3 xl:flex-col w-full xl:w-[30%]">
+                          <p class="text-[12px] w-full">
+                            <span class="text-4xl">. </span>Juan Carlos Romero
+                            Osuna
+                          </p>
+
+                          <p class="text-[12px] w-full">
+                            <span class="text-4xl">. </span>28/01/2023
+                          </p>
+                        </div>
+                      </section>
+                      <details class="flex flex-col gap-1 pb-2">
+                        <summary class="cursor-pointer list-none mb-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-4 h-4 grow"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                          <!-- Puedes agregar texto u otro contenido aquí si lo deseas -->
+                        </summary>
+                        <p class="text-[10px] text-justify 2xl:pr-10">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Perspiciatis voluptatem, aperiam neque
+                          praesentium, accusamus, alias a dolorum quaerat
+                          obcaecati molestias recusandae accusantium hic
+                          veritatis deleniti porro molestiae totam delectus
+                          placeat.
+                        </p>
+                      </details>
+                    </section>
+                    <!-- sec 1 card  -->
+                    <!-- sec 2 card  -->
+                    <section
+                      class="pl-3 py-3 border-t-2 border-[#f1f1f1] bg-[#fcfcfc]"
+                    >
+                      <h3 class="text-[12px]">Finaliza en 23 horas</h3>
+                    </section>
+                    <!-- sec 2 card  -->
+                  </section>
+                </figure>
+                <!-- cards de anuncios  -->`;
+  });
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   sliderMenu();
