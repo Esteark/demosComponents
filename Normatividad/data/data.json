@@ -1,0 +1,40 @@
+{
+  "filters": [
+    {
+      "id": 0,
+      "name": "Todas las categorías"
+    },
+    {
+      "id": 1,
+      "name": "Decretos"
+    },
+    {
+      "id": 2,
+      "name": "Resoluciones"
+    },
+    {
+      "id": 3,
+      "name": "Acuerdos"
+    },
+    {
+      "id": 4,
+      "name": "Circulares"
+    },
+    {
+      "id": 5,
+      "name": "Directivas"
+    },
+    {
+      "id": 6,
+      "name": "Normatividad Nacional"
+    },
+    {
+      "id": 7,
+      "name": "Otra"
+    },
+    {
+      "id": 8,
+      "name": "Edicto"
+    }
+  ]
+}
