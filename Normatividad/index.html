@@ -10,55 +10,34 @@
   </head>
   <body>
     <!-- main section -->
-    <main class="px-6 flex items-center h-screen">
+    <main class="px-6 flex items-center h-screen bg-[#f6f7fa]">
       <!-- main container  -->
       <section class="lg:container mx-auto w-full flex flex-col gap-3">
         <h2 class="font-bold text-xl md:text-2xl">Normatividad</h2>
         <!-- slider categorias -->
         <!-- Swiper -->
-        <article class="swiper mySwiperFilter container">
-          <div class="swiper-wrapper">
-            <button
-              class="bg-[#004884] text-white hover:bg-[#3366cc] transition py-2 duration-300 rounded-full swiper-slide"
-            >
-              Todas las categorías
-            </button>
-            <button
-              class="bg-[#004884] text-white hover:bg-[#3366cc] transition py-2 duration-300 rounded-full swiper-slide"
-            >
-              Decretos <span></span>
-            </button>
-            <button
-              class="bg-[#004884] text-white hover:bg-[#3366cc] transition py-2 duration-300 rounded-full swiper-slide"
-            >
-              Resoluciones <span></span>
-            </button>
-            <button
-              class="bg-[#004884] text-white hover:bg-[#3366cc] transition py-2 duration-300 rounded-full swiper-slide"
-            >
-              Acuerdos<span></span>
-            </button>
-            <button
-              class="bg-[#004884] text-white hover:bg-[#3366cc] transition py-2 duration-300 rounded-full swiper-slide"
-            >
-              Circulares<span></span>
-            </button>
-            <button
-              class="bg-[#004884] text-white hover:bg-[#3366cc] transition py-2 duration-300 rounded-full swiper-slide"
-            >
-              Directivas<span></span>
-            </button>
-          </div>
+        <article class="container swiper mySwiperFilter">
+          <div class="swiper-wrapper sliderBtn"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </article>
         <!-- slider categorias -->
+        <!-- slider Last documents  -->
+        <section class="flex flex-col gap-3">
+          <h2 class="font-bold text-xl md:text-2xl">Últimos documentos</h2>
+          <article class="container swiper mySwiperDocuments md:px-10">
+            <div class="swiper-wrapper sliderDocuments"></div>
+            <div class="swiper-button-next hidden md:flex"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
+          </article>
+        </section>
+        <!-- slider Last documents  -->
       </section>
       <!-- main container  -->
     </main>
     <!-- main section -->
 
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js" type="module"></script>
   </body>
 </html>

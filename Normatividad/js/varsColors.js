@@ -1,0 +1,18 @@
+export const colors = {
+  textGreen: "text-[#4caf50]",
+  textBrown: "text-[#795548]",
+  textYellow: "text-[#ff9800]",
+  textRed: "text-[#f44336]",
+  textBlue: "text-[#2196f3]",
+  textBlue2: "text-[#1734cc]",
+  textPurple: "text-[#673ab7]",
+  textOrange: "text-[#ff7800]",
+  bgGreen: "bg-[#e6ffed]",
+  bgBrown: "bg-[#efebe9]",
+  bgYellow: "bg-[#ffecb3]",
+  bgRed: "bg-[#ffdddd]",
+  bgBlue: "bg-[#c6dbff]",
+  bgBlue2: "bg-[#8b96cc]",
+  bgPurple: "bg-[#e7d0ff]",
+  bgOrange: "bg-[#ffcda1]",
+};

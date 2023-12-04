@@ -8,12 +8,15 @@
 }
 
 :root {
+  --mainColor: #f6f7fa;
   --mainblue: #004884;
   --secondaryBlue: #e6effd;
   --hoverblue: #3366cc;
+  --hoverBlue2: #306eea;
   --thirdblue: #1d42ff;
   --white: #fff;
   --black: #000;
+  --textbutton: #1c4884;
 }
 
 body {
@@ -34,5 +37,20 @@ body {
 .mySwiperFilter .swiper-button-next:after,
 .mySwiperFilter .swiper-button-prev:after {
   color: var(--black);
+  font-size: 12px;
+}
+
+.mySwiperDocuments .swiper-button-prev,
+.mySwiperDocuments .swiper-button-next {
+  width: 30px; /* Ajusta el ancho según tus necesidades */
+  height: 30px;
+  background-color: var(--thirdblue);
+  font-size: 24px;
+  border-radius: 30px;
+  /* top: var(--swiper-navigation-top-offset, 65%); */
+}
+.mySwiperDocuments .swiper-button-next:after,
+.mySwiperDocuments .swiper-button-prev:after {
+  color: var(--white);
   font-size: 12px;
 }
