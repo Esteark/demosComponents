@@ -17,6 +17,8 @@
   --white: #fff;
   --black: #000;
   --textbutton: #1c4884;
+  --gray: #e7e7e7;
+  --gray2: #757575;
 }
 
 body {
@@ -53,4 +55,10 @@ body {
 .mySwiperDocuments .swiper-button-prev:after {
   color: var(--white);
   font-size: 12px;
+}
+
+/* Hover Cards */
+
+.hoverCards {
+  transition: transform 0.2s;
 }

@@ -6,4 +6,6 @@ export const icons = {
   cvs: "../img/iconCSV.svg",
   txt: "../img/iconTXT.svg",
   audio: "../img/iconAudio.svg",
+  file: "../img/iconFile.svg",
+  video: "../img/iconVideo.svg",
 };

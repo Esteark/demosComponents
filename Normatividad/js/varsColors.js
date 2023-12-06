@@ -4,7 +4,7 @@ export const colors = {
   textYellow: "text-[#ff9800]",
   textRed: "text-[#f44336]",
   textBlue: "text-[#2196f3]",
-  textBlue2: "text-[#1734cc]",
+  textBlue2: "text-[#009688]",
   textPurple: "text-[#673ab7]",
   textOrange: "text-[#ff7800]",
   bgGreen: "bg-[#e6ffed]",
@@ -12,7 +12,7 @@ export const colors = {
   bgYellow: "bg-[#ffecb3]",
   bgRed: "bg-[#ffdddd]",
   bgBlue: "bg-[#c6dbff]",
-  bgBlue2: "bg-[#8b96cc]",
+  bgBlue2: "bg-[#93e2da]",
   bgPurple: "bg-[#e7d0ff]",
   bgOrange: "bg-[#ffcda1]",
 };

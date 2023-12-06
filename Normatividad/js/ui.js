@@ -1,4 +1,5 @@
 import { getData } from "./services.js";
+import { iconDocument, shortText } from "./tools.js";
 import { colors } from "./varsColors.js";
 
 //Slider Filters
@@ -101,7 +102,7 @@ const sliderDocuments = () => {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      992: {
+      1200: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
@@ -120,9 +121,9 @@ const sliderDocuments = () => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    loop: true,
+    // loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 10000,
       disableOnInteraction: false,
     },
   });
@@ -133,16 +134,21 @@ const sliderDocuments = () => {
 export const printSliderDocuments = async () => {
   const response = await getData();
   const { documents } = response;
+  const lastDocuments = obtaintLastDocuments(documents);
   const swiperSection = document.querySelector(".sliderDocuments");
   swiperSection.innerHTML = "";
-  documents.forEach((docu) => {
-    swiperSection.innerHTML += `<figure
-    class="bg-white rounded-md flex justify-between  items-center  p-6 h-auto swiper-slide "
-  >
+  lastDocuments.forEach((docu) => {
+    swiperSection.innerHTML += `<a class="bg-white rounded-md flex justify-between  items-center p-6 h-auto swiper-slide border border-[#e7e7e7] hoverCards lastFileCard" href="https://www.e-verify.gov/sites/default/files/everify/guides/InstructionsCreatePDFofE-VerifyManual.pdf" target="_blank" download>
     <figcaption class="flex flex-col gap-2">
-      <h3 class="text-[16px] font-bold">Nombre Archivo</h3>
-      <p class="text-[10px] md:text-[12px]">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      <h3 class="text-[16px] font-bold">${
+        docu.Title.length >= 20 ? shortText(docu.Title, 15) : docu.Title
+      }</h3>
+      <p class="text-[10px] md:text-[12px]" title="${docu.Description}">
+        ${
+          docu.Description.length >= 50
+            ? shortText(docu.Description, 40)
+            : docu.Description
+        }
       </p>
       <span
         class="${
@@ -152,11 +158,22 @@ export const printSliderDocuments = async () => {
         >${docu.Category}</span
       >
     </figcaption>
-    <img src="./img/iconAudio.svg" alt="" class="w-16 xl:w-20 " />
-  </figure>`;
+    <img src="${iconDocument(docu.FileLeafRef)}" alt="" class="w-16 xl:w-20 " />
+  </a>`;
   });
 
   sliderDocuments();
+
+  // Agrego evento hover a las cards
+  const lastFileCard = document.querySelectorAll(".lastFileCard");
+  lastFileCard.forEach((card) => {
+    card.addEventListener("mouseover", () => {
+      card.style.transform = "translateY(-5px)";
+    });
+    card.addEventListener("mouseout", () => {
+      card.style.transform = "translateY(0px)";
+    });
+  });
 
   function colorLabel(categoria) {
     //Agregar más categorias si es necesario
@@ -176,6 +193,12 @@ export const printSliderDocuments = async () => {
       case "Edicto":
         return colors.bgBlue2 + " " + colors.textBlue2;
     }
+  }
+  function obtaintLastDocuments(documents) {
+    const sortDocuments = documents;
+    sortDocuments.sort((a, b) => new Date(b.Modified) - new Date(a.Modified));
+    const cutDocuments = sortDocuments.slice(0, 10);
+    return cutDocuments;
   }
 };
 //Acciones documents
