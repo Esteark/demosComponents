@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <script src="./js/tailwindcss3.3.3.js"></script>
   </head>
-  <body>
+  <body class="bg-[#f6f7fa]">
     <!-- main section -->
-    <main class="px-6 flex items-center h-screen bg-[#f6f7fa]">
+    <main class="px-6 flex h-[100vh] items-center">
       <!-- main container  -->
       <section class="lg:container mx-auto w-full flex flex-col gap-6">
         <h2 class="font-bold text-xl md:text-2xl">Normatividad</h2>
@@ -25,7 +25,7 @@
         <!-- slider Last documents  -->
         <section class="flex flex-col gap-6">
           <h2 class="font-bold text-xl md:text-2xl">Últimos documentos</h2>
-          <article class="container swiper mySwiperDocuments md:px-10">
+          <article class="container swiper mySwiperDocuments">
             <div class="swiper-wrapper sliderDocuments"></div>
             <div class="swiper-button-next hidden md:flex"></div>
             <div class="swiper-button-prev hidden md:flex"></div>
@@ -33,17 +33,60 @@
         </section>
         <!-- slider Last documents  -->
         <!-- main documents  -->
-        <article
-          class="bg-white rounded-md p-3 px-4 shadow-sm flex flex-col gap-3"
-        >
+        <article class="bg-white rounded-md p-6 shadow-sm flex flex-col gap-5">
+          <!-- section input  -->
+          <section>
+            <article class="relative">
+              <input
+                type="text"
+                placeholder="Busca en Nomatividad"
+                class="text-[12px] border-2 w-full rounded-md py-3 px-3 outline-none focus:shadow-lg transition duration-300"
+              />
+              <button
+                class="bg-[#306eea] hover:bg-[#1d42ff] transition duration-300 rounded-full text-white absolute right-2 top-[0.45rem] cursor-pointer p-1"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 p-1"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
+              </button>
+            </article>
+          </section>
+          <!-- section input  -->
+
           <!-- sec filters  -->
-          <section class="flex flex-col lg:flex-row pt-3 gap-3 items-center">
+          <section class="flex justify-between pt-3 gap-3 items-center">
             <h3 class="text-[14px] font-bold">Ordenar por:</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 lg:hidden"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+              />
+            </svg>
+
             <article
-              class="flex flex-col lg:flex-row text-[14px] text-[#757575] gap-5"
+              class="hidden flex-col lg:flex lg:flex-row text-[14px] text-[#757575] gap-4"
             >
               <span
-                class="flex gap-1 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +105,7 @@
                 Recientes
               </span>
               <span
-                class="flex gap-1 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,21 +122,141 @@
                   />
                 </svg>
 
-                Fecha modificación
+                Fecha creación
               </span>
+
+              <span
+                class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                  />
+                </svg>
+
+                Fecha de expedición
+              </span>
+
+              <span
+                class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+                  />
+                </svg>
+
+                A-Z
+              </span>
+              <span
+                class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                  />
+                </svg>
+
+                Categoría
+              </span>
+
+              <article>
+                <span
+                  class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"
+                    />
+                  </svg>
+                  Filtrar por fecha
+                </span>
+              </article>
             </article>
           </section>
           <!-- sec filters  -->
           <!-- sec documents  -->
-          <section class="flex flex-col gap-3">
+          <section class="flex flex-col gap-3" id="secDocs">
             <!-- file -->
-            <section class="grid grid-cols-12 shadow-sm">
-              <article class="col-span-6 md:col-span-3">
+            <section class="grid grid-cols-12 gap-3 pb-3 border-b">
+              <article
+                class="col-span-3 md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center"
+              >
                 <img src="./img/iconDoc.svg" class="w-16 md:w-20" alt="" />
+                <p class="text-[12px] font-bold">20kb</p>
               </article>
-              <article class="col-span-6 md:col-span-3"></article>
-              <article class="md:col-span-3 xl:block"></article>
-              <article class="md:col-span-3 xl:block"></article>
+              <article
+                class="col-span-9 md:col-span-10 lg:col-span-7 flex flex-col justify-center"
+              >
+                <span
+                  class="w-32 bg-[#ffecb3] text-[#ff9800] rounded-full text-[10px] text-center rounded-full p-1 text-[10px] font-bold mb-2 lg:hidden"
+                  >Decretos</span
+                >
+                <a href="#" class="font-bold hover:underline">
+                  Titulo documento</a
+                >
+                <p class="text-[12px]">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Explicabo quia esse facere
+                </p>
+              </article>
+              <article
+                class="hidden md:col-span-2 lg:col-span-2 2xl:col-span-1 lg:flex flex-col justify-center"
+              >
+                <p class="font-bold text-[14px]">Publicación</p>
+                <p class="text-[14px]">12/12/2023</p>
+              </article>
+              <article
+                class="hidden md:col-span-2 lg:col-span-2 2xl:col-span-1 lg:flex flex-col justify-center"
+              >
+                <p class="font-bold text-[14px]">Expedición</p>
+                <p class="text-[14px]">12/12/2023</p>
+              </article>
+              <article
+                class="hidden col-span-2 xl:col-span-2 2xl:flex justify-center items-center flex-col"
+              >
+                <p class="font-bold mb-1 text-[14px]">Tipo documento</p>
+                <span
+                  class="w-32 bg-[#ffecb3] text-[#ff9800] rounded-full text-[10px] text-center rounded-full text-[10px] font-bold h-[20px] flex items-center justify-center"
+                  >Decretos</span
+                >
+              </article>
             </section>
             <!-- file  -->
           </section>

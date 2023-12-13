@@ -133,8 +133,8 @@ const sliderDocuments = () => {
 //Acciones documents
 export const printSliderDocuments = async () => {
   const response = await getData();
-  const { documents } = response;
-  const lastDocuments = obtaintLastDocuments(documents);
+  const { docs } = response;
+  const lastDocuments = obtaintLastDocuments(docs);
   const swiperSection = document.querySelector(".sliderDocuments");
   swiperSection.innerHTML = "";
   lastDocuments.forEach((docu) => {
@@ -175,25 +175,6 @@ export const printSliderDocuments = async () => {
     });
   });
 
-  function colorLabel(categoria) {
-    //Agregar más categorias si es necesario
-    switch (categoria) {
-      case "Decretos":
-        return colors.bgBlue + " " + colors.textBlue;
-      case "Resoluciones":
-        return colors.bgGreen + " " + colors.textGreen;
-      case "Acuerdos":
-        return colors.bgYellow + " " + colors.textYellow;
-      case "Circulares":
-        return colors.bgRed + " " + colors.textRed;
-      case "Directivas":
-        return colors.bgPurple + " " + colors.textPurple;
-      case "Normatividad Nacional":
-        return colors.bgOrange + " " + colors.textOrange;
-      case "Edicto":
-        return colors.bgBlue2 + " " + colors.textBlue2;
-    }
-  }
   function obtaintLastDocuments(documents) {
     const sortDocuments = documents;
     sortDocuments.sort((a, b) => new Date(b.Modified) - new Date(a.Modified));
@@ -201,4 +182,35 @@ export const printSliderDocuments = async () => {
     return cutDocuments;
   }
 };
+
+function colorLabel(categoria) {
+  //Agregar más categorias si es necesario
+  switch (categoria) {
+    case "Decretos":
+      return colors.bgBlue + " " + colors.textBlue;
+    case "Resoluciones":
+      return colors.bgGreen + " " + colors.textGreen;
+    case "Acuerdos":
+      return colors.bgYellow + " " + colors.textYellow;
+    case "Circulares":
+      return colors.bgRed + " " + colors.textRed;
+    case "Directivas":
+      return colors.bgPurple + " " + colors.textPurple;
+    case "Normatividad Nacional":
+      return colors.bgOrange + " " + colors.textOrange;
+    case "Edicto":
+      return colors.bgBlue2 + " " + colors.textBlue2;
+  }
+}
+
+// Funcion para pintar los documentos
+export const actionDocuments = async () => {
+  const response = await getData();
+  const { documents } = response;
+
+  const secDocs = document.getElementById("secDocs");
+
+  documents.forEach();
+};
+
 //Acciones documents

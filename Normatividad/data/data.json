@@ -15,7 +15,8 @@
       "Created": "2023-09-01T14:30:00Z",
       "Modified": "2023-09-02T16:45:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo1.pdf"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo1.pdf",
+        "FileSize": "39 kB"
       }
     },
     {
@@ -33,7 +34,8 @@
       "Created": "2023-09-03T11:20:00Z",
       "Modified": "2023-09-04T13:10:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo2.txt"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo2.txt",
+        "FileSize": "239 kB"
       }
     },
     {
@@ -51,7 +53,8 @@
       "Created": "2023-09-05T09:15:00Z",
       "Modified": "2023-09-06T12:25:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo3.docx"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo3.docx",
+        "FileSize": "500 kB"
       }
     },
     {
@@ -69,7 +72,8 @@
       "Created": "2023-09-07T10:30:00Z",
       "Modified": "2023-09-08T14:50:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo4.xls"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo4.xls",
+        "FileSize": "24 kB"
       }
     },
     {
@@ -87,7 +91,8 @@
       "Created": "2023-09-09T15:40:00Z",
       "Modified": "2023-09-10T17:20:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo5.csv"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo5.csv",
+        "FileSize": "53 kB"
       }
     },
     {
@@ -105,7 +110,8 @@
       "Created": "2023-09-11T08:55:00Z",
       "Modified": "2023-09-12T10:10:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo6.ppt"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo6.ppt",
+        "FileSize": "60 kB"
       }
     },
     {
@@ -123,7 +129,8 @@
       "Created": "2023-09-13T13:45:00Z",
       "Modified": "2023-09-14T15:30:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo7.mp3"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo7.mp3",
+        "FileSize": "78 kB"
       }
     },
     {
@@ -141,7 +148,8 @@
       "Created": "2023-09-15T16:20:00Z",
       "Modified": "2023-09-16T18:05:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo8.mp4"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo8.mp4",
+        "FileSize": "50 kB"
       }
     },
     {
@@ -159,7 +167,8 @@
       "Created": "2023-09-17T11:40:00Z",
       "Modified": "2023-09-18T12:55:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo9.jpg"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo9.jpg",
+        "FileSize": "30 kB"
       }
     },
     {
@@ -177,7 +186,8 @@
       "Created": "2023-09-19T14:15:00Z",
       "Modified": "2023-09-20T16:30:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo10.png"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo10.png",
+        "FileSize": "30 kB"
       }
     },
     {
@@ -195,7 +205,8 @@
       "Created": "2023-09-21T09:25:00Z",
       "Modified": "2023-09-22T11:40:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo11.pdf"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo11.pdf",
+        "FileSize": "60 kB"
       }
     },
     {
@@ -213,7 +224,8 @@
       "Created": "2023-09-23T12:55:00Z",
       "Modified": "2023-09-24T14:10:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo12.txt"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo12.txt",
+        "FileSize": "50 kB"
       }
     },
     {
@@ -231,7 +243,8 @@
       "Created": "2023-09-25T08:15:00Z",
       "Modified": "2023-09-26T10:30:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo13.docx"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo13.docx",
+        "FileSize": "56 kB"
       }
     },
     {
@@ -249,7 +262,8 @@
       "Created": "2023-09-27T11:45:00Z",
       "Modified": "2023-09-28T14:00:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo14.xls"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo14.xls",
+        "FileSize": "60 kB"
       }
     },
     {
@@ -267,7 +281,8 @@
       "Created": "2023-09-29T15:20:00Z",
       "Modified": "2023-09-30T17:35:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo15.csv"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo15.csv",
+        "FileSize": "60 kB"
       }
     },
     {
@@ -285,7 +300,8 @@
       "Created": "2023-10-01T10:10:00Z",
       "Modified": "2023-10-02T12:25:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo16.ppt"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo16.ppt",
+        "FileSize": "70 kB"
       }
     },
     {
@@ -303,7 +319,8 @@
       "Created": "2023-10-03T13:40:00Z",
       "Modified": "2023-10-04T15:55:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo17.mp3"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo17.mp3",
+        "FileSize": "67 kB"
       }
     },
     {
@@ -339,7 +356,8 @@
       "Created": "2023-10-07T11:30:00Z",
       "Modified": "2023-10-08T13:45:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo19.jpg"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo19.jpg",
+        "FileSize": "50 kB"
       }
     },
     {
@@ -357,7 +375,8 @@
       "Created": "2023-10-09T15:00:00Z",
       "Modified": "2023-10-10T17:15:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo20.png"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo20.png",
+        "FileSize": "50 kB"
       }
     },
     {
@@ -375,7 +394,8 @@
       "Created": "2023-10-11T09:10:00Z",
       "Modified": "2023-10-12T11:25:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo21.pdf"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo21.pdf",
+        "FileSize": "70 kB"
       }
     },
     {
@@ -393,7 +413,8 @@
       "Created": "2023-10-13T12:30:00Z",
       "Modified": "2023-10-14T14:45:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo22.txt"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo22.txt",
+        "FileSize": "670 kB"
       }
     },
     {
@@ -411,7 +432,8 @@
       "Created": "2023-10-15T08:50:00Z",
       "Modified": "2023-10-16T11:05:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo23.docx"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo23.docx",
+        "FileSize": "30 kB"
       }
     },
     {
@@ -429,7 +451,8 @@
       "Created": "2023-10-17T11:20:00Z",
       "Modified": "2023-10-18T13:35:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo24.xls"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo24.xls",
+        "FileSize": "785 kB"
       }
     },
     {
@@ -447,7 +470,8 @@
       "Created": "2023-10-19T14:50:00Z",
       "Modified": "2023-10-20T17:05:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo25.csv"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo25.csv",
+        "FileSize": "87 kB"
       }
     },
     {
@@ -465,7 +489,8 @@
       "Created": "2023-10-21T10:00:00Z",
       "Modified": "2023-10-22T12:15:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo26.ppt"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo26.ppt",
+        "FileSize": "780 kB"
       }
     },
     {
@@ -483,7 +508,8 @@
       "Created": "2023-10-23T13:15:00Z",
       "Modified": "2023-10-24T15:30:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo27.mp3"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo27.mp3",
+        "FileSize": "30 kB"
       }
     },
     {
@@ -501,7 +527,8 @@
       "Created": "2023-10-25T16:30:00Z",
       "Modified": "2023-10-26T18:45:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo28.mp4"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo28.mp4",
+        "FileSize": "70 kB"
       }
     },
     {
@@ -519,7 +546,8 @@
       "Created": "2023-10-27T11:40:00Z",
       "Modified": "2023-10-28T13:55:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo29.jpg"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo29.jpg",
+        "FileSize": "730 kB"
       }
     },
     {
@@ -537,7 +565,8 @@
       "Created": "2023-10-29T15:10:00Z",
       "Modified": "2023-10-30T17:25:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo30.png"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo30.png",
+        "FileSize": "50 kB"
       }
     },
     {
@@ -555,7 +584,8 @@
       "Created": "2023-11-01T09:20:00Z",
       "Modified": "2023-11-02T11:35:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo31.pdf"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo31.pdf",
+        "FileSize": "72 kB"
       }
     },
     {
@@ -573,7 +603,8 @@
       "Created": "2023-11-03T12:45:00Z",
       "Modified": "2023-11-04T15:00:00Z",
       "File": {
-        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo32.txt"
+        "ServerRelativeUrl": "/sites/tu-sitio/Documentos/Archivo32.txt",
+        "FileSize": "80 kB"
       }
     }
   ]
