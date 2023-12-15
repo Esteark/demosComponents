@@ -1,4 +1,5 @@
 import { icons } from "./icons.js";
+import { colors } from "./varsColors.js";
 
 export function shortText(texto, longitudMaxima) {
   if (texto.length <= longitudMaxima) {
@@ -47,4 +48,52 @@ export function iconDocument(name) {
     default:
       return icons.file;
   }
+}
+
+export function colorLabel(categoria) {
+  //Agregar más categorias si es necesario
+  switch (categoria) {
+    case "Decretos":
+      return colors.bgBlue + " " + colors.textBlue;
+    case "Resoluciones":
+      return colors.bgGreen + " " + colors.textGreen;
+    case "Acuerdos":
+      return colors.bgYellow + " " + colors.textYellow;
+    case "Circulares":
+      return colors.bgRed + " " + colors.textRed;
+    case "Directivas":
+      return colors.bgPurple + " " + colors.textPurple;
+    case "Normatividad Nacional":
+      return colors.bgOrange + " " + colors.textOrange;
+    case "Edicto":
+      return colors.bgBlue2 + " " + colors.textBlue2;
+  }
+}
+export function dateFormater(date) {
+  const fecha = new Date(date);
+
+  const dia = fecha.getDate();
+  const mes = fecha.getMonth() + 1; // Los meses en JavaScript son de 0 a 11
+  const año = fecha.getFullYear();
+
+  // Formatear la cadena de fecha con ceros a la izquierda si es necesario
+  const diaStr = dia < 10 ? "0" + dia : dia;
+  const mesStr = mes < 10 ? "0" + mes : mes;
+
+  // Construir la cadena de fecha en formato dd/mm/yyyy
+  var dateformater = diaStr + "/" + mesStr + "/" + año;
+
+  return dateformater;
+}
+
+// funcion para obtener los ultimos documentos
+export function obtaintLastDocuments(documents, cant) {
+  const sortDocuments = documents;
+  sortDocuments.sort((a, b) => new Date(b.Modified) - new Date(a.Modified));
+
+  if (cant != 0) {
+    const cutDocuments = sortDocuments.slice(0, cant);
+    return cutDocuments;
+  }
+  return sortDocuments;
 }

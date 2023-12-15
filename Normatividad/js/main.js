@@ -1,6 +1,5 @@
-import { printSliderDocuments, printSliderFilters } from "./ui.js";
+import { funcionUI } from "./ui.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  printSliderFilters();
-  printSliderDocuments();
+  funcionUI();
 });

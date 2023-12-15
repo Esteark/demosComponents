@@ -67,6 +67,25 @@ body {
 
 /* Hover Cards */
 
-.hoverCards {
-  transition: transform 0.2s;
+.lastFileCard {
+  transform: translateY(0px);
+  transition: all 0.3s ease;
+}
+
+.lastFileCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos para las scroll bars  */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray2);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
 }

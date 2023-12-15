@@ -5,15 +5,13 @@ export const getData = async () => {
   const { documents } = data;
   let filters = [];
   let docs = [];
-  let id = 0;
+
   documents.forEach((docu) => {
     if (!filters.some((item) => item.name === docu.Category)) {
       const newObj = {
-        id,
         name: docu.Category,
       };
       filters.push(newObj);
-      id += 1;
     }
     const newdoc = {
       Title: docu.Title,
@@ -23,9 +21,11 @@ export const getData = async () => {
       FileSize: docu.File.FileSize,
       Created: docu.Created,
       Modified: docu.Modified,
+      Exp: docu.Modified,
+      uri: docu.uri,
     };
     docs.push(newdoc);
   });
-  console.log(docs);
+
   return { filters, docs };
 };
