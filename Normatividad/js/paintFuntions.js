@@ -155,12 +155,11 @@ export const printSliderDocuments = async () => {
 };
 // Pintado Slider ultimos documentos
 
-// Funcion para pintar los documentos
+// Funcion para las acciones en los documentos
 export const actionDocuments = async () => {
   const response = await getData();
   const { docs } = response;
   documentos = docs;
-  let arrayFilter = [];
   paintMainDocs(documentos);
 
   //Agrego listener en los eventos click de los botones del slider para : 1. estilos y 2. Filtrar
@@ -169,8 +168,15 @@ export const actionDocuments = async () => {
     btn.addEventListener("click", () => {
       const id = btn.getAttribute("data-filter");
       const label = btn.getAttribute("data-label");
-      arrayFilter = documentos.filter((item) => item.Category === label);
-      paintMainDocs(arrayFilter);
+      documentos = docs.filter((item) => item.Category === label);
+
+      if (documentos.length != 0) {
+        paintMainDocs(documentos);
+      } else {
+        documentos = docs;
+        paintMainDocs(documentos);
+      }
+
       clickButton(id);
     });
   });
@@ -193,17 +199,32 @@ export const actionDocuments = async () => {
       }
     });
   }
+  // función para el (buscador)
+  actionInputText();
+  // función para el (buscador)
 };
+// Funcion para las acciones en los documentos
 
-function actionInputText() {}
+// Funcion para el buscador
+function actionInputText() {
+  const txtNormatividad = document.getElementById("txtNormatividad");
+  txtNormatividad.addEventListener("input", (e) => {
+    const arrayFilter = documentos.filter((item) =>
+      item.Title.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    paintMainDocs(arrayFilter);
+  });
+}
+// Funcion para el buscador
 
+// Funcion para pintar los documentos
 function paintMainDocs(docs) {
   if (docs.length != 0) {
     const secDocs = document.getElementById("secDocs");
     secDocs.innerHTML = "";
     docs.forEach((doc) => {
       secDocs.innerHTML += `<!-- file -->
-      <section class="grid grid-cols-12 gap-3 py-3 border-b">
+      <section class="grid grid-cols-12 gap-3 py-3 border-b cardDocument">
         <article
           class="col-span-12 sm:col-span-3 md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center"
         >
@@ -228,7 +249,7 @@ function paintMainDocs(docs) {
           ${doc.Description}
           </p>
           <div
-            class="w-full flex flex-wrap justify-start gap-5 mb:gap-1 lg:hidden text-[12px] mt-1"
+            class="w-full flex flex-wrap justify-center sm:justify-start gap-10 sm:gap-5 mb:gap-1 lg:hidden text-[12px] my-3 md:my-2"
           >
             <div class="flex flex-col md:flex-row gap-1">
               <p>Fecha publicación:</p>
@@ -279,3 +300,4 @@ function paintMainDocs(docs) {
    </section>`;
   }
 }
+// Funcion para pintar los documentos

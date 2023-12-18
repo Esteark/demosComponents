@@ -76,6 +76,14 @@ body {
   transform: translateY(-5px);
 }
 
+.cardDocument {
+  transition: transform 0.3s;
+}
+
+.cardDocument:hover {
+  transform: scale(1.01);
+}
+
 /* Estilos para las scroll bars  */
 ::-webkit-scrollbar {
   width: 7px;
