@@ -97,3 +97,17 @@ export function obtaintLastDocuments(documents, cant) {
   }
   return sortDocuments;
 }
+
+export const datePicker = () => {
+  flatpickr("#dateStart", {
+    dateFormat: "d/m/Y", // Formato de fecha
+    enableTime: true, // Habilitar selección de tiempo
+    minDate: "today", // Fecha mínima permitida
+    maxDate: "2100-12-31", // Fecha máxima permitida
+    locale: "es", // Configuración regional (en este caso, español)
+    onClose: function (selectedDates, dateStr, instance) {
+      console.log("Fecha seleccionada:", dateStr);
+    },
+    // Más opciones y eventos aquí
+  });
+};

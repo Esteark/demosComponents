@@ -202,6 +202,9 @@ export const actionDocuments = async () => {
   // función para el (buscador)
   actionInputText();
   // función para el (buscador)
+
+  //Función para el menu de filtros
+  menuFilters();
 };
 // Funcion para las acciones en los documentos
 
@@ -217,6 +220,42 @@ function actionInputText() {
 }
 // Funcion para el buscador
 
+//funcion para el menu mobile
+function menuFilters() {
+  //Funcion para el btn en menu mobile
+
+  const btnMenuFilters = document.getElementById("btnMenuFilters");
+  let showMenu = false;
+  btnMenuFilters.addEventListener("click", () => {
+    const secFilters = document.getElementById("secFilters");
+    if (!showMenu) {
+      secFilters.classList.remove("max-h-[0px]");
+      secFilters.classList.add("max-h-[500px]");
+      showMenu = true;
+    } else {
+      secFilters.classList.remove("max-h-[500px]");
+      secFilters.classList.add("max-h-[0px]");
+      showMenu = false;
+    }
+  });
+
+  // función para el dateTimePicker
+  const btnFilterDate = document.getElementById("btnFilterDate");
+  let showdateSec = false;
+  btnFilterDate.addEventListener("click", () => {
+    const secInputsDate = document.getElementById("secInputsDate");
+    if (!showdateSec) {
+      secInputsDate.classList.remove("max-h-[0px]");
+      secInputsDate.classList.add("max-h-[300px]");
+      showdateSec = true;
+    } else {
+      secInputsDate.classList.remove("max-h-[300px]");
+      secInputsDate.classList.add("max-h-[0px]");
+      showdateSec = false;
+    }
+  });
+}
+
 // Funcion para pintar los documentos
 function paintMainDocs(docs) {
   if (docs.length != 0) {
@@ -231,7 +270,7 @@ function paintMainDocs(docs) {
           <img src="${iconDocument(
             doc.FileLeafRef
           )}" class="w-16 md:w-20" alt="" />
-          <p class="text-[12px] font-bold">20kb</p>
+          <p class="text-[12px] font-bold">${doc.FileSize}</p>
         </article>
         <article
           class="col-span-12 sm:col-span-9 md:col-span-10 lg:col-span-7 flex flex-col justify-center items-center sm:items-start "
@@ -249,7 +288,7 @@ function paintMainDocs(docs) {
           ${doc.Description}
           </p>
           <div
-            class="w-full flex flex-wrap justify-center sm:justify-start gap-10 sm:gap-5 mb:gap-1 lg:hidden text-[12px] my-3 md:my-2"
+            class="w-full flex flex-wrap justify-center sm:justify-start gap-10  sm:gap-5 mb:gap-1 lg:hidden text-[12px] my-3 md:my-2"
           >
             <div class="flex flex-col md:flex-row gap-1">
               <p>Fecha publicación:</p>
@@ -301,3 +340,58 @@ function paintMainDocs(docs) {
   }
 }
 // Funcion para pintar los documentos
+
+// let datosConsulta = await consumirDatosFuncionarios();
+// let currentPage = 1;
+// let itemsPerPage = 6;
+// const numPagina = document.querySelector('.contenedor__numPagina');
+
+// export async function showCurrentPage(resp) {
+//     const startIndex = (currentPage - 1) * itemsPerPage;
+//     const endIndex = startIndex + itemsPerPage;
+//     const data = resp.d.results;
+//     const dataToRender = data.slice(startIndex, endIndex);
+
+//     const cardContainer = document.querySelector(".contenedor__funcionarios");
+//     cardContainer.innerHTML = ''; // Limpiar el contenido actual
+
+//     pintarCardsFuncionarios(dataToRender);
+// }
+
+// const prevButton = document.getElementById("atras");
+// const nextButton = document.getElementById("siguiente");
+
+// prevButton.addEventListener("click", async (e) => {
+//     e.preventDefault();
+//     if (currentPage > 1) {
+//         currentPage--;
+
+//         numPagina.innerText = currentPage;
+
+//         showCurrentPage(datosConsulta);
+//     } else {
+//         console.log("Ya no puedes retroceder más.");
+//     }
+// });
+
+// nextButton.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     let data = datosConsulta.d.results;
+//     const totalPages = Math.ceil(data.length / itemsPerPage);
+
+//     if (currentPage < totalPages) {
+//         currentPage++;
+
+//         numPagina.innerText = currentPage;
+
+//         // Ocultar elementos anteriores
+//         const previousItems = document.querySelectorAll(".card");
+//         previousItems.forEach(item => {
+//             item.classList.add("hide");
+//         });
+
+//         showCurrentPage(datosConsulta);
+//     } else {
+//         console.log("Ya estás en la última página.");
+//     }
+// });

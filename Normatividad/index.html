@@ -6,6 +6,7 @@
     <title>Normatividad</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./datePicker/flatpickr.min.css" />
     <script src="./js/tailwindcss3.3.3.js"></script>
   </head>
   <body class="bg-[#f6f7fa]">
@@ -66,28 +67,34 @@
           <!-- section input  -->
 
           <!-- sec filters  -->
-          <section class="flex justify-between pt-3 gap-3 items-center">
-            <h3 class="text-[14px] font-bold">Ordenar por:</h3>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 lg:hidden"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
-              />
-            </svg>
+          <section
+            class="flex flex-col lg:flex-row pt-3 gap-3 lg:items-center justify-between"
+          >
+            <article class="flex justify-between">
+              <h3 class="text-[14px] font-bold">Ordenar por:</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 lg:hidden cursor-pointer"
+                id="btnMenuFilters"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+                />
+              </svg>
+            </article>
 
             <article
-              class="hidden max-h-[200px] lg:h-auto flex-col lg:flex lg:flex-row text-[14px] text-[#757575] gap-4"
+              class="lg:relative flex flex-col lg:flex-row text-[14px] text-[#757575] gap-4 transition duration-500 max-h-[0px] lg:max-h-[100px] overflow-y-hidden transition-all duration-300 mb-2 lg:mb-0"
+              id="secFilters"
             >
               <span
-                class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                class="flex gap-2 font-bold hover:underline cursor-pointer items-center"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,9 +134,10 @@
                 A-Z
               </span>
 
-              <article class="flex flex-col relative">
+              <article class="flex flex-col gap-3 relative">
                 <span
                   class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                  id="btnFilterDate"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -142,12 +150,91 @@
                     <path
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
                     />
                   </svg>
+
                   Filtrar por fecha
                 </span>
-                <section class="hidden"></section>
+                <section
+                  class="lg:absolute w-[100%] lg:w-[500px] lg:right-0 lg:top-[2rem] lg:bg-white lg:rounded-md lg:shadow-md z-30 max-h-[0px] transition-all duration-500 ease-in-out"
+                  id="secInputsDate"
+                >
+                  <section class="lg:p-6 flex flex-col gap-2">
+                    <div class="flex flex-col w-full gap-1">
+                      <label for="dates">
+                        <p class="text-[12px] font-bold text-black">
+                          Tipo fecha
+                        </p></label
+                      >
+                      <select
+                        id="dates"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none w-full"
+                      >
+                        <option selected>Seleccione una fecha</option>
+                        <option value="0">Fecha de Creación</option>
+                        <option value="1">Fecha de Expedición</option>
+                      </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <article
+                        class="flex flex-col col-span-2 lg:col-span-1 gap-1"
+                      >
+                        <label for="dateStart ">
+                          <p class="text-[12px] font-bold text-black">Desde</p>
+                        </label>
+                        <section class="relative">
+                          <input
+                            type="text"
+                            id="dateStart"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg py-2 px-3 outline-none w-full"
+                          />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-5 h-5 absolute right-2 top-[0.5rem]"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                            />
+                          </svg>
+                        </section>
+                      </article>
+                      <article class="flex flex-col col-span-2 lg:col-span-1">
+                        <label for="dateStart">
+                          <p class="text-[12px] font-bold text-black">Hasta</p>
+                        </label>
+                        <section class="relative">
+                          <input
+                            type="text"
+                            id="dateEnd"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg py-2 px-3 outline-none w-full"
+                          />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-5 h-5 absolute right-2 top-[0.5rem]"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                            />
+                          </svg>
+                        </section>
+                      </article>
+                    </div>
+                  </section>
+                </section>
               </article>
             </article>
           </section>
@@ -227,7 +314,7 @@
       <!-- main container  -->
     </main>
     <!-- main section -->
-
+    <script src="./datePicker/flatpickr.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.js" type="module"></script>
   </body>
