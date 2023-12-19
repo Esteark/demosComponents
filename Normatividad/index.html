@@ -68,7 +68,7 @@
 
           <!-- sec filters  -->
           <section
-            class="flex flex-col lg:flex-row pt-3 gap-3 lg:items-center justify-between"
+            class="flex flex-col lg:flex-row pt-3 gap-3 lg:items-center justify-between border-b-2 pb-3"
           >
             <article class="flex justify-between">
               <h3 class="text-[14px] font-bold">Ordenar por:</h3>
@@ -90,7 +90,7 @@
             </article>
 
             <article
-              class="lg:relative flex flex-col lg:flex-row text-[14px] text-[#757575] gap-4 transition duration-500 max-h-[0px] lg:max-h-[100px] overflow-y-hidden transition-all duration-300 mb-2 lg:mb-0"
+              class="lg:relative flex flex-col lg:flex-row text-[14px] text-[#757575] gap-4 transition duration-500 max-h-[0px] lg:max-h-[300px] transition-all duration-300 mb-2 lg:mb-0 overflow-y-hidden lg:overflow-y-visible"
               id="secFilters"
             >
               <span
@@ -157,10 +157,12 @@
                   Filtrar por fecha
                 </span>
                 <section
-                  class="lg:absolute w-[100%] lg:w-[500px] lg:right-0 lg:top-[2rem] lg:bg-white lg:rounded-md lg:shadow-md z-30 max-h-[0px] transition-all duration-500 ease-in-out"
+                  class="lg:absolute w-[100%] lg:w-[500px] lg:right-0 lg:top-[2rem] lg:bg-white z-30 max-h-[0px] transition-all duration-500 ease-in-out overflow-y-hidden"
                   id="secInputsDate"
                 >
-                  <section class="lg:p-6 flex flex-col gap-2">
+                  <section
+                    class="lg:p-6 flex flex-col gap-2 lg:border-2 lg:rounded-md"
+                  >
                     <div class="flex flex-col w-full gap-1">
                       <label for="dates">
                         <p class="text-[12px] font-bold text-black">
@@ -206,7 +208,9 @@
                           </svg>
                         </section>
                       </article>
-                      <article class="flex flex-col col-span-2 lg:col-span-1">
+                      <article
+                        class="flex flex-col gap-1 col-span-2 lg:col-span-1"
+                      >
                         <label for="dateStart">
                           <p class="text-[12px] font-bold text-black">Hasta</p>
                         </label>

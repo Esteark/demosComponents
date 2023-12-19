@@ -231,10 +231,12 @@ function menuFilters() {
     if (!showMenu) {
       secFilters.classList.remove("max-h-[0px]");
       secFilters.classList.add("max-h-[500px]");
+
       showMenu = true;
     } else {
       secFilters.classList.remove("max-h-[500px]");
       secFilters.classList.add("max-h-[0px]");
+
       showMenu = false;
     }
   });
