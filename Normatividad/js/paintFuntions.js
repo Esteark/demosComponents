@@ -7,8 +7,6 @@ import {
   shortText,
 } from "./tools.js";
 
-let documentos = [];
-
 //Slider Filters
 const sliderFilter = () => {
   const mySwiperFilter = new Swiper(".mySwiperFilter", {
@@ -91,10 +89,13 @@ const sliderDocuments = () => {
 };
 //Slider last documents
 
-//Pintado de Slider Filtros
-export const printSliderFilters = async () => {
+//Pintado de Slider Filtros y ultimos documentos
+export const printSliders = async () => {
+  //Obtención de data
   const response = await getData();
-  const buttons = response.filters;
+  const { docs, filters } = response;
+  //Obtención de data
+  //Acciones para pintado slider filtros
   const swiperContainer = document.querySelector(".sliderBtn");
   swiperContainer.innerHTML = "";
   swiperContainer.innerHTML = `<button
@@ -102,7 +103,7 @@ export const printSliderFilters = async () => {
 >
  Todas las categorías
 </button>`;
-  buttons.forEach((item, index) => {
+  filters.forEach((item, index) => {
     swiperContainer.innerHTML += `<button
       class="text-white hover:bg-[#306eea] hover:text-white transition py-3 duration-300 rounded-full swiper-slide h-auto px-1 text-[12px] xl:text-[14px]  btnFilters" data-filter="${
         index + 1
@@ -114,13 +115,11 @@ export const printSliderFilters = async () => {
 
   //Agrego funcionalidad Swiper
   sliderFilter();
-};
-//Pintado de Slider Filtros
 
-// Pintado Slider ultimos documentos
-export const printSliderDocuments = async () => {
-  const response = await getData();
-  const { docs } = response;
+  //Acciones para pintado slider filtros
+
+  //Acciones para pintar el Slider lastDocuments
+
   const lastDocuments = obtaintLastDocuments(docs);
   const swiperSection = document.querySelector(".sliderDocuments");
   swiperSection.innerHTML = "";
@@ -153,113 +152,10 @@ export const printSliderDocuments = async () => {
 
   sliderDocuments();
 };
-// Pintado Slider ultimos documentos
-
-// Funcion para las acciones en los documentos
-export const actionDocuments = async () => {
-  const response = await getData();
-  const { docs } = response;
-  documentos = docs;
-  paintMainDocs(documentos);
-
-  //Agrego listener en los eventos click de los botones del slider para : 1. estilos y 2. Filtrar
-  const btnFilters = document.querySelectorAll(".btnFilters");
-  btnFilters.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const id = btn.getAttribute("data-filter");
-      const label = btn.getAttribute("data-label");
-      documentos = docs.filter((item) => item.Category === label);
-
-      if (documentos.length != 0) {
-        paintMainDocs(documentos);
-      } else {
-        documentos = docs;
-        paintMainDocs(documentos);
-      }
-
-      clickButton(id);
-    });
-  });
-  //Cambio el color del primer botón
-  clickButton(0);
-  // funcion para mostrar cual es el botón que esta seleccionado
-  function clickButton(id) {
-    btnFilters.forEach((btn) => {
-      const valorData = btn.getAttribute("data-filter");
-      if (valorData != id) {
-        btn.classList.remove("bg-[#1d42ff]");
-        btn.classList.add("bg-[#e6effd]");
-        btn.classList.remove("text-white");
-        btn.classList.add("text-[#1c4884]");
-      } else {
-        btn.classList.remove("bg-[#e6effd]");
-        btn.classList.add("bg-[#1d42ff]");
-        btn.classList.add("text-white");
-        btn.classList.remove("text-[#1c4884]");
-      }
-    });
-  }
-  // función para el (buscador)
-  actionInputText();
-  // función para el (buscador)
-
-  //Función para el menu de filtros
-  menuFilters();
-};
-// Funcion para las acciones en los documentos
-
-// Funcion para el buscador
-function actionInputText() {
-  const txtNormatividad = document.getElementById("txtNormatividad");
-  txtNormatividad.addEventListener("input", (e) => {
-    const arrayFilter = documentos.filter((item) =>
-      item.Title.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    paintMainDocs(arrayFilter);
-  });
-}
-// Funcion para el buscador
-
-//funcion para el menu mobile
-function menuFilters() {
-  //Funcion para el btn en menu mobile
-
-  const btnMenuFilters = document.getElementById("btnMenuFilters");
-  let showMenu = false;
-  btnMenuFilters.addEventListener("click", () => {
-    const secFilters = document.getElementById("secFilters");
-    if (!showMenu) {
-      secFilters.classList.remove("max-h-[0px]");
-      secFilters.classList.add("max-h-[500px]");
-
-      showMenu = true;
-    } else {
-      secFilters.classList.remove("max-h-[500px]");
-      secFilters.classList.add("max-h-[0px]");
-
-      showMenu = false;
-    }
-  });
-
-  // función para el dateTimePicker
-  const btnFilterDate = document.getElementById("btnFilterDate");
-  let showdateSec = false;
-  btnFilterDate.addEventListener("click", () => {
-    const secInputsDate = document.getElementById("secInputsDate");
-    if (!showdateSec) {
-      secInputsDate.classList.remove("max-h-[0px]");
-      secInputsDate.classList.add("max-h-[300px]");
-      showdateSec = true;
-    } else {
-      secInputsDate.classList.remove("max-h-[300px]");
-      secInputsDate.classList.add("max-h-[0px]");
-      showdateSec = false;
-    }
-  });
-}
+//Pintado de Slider Filtros
 
 // Funcion para pintar los documentos
-function paintMainDocs(docs) {
+export function paintMainDocs(docs) {
   if (docs.length != 0) {
     const secDocs = document.getElementById("secDocs");
     secDocs.innerHTML = "";
@@ -334,13 +230,31 @@ function paintMainDocs(docs) {
   } else {
     const secDocs = document.getElementById("secDocs");
     secDocs.innerHTML = "";
-    secDocs.innerHTML = `<section class="flex flex-col justify-center items-center gap-6"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    secDocs.innerHTML = `<section class="flex flex-col justify-center items-center gap-6 h-full"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-24 h-24">
     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m5.231 13.481L15 17.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v16.5c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9zm3.75 11.625a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
   </svg>
   <span class="text-2xl font-bold">No encontramos resultados con el filtro aplicado</span>
    </section>`;
   }
 }
+
+export const notify = (
+  mensaje = "Ocurrió un Error",
+  color1 = "#f44336",
+  color2 = "#f44336"
+) => {
+  Toastify({
+    text: `${mensaje}`,
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: `linear-gradient(to right, ${color1}, ${color2})`,
+    },
+  }).showToast();
+};
 // Funcion para pintar los documentos
 
 // let datosConsulta = await consumirDatosFuncionarios();

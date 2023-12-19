@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./datePicker/flatpickr.min.css" />
+    <link rel="stylesheet" href="./css/toastify.min.css" />
     <script src="./js/tailwindcss3.3.3.js"></script>
   </head>
   <body class="bg-[#f6f7fa]">
@@ -68,7 +69,7 @@
 
           <!-- sec filters  -->
           <section
-            class="flex flex-col lg:flex-row pt-3 gap-3 lg:items-center justify-between border-b-2 pb-3"
+            class="flex flex-col lg:flex-row pt-3 gap-3 lg:items-center justify-between border-b-2 pb-3 lg:pb-6"
           >
             <article class="flex justify-between">
               <h3 class="text-[14px] font-bold">Ordenar por:</h3>
@@ -161,7 +162,7 @@
                   id="secInputsDate"
                 >
                   <section
-                    class="lg:p-6 flex flex-col gap-2 lg:border-2 lg:rounded-md"
+                    class="lg:p-6 flex flex-col gap-4 lg:border-2 lg:rounded-md"
                   >
                     <div class="flex flex-col w-full gap-1">
                       <label for="dates">
@@ -173,7 +174,7 @@
                         id="dates"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none w-full"
                       >
-                        <option selected>Seleccione una fecha</option>
+                        <option selected value="">Seleccione una fecha</option>
                         <option value="0">Fecha de Creación</option>
                         <option value="1">Fecha de Expedición</option>
                       </select>
@@ -198,7 +199,7 @@
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            class="w-5 h-5 absolute right-2 top-[0.5rem]"
+                            class="w-5 h-5 absolute right-2 top-[0.5rem] hidden lg:block"
                           >
                             <path
                               stroke-linecap="round"
@@ -226,7 +227,7 @@
                             viewBox="0 0 24 24"
                             stroke-width="1.5"
                             stroke="currentColor"
-                            class="w-5 h-5 absolute right-2 top-[0.5rem]"
+                            class="w-5 h-5 absolute right-2 top-[0.5rem] hidden lg:block"
                           >
                             <path
                               stroke-linecap="round"
@@ -237,6 +238,20 @@
                         </section>
                       </article>
                     </div>
+                    <section class="grid grid-cols-2 gap-3">
+                      <button
+                        class="bg-[#1d42ff] hover:bg-[#3366cc] text-white rounded-lg py-2 transition-all duration-500 mt-2 cols-span-2 lg:cols-span-1"
+                        id="btnFilterFecha"
+                      >
+                        Buscar
+                      </button>
+                      <button
+                        class="bg-[#f44336] hover:bg-[#ff8a80] text-white rounded-lg py-2 transition-all duration-500 mt-2 cols-span-2 lg:cols-span-1"
+                        id="btnRemoveFilter"
+                      >
+                        Borrar filtro
+                      </button>
+                    </section>
                   </section>
                 </section>
               </article>
@@ -318,8 +333,11 @@
       <!-- main container  -->
     </main>
     <!-- main section -->
+
     <script src="./datePicker/flatpickr.js"></script>
+    <script src="./datePicker/es.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/toastify-js.js"></script>
     <script src="./js/main.js" type="module"></script>
   </body>
 </html>
