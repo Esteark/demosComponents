@@ -257,57 +257,109 @@ export const notify = (
 };
 // Funcion para pintar los documentos
 
-// let datosConsulta = await consumirDatosFuncionarios();
-// let currentPage = 1;
-// let itemsPerPage = 6;
-// const numPagina = document.querySelector('.contenedor__numPagina');
+//Función para pintar el paginador
 
-// export async function showCurrentPage(resp) {
+// export const renderPagination = (array) => {
+//   let datosConsulta = array; //Aca se puede cambiar por una consulta asyncorna;
+//   let currentPage = 1;
+//   let itemsPerPage = 4;
+//   const numPagina = document.querySelector(".contenedor__numPagina");
+//   const prevButton = document.getElementById("atras");
+//   const nextButton = document.getElementById("siguiente");
+//   numPagina.innerText = currentPage;
+//   showCurrentPage(datosConsulta);
+
+//   function showCurrentPage(resp) {
 //     const startIndex = (currentPage - 1) * itemsPerPage;
 //     const endIndex = startIndex + itemsPerPage;
-//     const data = resp.d.results;
+//     const data = resp; //resp.d.results;
 //     const dataToRender = data.slice(startIndex, endIndex);
+//     paintMainDocs(dataToRender);
+//   }
 
-//     const cardContainer = document.querySelector(".contenedor__funcionarios");
-//     cardContainer.innerHTML = ''; // Limpiar el contenido actual
-
-//     pintarCardsFuncionarios(dataToRender);
-// }
-
-// const prevButton = document.getElementById("atras");
-// const nextButton = document.getElementById("siguiente");
-
-// prevButton.addEventListener("click", async (e) => {
+//   //Evento botón atras
+//   prevButton.addEventListener("click", (e) => {
 //     e.preventDefault();
 //     if (currentPage > 1) {
-//         currentPage--;
-
-//         numPagina.innerText = currentPage;
-
-//         showCurrentPage(datosConsulta);
+//       currentPage--;
+//       numPagina.innerText = currentPage;
+//       showCurrentPage(datosConsulta);
+//       nextButton.disabled = false;
+//       nextButton.classList.remove("cursor-not-allowed", "opacity-50");
 //     } else {
-//         console.log("Ya no puedes retroceder más.");
+//       prevButton.disabled = true;
+//       prevButton.classList.add("cursor-not-allowed", "opacity-50");
 //     }
-// });
+//   });
 
-// nextButton.addEventListener("click", (e) => {
+//   //Evento botón siguiente
+//   nextButton.addEventListener("click", (e) => {
 //     e.preventDefault();
-//     let data = datosConsulta.d.results;
+//     let data = datosConsulta; // datosConsulta.d.results;
 //     const totalPages = Math.ceil(data.length / itemsPerPage);
 
 //     if (currentPage < totalPages) {
-//         currentPage++;
-
-//         numPagina.innerText = currentPage;
-
-//         // Ocultar elementos anteriores
-//         const previousItems = document.querySelectorAll(".card");
-//         previousItems.forEach(item => {
-//             item.classList.add("hide");
-//         });
-
-//         showCurrentPage(datosConsulta);
+//       currentPage++;
+//       numPagina.innerText = currentPage;
+//       showCurrentPage(datosConsulta);
+//       prevButton.disabled = false;
+//       prevButton.classList.remove("cursor-not-allowed", "opacity-50");
 //     } else {
-//         console.log("Ya estás en la última página.");
+//       // Deshabilitar el botón
+//       nextButton.disabled = true;
+//       // Añadir clases de Tailwind para cambiar el estilo del botón
+//       nextButton.classList.add("cursor-not-allowed", "opacity-50");
 //     }
-// });
+//   });
+// };
+
+export const renderPagination = (array) => {
+  let datosConsulta = array;
+  let currentPage = 1;
+  let itemsPerPage = 4;
+  const numPagina = document.querySelector(".contenedor__numPagina");
+  const prevButton = document.getElementById("atras");
+  const nextButton = document.getElementById("siguiente");
+  numPagina.innerText = currentPage;
+  showCurrentPage(datosConsulta);
+
+  function showCurrentPage(resp) {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const data = resp;
+    const dataToRender = data.slice(startIndex, endIndex);
+    paintMainDocs(dataToRender);
+
+    // Deshabilitar el botón de retroceso si no hay más páginas hacia atrás
+    prevButton.disabled = currentPage === 1;
+    prevButton.classList.toggle("cursor-not-allowed", prevButton.disabled);
+    prevButton.classList.toggle("opacity-50", prevButton.disabled);
+
+    // Deshabilitar el botón siguiente si no hay más páginas hacia adelante
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+    nextButton.disabled = currentPage === totalPages || totalPages === 0;
+    nextButton.classList.toggle("cursor-not-allowed", nextButton.disabled);
+    nextButton.classList.toggle("opacity-50", nextButton.disabled);
+  }
+
+  prevButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (currentPage > 1) {
+      currentPage--;
+      numPagina.innerText = currentPage;
+      showCurrentPage(datosConsulta);
+    }
+  });
+
+  nextButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    let data = datosConsulta;
+    const totalPages = Math.ceil(data.length / itemsPerPage);
+
+    if (currentPage < totalPages) {
+      currentPage++;
+      numPagina.innerText = currentPage;
+      showCurrentPage(datosConsulta);
+    }
+  });
+};

@@ -123,3 +123,38 @@ export const datePicker = () => {
     // },
   });
 };
+
+export function ordenarAZ(array) {
+  return array.sort((a, b) => {
+    const titleA = a.Title.toUpperCase();
+    const titleB = b.Title.toUpperCase();
+    return titleA.localeCompare(titleB);
+  });
+}
+
+export function ordenarZA(array) {
+  return array.sort((a, b) => {
+    const titleA = a.Title.toUpperCase();
+    const titleB = b.Title.toUpperCase();
+    return titleB.localeCompare(titleA);
+  });
+}
+
+export function obtenerRecientes(array) {
+  //fecha de hoy
+  const fechaActual = new Date();
+  //Dame los elementos donde su fecha de creación sea anterior a la fecha actual
+  const masRecientes = array.filter((item) => {
+    const fechaCreacion = new Date(item.Created);
+    return fechaCreacion < fechaActual;
+  });
+
+  // Ordena los elementos por fecha de creación de forma descendente
+  masRecientes.sort((a, b) => {
+    const fechaA = new Date(a.Created);
+    const fechaB = new Date(b.Created);
+    return fechaB - fechaA;
+  });
+
+  return masRecientes;
+}

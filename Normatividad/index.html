@@ -47,6 +47,7 @@
               />
               <button
                 class="bg-[#306eea] hover:bg-[#1d42ff] transition duration-300 rounded-full text-white absolute right-2 top-[0.45rem] cursor-pointer p-1"
+                id="btnSearchInput"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +97,7 @@
             >
               <span
                 class="flex gap-2 font-bold hover:underline cursor-pointer items-center"
+                id="btnRecientes"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -116,6 +118,7 @@
 
               <span
                 class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                id="btnSortAZ"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -259,13 +262,13 @@
           </section>
           <!-- sec filters  -->
           <!-- sec documents  -->
-          <section>
+          <section class="flex flex-col gap-10 pb-3">
             <section
-              class="flex flex-col gap-3 h-[500px] overflow-y-auto overflow-x-hidden"
+              class="flex flex-col gap-3 h-[530px] overflow-y-auto overflow-x-hidden"
               id="secDocs"
             >
               <!-- file -->
-              <section class="grid grid-cols-12 gap-3 pb-5 border-b">
+              <section class="grid grid-cols-12 gap-3 pb-5 border-b-2">
                 <article
                   class="col-span-3 md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center"
                 >
@@ -325,6 +328,49 @@
               <!-- file  -->
             </section>
             <!-- paginador  -->
+            <section class="w-full justify-center items-center flex gap-3">
+              <button
+                class="bg-[#306eea] hover:bg-[#345cff] transition-all duration-500 p-2 rounded-full"
+                id="atras"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  data-slot="icon"
+                  class="w-4 h-4 text-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5 8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <span class="contenedor__numPagina text-[14px]">0</span>
+              <button
+                class="bg-[#306eea] hover:bg-[#345cff] transition-all duration-500 p-2 rounded-full"
+                id="siguiente"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  data-slot="icon"
+                  class="w-4 h-4 text-white font-bold"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </section>
           </section>
           <!-- sec documents -->
         </article>

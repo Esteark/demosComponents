@@ -1,6 +1,6 @@
-import { notify, paintMainDocs, printSliders } from "./paintFuntions.js";
+import { notify, printSliders, renderPagination } from "./paintFuntions.js";
 import { getData } from "./services.js";
-import { datePicker } from "./tools.js";
+import { datePicker, obtenerRecientes, ordenarAZ, ordenarZA } from "./tools.js";
 
 let documentos = [];
 
@@ -16,31 +16,51 @@ export const actionDocuments = async () => {
   const { docs } = response;
   documentos = docs;
   //Función para el pintado de los documentos
-  paintMainDocs(documentos);
+  renderPagination(documentos);
   // Funcion para el slider filtrador
   sliderFilters(docs);
   // Funcion para el slider filtrador
 
   // función para el (buscador)
-  actionInputText();
+  actionInputText(docs);
   // función para el (buscador)
 
   //Función para el menu de filtros
   menuFilters();
 
   //Función para limpiar datos cuando se filtre por fecha
-  clearFilterDate(docs);
+  actionsFilterDate(docs);
 };
 // Funcion para las acciones en los documentos
 
 // Funcion para el buscador
-function actionInputText() {
+function actionInputText(docs) {
   const txtNormatividad = document.getElementById("txtNormatividad");
   txtNormatividad.addEventListener("input", (e) => {
-    const arrayFilter = documentos.filter((item) =>
-      item.Title.toLowerCase().includes(e.target.value.toLowerCase())
-    );
-    paintMainDocs(arrayFilter);
+    if (e.target.value.length == 0) {
+      documentos = docs;
+      renderPagination(documentos);
+    }
+  });
+  txtNormatividad.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const arrayFilter = documentos.filter((item) =>
+        item.Title.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+      renderPagination(arrayFilter);
+    }
+  });
+  //accion cick del boton de busqueda
+  const btnSearchInput = document.getElementById("btnSearchInput");
+  btnSearchInput.addEventListener("click", () => {
+    if (txtNormatividad.value.length != 0) {
+      const arrayFilter = documentos.filter((item) =>
+        item.Title.toLowerCase().includes(txtNormatividad.value.toLowerCase())
+      );
+      renderPagination(arrayFilter);
+    } else {
+      notify("No debes dejar el campo de búsqueda vacío");
+    }
   });
 }
 // Funcion para el buscador
@@ -56,10 +76,10 @@ function sliderFilters(docs) {
       documentos = docs.filter((item) => item.Category === label);
 
       if (documentos.length != 0) {
-        paintMainDocs(documentos);
+        renderPagination(documentos);
       } else {
         documentos = docs;
-        paintMainDocs(documentos);
+        renderPagination(documentos);
       }
 
       clickButton(id);
@@ -98,26 +118,35 @@ function menuFilters() {
 
   // función para mostrar o ocultar el menu dateTimePicker
   const btnFilterDate = document.getElementById("btnFilterDate");
-
   btnFilterDate.addEventListener("click", () => {
     showQuitDateFilter();
   });
   //función para hacer funcionar los dateTimePikers
   datePicker();
+
+  //Función para cuando se da clic a la A-Z
+  const btnSortAZ = document.getElementById("btnSortAZ");
+  let orderAZ = 1;
+  btnSortAZ.addEventListener("click", () => {
+    if (orderAZ == 1) {
+      documentos = ordenarAZ(documentos);
+      orderAZ = 0;
+    } else {
+      documentos = ordenarZA(documentos);
+      orderAZ = 1;
+    }
+    renderPagination(documentos);
+  });
+
+  //Funcion para cuando se desee filtrar por los documentos más recientes
+
+  const btnRecientes = document.getElementById("btnRecientes");
+  btnRecientes.addEventListener("click", () => {
+    documentos = obtenerRecientes(documentos);
+    renderPagination(documentos);
+  });
 }
 //Funcion para resetear accion de filtrar por fecha
-
-//Función para ocultar o mostrar sección menu filter date
-function showQuitDateFilter() {
-  const secInputsDate = document.getElementById("secInputsDate");
-  if (secInputsDate.classList.contains("max-h-[0px]")) {
-    secInputsDate.classList.remove("max-h-[0px]");
-    secInputsDate.classList.add("max-h-[300px]");
-  } else {
-    secInputsDate.classList.remove("max-h-[300px]");
-    secInputsDate.classList.add("max-h-[0px]");
-  }
-}
 
 //Función para ocultar o motrar el menu  de los filtros en versión moible
 function showQuitMenuFiltersMobile() {
@@ -131,17 +160,30 @@ function showQuitMenuFiltersMobile() {
   }
 }
 
-let showfilter = false;
-function clearFilterDate(docs) {
+//Función para ocultar o mostrar sección menu filter date
+function showQuitDateFilter() {
+  const secInputsDate = document.getElementById("secInputsDate");
+  if (secInputsDate.classList.contains("max-h-[0px]")) {
+    secInputsDate.classList.remove("max-h-[0px]");
+    secInputsDate.classList.add("max-h-[300px]");
+  } else {
+    secInputsDate.classList.remove("max-h-[300px]");
+    secInputsDate.classList.add("max-h-[0px]");
+  }
+}
+
+//Cacciones del menu de filtrado de fecha
+
+function actionsFilterDate(docs) {
   const listSelect = document.getElementById("dates");
   const dateStart = document.getElementById("dateStart");
   const dateEnd = document.getElementById("dateEnd");
   const btnRemoveFilter = document.getElementById("btnRemoveFilter");
-  const btnFilterDate = document.getElementById("btnFilterFecha");
+  const btnFilterFecha = document.getElementById("btnFilterFecha");
   //Evento para el botón de borrar filtro
   btnRemoveFilter.addEventListener("click", () => {
     documentos = docs;
-    paintMainDocs(documentos);
+    renderPagination(documentos);
     listSelect.value = "";
     dateStart.value = "";
     dateEnd.value = "";
@@ -170,15 +212,13 @@ function clearFilterDate(docs) {
           const fechaExpedicion = new Date(item.Exp);
           return fechaExpedicion >= dateDesde && fechaExpedicion <= dateHasta;
         });
-        paintMainDocs(documentos);
       } else {
         documentos = docs.filter((item) => {
           const fechaPublicacion = new Date(item.Created);
-
           return fechaPublicacion >= dateDesde && fechaPublicacion <= dateHasta;
         });
-        paintMainDocs(documentos);
       }
+      renderPagination(documentos);
       showfilter = true;
 
       showQuitDateFilter();
