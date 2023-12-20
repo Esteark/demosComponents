@@ -1,4 +1,4 @@
-const URL_base = "../data/data.json";
+const URL_base = "./data/data.json";
 export const getData = async () => {
   const response = await fetch(URL_base);
   const data = await response.json();

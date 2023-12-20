@@ -165,7 +165,7 @@ function clearFilterDate(docs) {
       const dateDesde = new Date(`${monthDesde}/${dayDesde}/${yearDesde}`);
       const dateHasta = new Date(`${monthHasta}/${dayHasta}/${yearHasta}`);
 
-      if (typeDate) {
+      if (typeDate === 1) {
         documentos = docs.filter((item) => {
           const fechaExpedicion = new Date(item.Exp);
           return fechaExpedicion >= dateDesde && fechaExpedicion <= dateHasta;
