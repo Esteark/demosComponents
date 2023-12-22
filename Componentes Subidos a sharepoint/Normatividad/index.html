@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normatividad</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./datePicker/flatpickr.min.css" />
+    <link rel="stylesheet" href="./css/toastify.min.css" />
+    <script src="./js/tailwindcss3.3.3.js"></script>
+  </head>
+  <body class="bg-[#f6f7fa]">
+    <!-- main section -->
+    <main class="px-6 my-10">
+      <!-- main container  -->
+      <section class="lg:container mx-auto w-full flex flex-col gap-6">
+        <h2 class="font-bold text-xl md:text-2xl">Normatividad</h2>
+        <!-- slider categorias -->
+        <!-- Swiper -->
+        <article class="w-full swiper mySwiperFilter">
+          <div class="swiper-wrapper sliderBtn"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </article>
+        <!-- slider categorias -->
+        <!-- slider Last documents  -->
+        <section class="flex flex-col gap-6">
+          <h2 class="font-bold text-xl md:text-2xl">Últimos documentos</h2>
+          <article class="w-full swiper mySwiperDocuments">
+            <div class="swiper-wrapper sliderDocuments"></div>
+            <div class="swiper-button-next hidden md:flex"></div>
+            <div class="swiper-button-prev hidden md:flex"></div>
+          </article>
+        </section>
+        <!-- slider Last documents  -->
+        <!-- main documents  -->
+        <article class="bg-white rounded-md p-6 shadow-sm flex flex-col gap-5">
+          <!-- section input  -->
+          <section>
+            <article class="relative">
+              <input
+                id="txtNormatividad"
+                type="text"
+                placeholder="Busca en Nomatividad"
+                class="text-[12px] border-2 w-full rounded-md py-3 px-3 outline-none focus:shadow-lg transition duration-300"
+              />
+              <button
+                class="bg-[#306eea] hover:bg-[#1d42ff] transition duration-300 rounded-full text-white absolute right-2 top-[0.45rem] cursor-pointer p-1"
+                id="btnSearchInput"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 p-1"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
+              </button>
+            </article>
+          </section>
+          <!-- section input  -->
+
+          <!-- sec filters  -->
+          <section
+            class="flex flex-col lg:flex-row pt-3 gap-3 lg:items-center justify-between border-b-2 pb-3 lg:pb-6"
+          >
+            <article class="flex justify-between">
+              <h3 class="text-[14px] font-bold">Ordenar por:</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 lg:hidden cursor-pointer"
+                id="btnMenuFilters"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+                />
+              </svg>
+            </article>
+
+            <article
+              class="lg:relative flex flex-col lg:flex-row text-[14px] text-[#757575] gap-4 transition duration-500 max-h-[0px] lg:max-h-[300px] transition-all duration-300 mb-2 lg:mb-0 overflow-y-hidden lg:overflow-y-visible"
+              id="secFilters"
+            >
+              <span
+                class="flex gap-2 font-bold hover:underline cursor-pointer items-center"
+                id="btnRecientes"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                Recientes
+              </span>
+
+              <span
+                class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                id="btnSortAZ"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+                  />
+                </svg>
+
+                A-Z
+              </span>
+
+              <article class="flex flex-col gap-3 relative">
+                <span
+                  class="flex gap-2 font-bold hover:underline transition duration-300 cursor-pointer items-center"
+                  id="btnFilterDate"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z"
+                    />
+                  </svg>
+
+                  Filtrar por fecha
+                </span>
+                <section
+                  class="lg:absolute w-[100%] lg:w-[500px] lg:right-0 lg:top-[2rem] lg:bg-white z-30 max-h-[0px] transition-all duration-500 ease-in-out overflow-y-hidden"
+                  id="secInputsDate"
+                >
+                  <section
+                    class="lg:p-6 flex flex-col gap-4 lg:border-2 lg:rounded-md"
+                  >
+                    <div class="flex flex-col w-full gap-1">
+                      <label for="dates">
+                        <p class="text-[12px] font-bold text-black">
+                          Tipo fecha
+                        </p></label
+                      >
+                      <select
+                        id="dates"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 outline-none w-full"
+                      >
+                        <option selected value="">Seleccione una fecha</option>
+                        <option value="0">Fecha de Creación</option>
+                        <option value="1">Fecha de Expedición</option>
+                      </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                      <article
+                        class="flex flex-col col-span-2 lg:col-span-1 gap-1"
+                      >
+                        <label for="dateStart ">
+                          <p class="text-[12px] font-bold text-black">Desde</p>
+                        </label>
+                        <section class="relative">
+                          <input
+                            type="text"
+                            id="dateStart"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg py-2 px-3 outline-none w-full"
+                          />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-5 h-5 absolute right-2 top-[0.5rem] hidden lg:block"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                            />
+                          </svg>
+                        </section>
+                      </article>
+                      <article
+                        class="flex flex-col gap-1 col-span-2 lg:col-span-1"
+                      >
+                        <label for="dateStart">
+                          <p class="text-[12px] font-bold text-black">Hasta</p>
+                        </label>
+                        <section class="relative">
+                          <input
+                            type="text"
+                            id="dateEnd"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg py-2 px-3 outline-none w-full"
+                          />
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-5 h-5 absolute right-2 top-[0.5rem] hidden lg:block"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"
+                            />
+                          </svg>
+                        </section>
+                      </article>
+                    </div>
+                    <section class="grid grid-cols-2 gap-3">
+                      <button
+                        class="bg-[#1d42ff] hover:bg-[#3366cc] text-white rounded-lg py-2 transition-all duration-500 mt-2 cols-span-2 lg:cols-span-1"
+                        id="btnFilterFecha"
+                      >
+                        Buscar
+                      </button>
+                      <button
+                        class="bg-[#f44336] hover:bg-[#ff8a80] text-white rounded-lg py-2 transition-all duration-500 mt-2 cols-span-2 lg:cols-span-1"
+                        id="btnRemoveFilter"
+                      >
+                        Borrar filtro
+                      </button>
+                    </section>
+                  </section>
+                </section>
+              </article>
+            </article>
+          </section>
+          <!-- sec filters  -->
+          <!-- sec documents  -->
+          <section class="flex flex-col gap-10 pb-3">
+            <section
+              class="flex flex-col gap-3 h-[530px] overflow-y-auto overflow-x-hidden"
+              id="secDocs"
+            >
+              <!-- file -->
+              <section class="grid grid-cols-12 gap-3 pb-5 border-b-2">
+                <article
+                  class="col-span-3 md:col-span-2 lg:col-span-1 flex flex-col items-center justify-center"
+                >
+                  <img src="./img/iconDoc.svg" class="w-16 md:w-20" alt="" />
+                  <p class="text-[12px] font-bold">20kb</p>
+                </article>
+                <article
+                  class="col-span-9 md:col-span-10 lg:col-span-7 flex flex-col justify-center gap-2"
+                >
+                  <span
+                    class="w-32 bg-[#ffecb3] text-[#ff9800] rounded-full text-[10px] text-center rounded-full p-1 text-[10px] font-bold mb-2 lg:hidden"
+                    >Decretos</span
+                  >
+                  <a href="#" class="font-bold hover:underline">
+                    Titulo documento</a
+                  >
+                  <p class="text-[12px]">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Explicabo quia esse facere
+                  </p>
+                  <div
+                    class="flex flex-wrap md:lex-wrap-none gap-3 lg:hidden text-[12px]"
+                  >
+                    <div class="flex flex-col md:flex-row gap-1">
+                      <p>Fecha publicación:</p>
+                      <p class="font-bold">12/12/12</p>
+                    </div>
+                    <span class="hidden md:block">|</span>
+                    <div class="flex flex-col md:flex-row gap-1">
+                      <p>Fecha Expedición</p>
+                      <p class="font-bold">13/12/23</p>
+                    </div>
+                  </div>
+                </article>
+                <article
+                  class="hidden md:col-span-2 lg:col-span-2 2xl:col-span-1 lg:flex flex-col justify-center"
+                >
+                  <p class="font-bold text-[14px]">Publicación</p>
+                  <p class="text-[14px]">12/12/2023</p>
+                </article>
+                <article
+                  class="hidden md:col-span-2 lg:col-span-2 2xl:col-span-1 lg:flex flex-col justify-center"
+                >
+                  <p class="font-bold text-[14px]">Expedición</p>
+                  <p class="text-[14px]">12/12/2023</p>
+                </article>
+                <article
+                  class="hidden col-span-2 xl:col-span-2 2xl:flex justify-center items-start flex-col"
+                >
+                  <p class="font-bold mb-1 text-[14px] px-6">Categoria</p>
+                  <span
+                    class="w-32 bg-[#ffecb3] text-[#ff9800] rounded-full text-[10px] text-center rounded-full text-[10px] font-bold h-[20px] flex items-center justify-center"
+                    >Decretos</span
+                  >
+                </article>
+              </section>
+              <!-- file  -->
+            </section>
+            <!-- paginador  -->
+            <section class="w-full justify-center items-center flex gap-3">
+              <button
+                class="bg-[#306eea] hover:bg-[#345cff] transition-all duration-500 p-2 rounded-full"
+                id="atras"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  data-slot="icon"
+                  class="w-4 h-4 text-white"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5 8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <span class="contenedor__numPagina text-[14px]">0</span>
+              <button
+                class="bg-[#306eea] hover:bg-[#345cff] transition-all duration-500 p-2 rounded-full"
+                id="siguiente"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  data-slot="icon"
+                  class="w-4 h-4 text-white font-bold"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </section>
+          </section>
+          <!-- sec documents -->
+        </article>
+        <!-- main documents  -->
+      </section>
+      <!-- main container  -->
+    </main>
+    <!-- main section -->
+
+    <script src="./datePicker/flatpickr.js"></script>
+    <script src="./datePicker/es.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/toastify-js.js"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
