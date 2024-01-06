@@ -90,7 +90,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--gray2);
+  background-color: var(--thirdblue);
   border-radius: 6px;
 }
 
