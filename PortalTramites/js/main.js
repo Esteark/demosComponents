@@ -38,19 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     loadingBar.classList.add("w-full");
   }, 500); // Puedes ajustar el tiempo de retraso según sea necesario
 
-  // Acciones para el texto del header
-  const typed = new Typed("#textHeader", {
-    strings: [
-      'Construir <span class="text-[#17599b]">equipos de alto rendimiento</span> es difícil pero lo hacemos fácil',
-    ],
-    showCursor: false,
-    typeSpeed: 20,
-    backSpeed: 0,
-    startDelay: 100,
-    fadeOut: false,
-    loop: false,
-  });
-
   //Acciones botón menu mobile
   const btnMenu = document.getElementById("btnMenu");
   const ulMenu = document.getElementById("ulMenu");
