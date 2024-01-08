@@ -22,6 +22,11 @@
   --gray2: #757575;
 }
 
+html {
+  scroll-padding-top: 1.5rem;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
@@ -30,61 +35,26 @@ body {
 
 /* Estilos carrusel */
 
-.mySwiperFilter .swiper-button-prev,
-.mySwiperFilter .swiper-button-next {
+.mySwiperInfo .swiper-button-prev,
+.mySwiperInfo .swiper-button-next {
   width: 30px; /* Ajusta el ancho según tus necesidades */
   height: 30px;
   background-color: var(--white);
-  font-size: 24px;
+  font-size: 30px;
   border-radius: 30px;
-  top: var(--swiper-navigation-top-offset, 65%);
-}
 
-.mySwiperFilter .swiper-button-next:after,
-.mySwiperFilter .swiper-button-prev:after {
-  color: var(--black);
-  font-size: 12px;
-}
-
-.mySwiperDocuments .swiper-button-prev,
-.mySwiperDocuments .swiper-button-next {
-  width: 30px; /* Ajusta el ancho según tus necesidades */
-  height: 30px;
-  background-color: var(--thirdblue);
-  font-size: 24px;
-  border-radius: 30px;
   opacity: 0.5;
   transition: opacity 0.5s;
 }
 
-.mySwiperDocuments .swiper-button-prev:hover,
-.mySwiperDocuments .swiper-button-next:hover {
-  opacity: 1;
-}
-
-.mySwiperDocuments .swiper-button-next:after,
-.mySwiperDocuments .swiper-button-prev:after {
-  color: var(--white);
+.mySwiperInfo .swiper-button-next:after,
+.mySwiperInfo .swiper-button-prev:after {
+  color: var(--black);
   font-size: 12px;
 }
-
-/* Hover Cards */
-
-.lastFileCard {
-  transform: translateY(0px);
-  transition: all 0.3s ease;
-}
-
-.lastFileCard:hover {
-  transform: translateY(-5px);
-}
-
-.cardDocument {
-  transition: transform 0.3s;
-}
-
-.cardDocument:hover {
-  transform: scale(1.01);
+.mySwiperInfo .swiper-button-prev:hover,
+.mySwiperInfo .swiper-button-next:hover {
+  opacity: 1;
 }
 
 /* Estilos para las scroll bars  */
@@ -149,4 +119,7 @@ body {
   100% {
     width: 100%;
   }
+}
+a:visited {
+  color: var(--blue1cero1) !important;
 }

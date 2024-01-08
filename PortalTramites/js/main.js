@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     let currentPosition = window.scrollY;
 
-    if (currentPosition > scrollPosition) {
+    if (currentPosition > 50) {
       // El usuario está haciendo scroll hacia abajo
       navbar.classList.add("fixed", "bg-white", "top-0");
-      header.classList.add("mt-10");
+      header.classList.add("lg:mt-20");
     } else {
       // El usuario está haciendo scroll hacia arriba
       navbar.classList.remove("fixed", "bg-white", "top-0");
-      header.classList.remove("mt-10");
+      header.classList.remove("lg:mt-20");
     }
 
     scrollPosition = currentPosition;
@@ -52,15 +52,39 @@ document.addEventListener("DOMContentLoaded", function () {
   let showmenu = false;
   btnMenu.addEventListener("click", () => {
     if (!showmenu) {
-      ulMenu.classList.add(animations.menu.showMenu);
-      ulMenu.classList.remove(animations.menu.hiddenMenu);
+      ulMenu.classList.remove("hidden");
+      setTimeout(() => {
+        ulMenu.classList.add(animations.menu.showMenu);
+        ulMenu.classList.remove(animations.menu.hiddenMenu);
+      }, 50);
 
       showmenu = true;
     } else {
       ulMenu.classList.remove(animations.menu.showMenu);
       ulMenu.classList.add(animations.menu.hiddenMenu);
 
+      setTimeout(() => {
+        ulMenu.classList.add("hidden");
+      }, 500);
+
       showmenu = false;
     }
   });
+
+  // funcionalidad caruseles
+  const swiperInfo = () => {
+    const swiper = new Swiper(".mySwiperInfo", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
+    });
+  };
+
+  swiperInfo();
 });

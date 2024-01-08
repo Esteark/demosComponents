@@ -34,7 +34,7 @@ body {
   background-color: var(--white);
   font-size: 24px;
   border-radius: 30px;
-  top: var(--swiper-navigation-top-offset, 65%);
+  top: var(--swiper-navigation-top-offset, 50%);
 }
 
 .mySwiperFilter .swiper-button-next:after,
