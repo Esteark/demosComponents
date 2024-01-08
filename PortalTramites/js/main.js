@@ -8,11 +8,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (currentPosition > 50) {
       // El usuario está haciendo scroll hacia abajo
-      navbar.classList.add("fixed", "bg-white", "top-0");
+      navbar.classList.add(
+        "fixed",
+        "bg-white",
+        "top-0",
+        "shadow-md",
+        "shadow-white"
+      );
       header.classList.add("lg:mt-20");
     } else {
       // El usuario está haciendo scroll hacia arriba
-      navbar.classList.remove("fixed", "bg-white", "top-0");
+      navbar.classList.remove(
+        "fixed",
+        "bg-white",
+        "top-0",
+        "shadow-md",
+        "shadow-white"
+      );
       header.classList.remove("lg:mt-20");
     }
 
