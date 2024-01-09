@@ -79,15 +79,15 @@ actionbtn(btnMensaje, dropDownMessage);
 // evento del primer boton de ajuste
 
 //evento boton info user
-const btnInfoUser = document.getElementById("btnInfoUser");
-const dropDownInfoUser = document.getElementById("dropDownInfoUser");
-actionbtn(btnInfoUser, dropDownInfoUser);
+// const btnInfoUser = document.getElementById("btnInfoUser");
+// const dropDownInfoUser = document.getElementById("dropDownInfoUser");
+// actionbtn(btnInfoUser, dropDownInfoUser);
 //evento boton info user
 
 // evento boton tool 2
-const toolbtn2 = document.getElementById("toolbtn2");
-const dropDowntool2 = document.getElementById("dropDowntool2");
-actionbtn(toolbtn2, dropDowntool2);
+// const toolbtn2 = document.getElementById("toolbtn2");
+// const dropDowntool2 = document.getElementById("dropDowntool2");
+// actionbtn(toolbtn2, dropDowntool2);
 // evento boton tool 2
 
 // Funcion agregadora de listeners
@@ -115,8 +115,8 @@ const submenus = [
   dropDownGroup,
   dropDowntool1,
   dropDownMessage,
-  dropDownInfoUser,
-  dropDowntool2,
+  // dropDownInfoUser,
+  // dropDowntool2,
 ];
 //Array con los submenus que me servira para ocultarlos
 

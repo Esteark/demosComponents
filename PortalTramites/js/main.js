@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let scrollBtn = document.getElementById("scrollBtn");
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > window.innerHeight * 2) {
+    if (window.scrollY > window.innerHeight * 0.2) {
       scrollBtn.style.opacity = "1";
       scrollBtn.style.transform = "translateX(0)";
     } else {
@@ -125,4 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Botón del scroll
+
+  //Acciones menu tramites
+  const toggle = document.querySelector(".toggle");
+  const menu = document.querySelector(".menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
 });

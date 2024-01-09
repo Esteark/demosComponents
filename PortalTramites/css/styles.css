@@ -71,6 +71,31 @@ body {
   background-color: #fff;
 }
 
+/*Estilos seccion de tramites*/
+
+.menu figure {
+  transform-origin: 120px;
+  transition: all 0.6s;
+  transition-delay: calc(0.1s * var(--i));
+  transform: rotate(0) translateX(90px);
+}
+.menu figure a {
+  transform: rotate(calc(360deg / -8 * var(--i)));
+}
+.menu figure a:hover {
+  transform: scale(1.2) rotate(calc(360deg / -8 * var(--i)));
+}
+
+.menu.active figure {
+  transform: rotate(calc(360deg / 8 * var(--i)));
+}
+
+.menu.active .toggle {
+  transform: rotate(360deg);
+}
+
+/*Estilos seccion de tramites*/
+
 /* Animaciones para el header */
 
 @keyframes slideInDown {
