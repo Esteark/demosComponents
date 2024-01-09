@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     let currentPosition = window.scrollY;
 
-    if (currentPosition > 400) {
+    if (currentPosition > 100) {
       // El usuario está haciendo scroll hacia abajo
       navbar.classList.add(
         "fixed",
@@ -15,9 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "shadow-md",
         "shadow-white"
       );
-      navbar.classList.remove("mb-10");
-      // header.classList.add("lg:mt-32");
-      // header.classList.remove("mt-10");
+      header.classList.add("lg:mt-32");
+      header.classList.remove("mt-10");
     } else {
       // El usuario está haciendo scroll hacia arriba
       navbar.classList.remove(
@@ -27,9 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         "shadow-md",
         "shadow-white"
       );
-      navbar.classList.add("mb-10");
-      // header.classList.remove("lg:mt-32");
-      // header.classList.add("mt-10");
+      header.classList.remove("lg:mt-32");
+      header.classList.add("mt-10");
     }
 
     scrollPosition = currentPosition;
@@ -38,21 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
   //Acciones para el header
 
   navbar.style.animation = "slideInDown 0.5s ease-out";
-
-  // Aplicar animación de izquierda a derecha
-  const secText = document.getElementById("secText");
-  secText.style.animation = "fadeIn 1s ease-out";
-
-  // Aplicar animación de aparición gradual de la imagen
-  const headerImage = document.getElementById("headerImage");
-  headerImage.style.animation = "fadeIn 1s ease-out";
-
-  // Añadir la clase de expansión de la barra de carga después de un retraso
-  const loadingBar = document.getElementById("loadingBar");
-  loadingBar.style.animation = "expandWidth 3s ease-out";
-  setTimeout(function () {
-    loadingBar.classList.add("w-full");
-  }, 500); // Puedes ajustar el tiempo de retraso según sea necesario
 
   //Acciones botón menu mobile
   const btnMenu = document.getElementById("btnMenu");

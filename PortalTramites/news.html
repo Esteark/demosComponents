@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <title>Design</title>
+  </head>
+  <body>
+    <!-- Nav  -->
+    <nav class="py-6 px-6 md:px-0">
+      <section
+        class="container:lg mx-auto bg-white border-gray-200 dark:bg-gray-900"
+      >
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a href="/" class="flex items-center">
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Blog News</span
+            >
+          </a>
+          <div class="flex items-center md:order-2">
+            <button
+              type="button"
+              class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+              id="user-menu-button"
+              aria-expanded="false"
+              data-dropdown-toggle="user-dropdown"
+              data-dropdown-placement="bottom"
+            >
+              <span class="sr-only">Open user menu</span>
+              <img
+                class="w-8 h-8 rounded-full object-cover"
+                src="https://img.freepik.com/foto-gratis/retrato-hombre-blanco-aislado_53876-40306.jpg?w=2000"
+                alt="user photo"
+              />
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+              id="user-dropdown"
+            >
+              <div class="px-4 py-3">
+                <span class="block text-sm text-gray-900 dark:text-white"
+                  >Blog News User</span
+                >
+                <span
+                  class="block text-sm text-gray-500 truncate dark:text-gray-400"
+                  >BlogNew@news.com</span
+                >
+              </div>
+              <ul class="py-2" aria-labelledby="user-menu-button">
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Dashboard</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Settings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Earnings</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                    >Sign out</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <button
+              data-collapse-toggle="navbar-user"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-user"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-user"
+          >
+            <ul
+              class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+            >
+              <li>
+                <a
+                  href="/"
+                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/design.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Design</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/tech.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Technology</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/sports.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Sports</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/games.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Games</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/travel.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >Travel</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/views/iamachine.html"
+                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >IA</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </nav>
+    <!-- Nav  -->
+    <!-- header  -->
+    <header class="px-6">
+      <section
+        class="lg:container mx-auto bg-cover max-w-screen-lg h-[300px] md:h-[400px] rounded-lg flex flex-col gap-3 items-center justify-center px-6"
+        style="
+          background-image: linear-gradient(
+              0deg,
+              rgba(0, 0, 0, 0.9458158263305322) 29%,
+              rgba(0, 0, 0, 0.06486344537815125) 100%
+            ),
+            url(https://wallpapercave.com/wp/wRjmVjO.jpg);
+        "
+      >
+        <article class="flex flex-col items-center gap-1 md:gap-3">
+          <article
+            class="flex items-center justify-center gap-1 md:gap-3 w-16 h-auto md:w-24 bg-[#D6293E] rounded-lg px-2 py-1"
+          >
+            <div
+              class="w-[8px] h-[8px] md:w-[14px] md:h-[14px] bg-white rounded-full"
+            ></div>
+            <p
+              class="text-white font-bold md:font-normal text-[10px] md:text-[16px]"
+            >
+              Design
+            </p>
+          </article>
+          <h2
+            class="text-2xl md:text-3xl xl:text-6xl text-center text-white font-bold"
+          >
+            Sarah Burton is leaving Alexander McQueen's creative direction after
+            13 years.
+          </h2>
+        </article>
+        <article
+          class="flex justify-center flex-wrap gap-3 xl:gap-6 items-center"
+        >
+          <img
+            src="https://media.istockphoto.com/id/1399395748/es/foto/alegre-mujer-de-negocios-con-gafas-posando-con-las-manos-bajo-la-cara-mostrando-su-sonrisa-en.jpg?s=612x612&w=0&k=20&c=0y9KGEHKrwRUhZX2b7OH-SPUJ9t_HPf9Dle5khT77bg="
+            class="w-[30px] h-[30px] md:w-[40px] md:h-[40px] rounded-full object-cover"
+            alt=""
+          />
+          <p class="text-sm md:font-bold xl:text-lg text-white">by Valen</p>
+          <span class="bg-white w-[5px] h-[5px] rounded-full"></span>
+          <p class="text-sm md:font-bold xl:text-lg text-white">Nov 10,2023</p>
+          <span class="bg-white w-[5px] h-[5px] rounded-full"></span>
+          <p class="text-sm md:font-bold md:text-[14px] xl:text-lg text-white">
+            5 min read
+          </p>
+        </article>
+      </section>
+    </header>
+    <!-- header  -->
+    <main class="my-6 px-6">
+      <section
+        class="grid grid-cols-1 xl:grid-cols-12 gap-6 md:gap-10 2xl:gap-20 max-w-screen-lg lg:container mx-auto"
+      >
+        <div class="col-span-12 xl:col-span-9 w-full">
+          <article
+            class="flex flex-col gap-3 text-[#706e74] text-sm md:text-[16px] leading-relaxed md:leading-7 text-justify"
+          >
+            <p>
+              <span
+                class="bg-[#191a1f] text-white font-bold py-1 px-2 text-2xl md:mb-[3px]"
+                >A</span
+              >
+              fter 13 years at the helm of the brand, Sarah Burton is stepping
+              down from her role as the creative director of Alexander McQueen.
+              This was announced last night by the Kering Group, the company
+              that owns the British label, through a statement: "I am very proud
+              of everything I have accomplished and of the incredible team that
+              makes up Alexander McQueen. They are my family, and this has been
+              my home for the past 26 years," explains Burton, who joined the
+              brand as an intern in 1996 and was later appointed head of design.
+            </p>
+            <p>
+              After the passing of McQueen in 2010, Kering decided that his
+              right-hand woman would become his successor. "I want to thank
+              Francois Henri Pinault for his trust in me by off ering me this
+              incredible opportunity, but above all, I want to thank Lee
+              Alexander McQueen, who taught me so much," Burton continues in the
+              statement. During her thirteen years at the helm, Burton continued
+              to explore some of her mentor's obsessions (the gothic, Victorian
+              attire, the aesthetics of British rural communities...) but in a
+              much less spectacular and more realistic manner
+              <span class="font-bold text-black"
+                >The garments were mostly crafted using tailoring techniques,
+                detailed yet tailored to the female body. </span
+              >When she took the reins at McQueen, Burton became one of the very
+              few women at that time leading the design of a major luxury brand.
+              "There is no archetype for women; there are many women, even in
+              the same woman. We see it every day on the street. Fortunately,
+              there are no longer conventions about what to wear. In the same
+              week, we can express ourselves diff erently with very diff erent
+              garments," she explained in an interview with S Moda
+            </p>
+            <!-- galeria  -->
+            <div
+              class="flex flex-col md:grid md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-2"
+            >
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://cdn.luxuo.com/2015/08/Lee-Alexander-McQueen.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://e0.pxfuel.com/wallpapers/517/275/desktop-wallpaper-alexander-mcqueen.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-lg"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://images.lifestyleasia.com/wp-content/uploads/2018/06/19171356/alexander-mcqueen-documentary.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://w0.peakpx.com/wallpaper/942/1021/HD-wallpaper-alexander-mcqueen-art-red-topmodel-vogue-moda-black-beautiful-female-model-couture-fashion.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://cdn.concreteplayground.com/content/uploads/2022/12/Alexander-McQueen-Mind-Mythos-Muse_11_Tom-Ross_NGV_supplied.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+              <div class="md:col-span-1 h-[250px] md:h-[370px]">
+                <img
+                  src="https://media.glamourmagazine.co.uk/photos/651d78c7b03d823d2689b0b4/16:9/w_1920,h_1080,c_limit/ALEXANDER%20MCQUEEN%20041023%20deefault.jpg"
+                  alt=""
+                  class="w-full h-full object-cover rounded-md"
+                />
+              </div>
+            </div>
+            <!-- galeria  -->
+          </article>
+        </div>
+
+        <div class="col-span-12 xl:col-span-3 w-full">
+          <article class="w-full flex flex-col gap-3">
+            <h3 class="text-lg font-bold">Categories</h3>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#fef6e0] px-4"
+            >
+              <h3 class="text-[#f7c32e] font-bold text-[16px]">Photography</h3>
+              <span class="px-2 text-black bg-[#f7c32e] rounded-md text-sm"
+                >09</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#edf5fe] px-4"
+            >
+              <h3 class="text-[#4f9ef8] font-bold text-[16px]">Travel</h3>
+              <span class="px-2 text-white bg-[#4f9ef8] rounded-md text-sm"
+                >08</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#fbe9eb] px-4"
+            >
+              <h3 class="text-[#d6293e] font-bold text-[16px]">Technology</h3>
+              <span class="px-2 text-white bg-[#d6293e] rounded-md text-sm"
+                >10</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#edf5fe] px-4"
+            >
+              <h3 class="text-[#2163e8] font-bold text-[16px]">Video</h3>
+              <span class="px-2 text-white bg-[#2163e8] rounded-md text-sm"
+                >08</span
+              >
+            </div>
+            <div
+              class="w-full py-2 rounded-md flex items-center justify-between bg-[#e6f8f3] px-4"
+            >
+              <h3 class="text-[#0cbc87] font-bold text-[16px]">Design</h3>
+              <span class="px-2 text-white bg-[#0cbc87] rounded-md text-sm"
+                >11</span
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer  -->
+    <footer class="rounded-t-md shadow bg-gray-900 mt-10">
+      <div class="w-full max-w-screen-xl mx-auto p-10 xl:p-4 xl:py-12 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center mb-4 sm:mb-0"
+          >
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              class="h-8 mr-3"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+              >Blog News</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 text-white"
+          >
+            <li>
+              <a href="./design.html" class="mr-4 hover:underline md:mr-6"
+                >Design</a
+              >
+            </li>
+            <li>
+              <a href="./iamachine.html" class="mr-4 hover:underline md:mr-6"
+                >IA</a
+              >
+            </li>
+            <li>
+              <a href="./sports.html" class="mr-4 hover:underline md:mr-6"
+                >Sports</a
+              >
+            </li>
+            <li>
+              <a href="./games.html" class="hover:underline">Games</a>
+            </li>
+          </ul>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span class="block text-sm text-gray-500 sm:text-center text-white"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">Blog News™</a
+          >. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+    <!-- footer  -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- script ppal  -->
+    <script src="../main.js"></script>
+  </body>
+</html>
