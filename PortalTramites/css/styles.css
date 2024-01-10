@@ -23,14 +23,13 @@
 }
 
 html {
-  scroll-padding-top: 2rem;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 /* Estilos carrusel */
@@ -79,10 +78,10 @@ body {
   transition-delay: calc(0.1s * var(--i));
   transform: rotate(0) translateX(90px);
 }
-.menu figure a {
+.menu figure div {
   transform: rotate(calc(360deg / -8 * var(--i)));
 }
-.menu figure a:hover {
+.menu figure div:hover {
   transform: scale(1.2) rotate(calc(360deg / -8 * var(--i)));
 }
 

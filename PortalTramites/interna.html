@@ -10,7 +10,10 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="px-6 transition-all duration-700 z-50 w-full" id="nav">
+    <nav
+      class="fixed px-6 transition-all duration-700 z-50 w-full mb-10"
+      id="nav"
+    >
       <section class="lg:container mx-auto flex justify-between items-center">
         <!-- logo     -->
         <a href="./index.html">
@@ -230,18 +233,20 @@
           </li>
           <li class="relative cursor-pointer">
             <a
-              href="#"
+              href="#portfolio"
               class="font-bold transition-all duration-500 hover:text-[#17599b] text-[14px] select-none"
             >
               Portafolio
             </a>
           </li>
           <li class="relative cursor-pointer">
-            <h3
-              class="font-bold transition-all duration-500 hover:text-[#17599b] text-[14px] select-none"
-            >
-              Nosotros
-            </h3>
+            <a href="#tramites">
+              <h3
+                class="font-bold transition-all duration-500 hover:text-[#17599b] text-[14px] select-none"
+              >
+                Trámites
+              </h3>
+            </a>
           </li>
           <li class="cursor-pointer group hover:text-[#17599b] transition-all">
             <section class="flex gap-2 items-center">
@@ -620,7 +625,7 @@
     </nav>
     <!-- navbar -->
     <!-- header  -->
-    <header class="px-6" id="header">
+    <header class="px-6 transform translate-y-32 mb-40" id="header">
       <section
         class="lg:container mx-auto bg-cover max-w-screen-lg h-[300px] md:h-[400px] rounded-lg flex flex-col gap-3 items-center justify-center px-6"
         style="
