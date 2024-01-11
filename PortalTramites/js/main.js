@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     let currentPosition = window.scrollY;
 
-    if (currentPosition > 200) {
+    if (currentPosition > 50) {
       // El usuario está haciendo scroll hacia abajo
       navbar.classList.add(
         "fixed",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Acciones para el header
 
-  navbar.style.animation = "slideInDown 0.5s ease-out";
+  navbar.style.animation = "slideInDown 1s ease-out";
 
   // Aplicar animación de izquierda a derecha
   const secText = document.getElementById("secText");
