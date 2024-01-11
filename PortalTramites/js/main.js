@@ -81,10 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
     showmenu = false;
   }
 
-  ulMenu.addEventListener("click", () => {
-    closeMenu();
-  });
-
   // funcionalidad caruseles
   const swiperInfo = () => {
     const swiper = new Swiper(".mySwiperInfo", {
