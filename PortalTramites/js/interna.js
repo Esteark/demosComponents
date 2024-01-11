@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     let currentPosition = window.scrollY;
 
-    if (currentPosition > 200) {
+    if (currentPosition > 50) {
       // El usuario está haciendo scroll hacia abajo
       navbar.classList.add(
         "fixed",
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let scrollBtn = document.getElementById("scrollBtn");
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY > window.innerHeight * 2) {
+    if (window.scrollY > window.innerHeight * 0.95) {
       scrollBtn.style.opacity = "1";
       scrollBtn.style.transform = "translateX(0)";
     } else {
@@ -82,4 +82,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Botón del scroll
+
+  // funcionalidad caruseles
+  const swiperInfo = () => {
+    const swiper = new Swiper(".mySwiperInfo", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      autoplay: {
+        delay: 5500,
+        disableOnInteraction: false,
+      },
+    });
+  };
+
+  swiperInfo();
 });
