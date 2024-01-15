@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <script src="./js/tailwindcss3.3.3.js"></script>
+    <!-- main scripts  -->
+    <title>Portal Trámites 1cero1</title>
+  </head>
+  <body class="overflow-y-auto">
+    <!-- navbar -->
+    <nav
+      class="fixed px-6 transition-all duration-700 z-50 w-full top-[3rem]"
+      id="nav"
+    >
+      <section
+        class="lg:container mx-auto justify-between flex items-center py-3"
+      >
+        <!-- logo     -->
+        <a href="./index.html" class="flex gap-3 items-center">
+          <figure class="w-14">
+            <img
+              src="./img/logo.png"
+              alt=""
+              class="w-full h-full object-contain"
+            />
+          </figure>
+          <h3 class="font-bold text-xl">TramyFast</h3>
+        </a>
+        <!-- logo     -->
+        <!-- boton menu mobile  -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 cursor-pointer lg:hidden"
+          id="btnMenu"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+        <!-- boton menu mobile  -->
+        <!-- menu  -->
+        <ul
+          class="hidden absolute lg:relative top-[4rem] right-0 lg:top-0 flex flex-col-reverse justify-end lg:flex lg:flex-row gap-5 lg:gap-10 lg:items-center p-6 lg:p-0 w-full md:w-[400px] lg:w-auto h-screen lg:h-auto transform transition-all lg:opacity-100 duration-700 opacity-0 z-50 lg:z-auto bg-white lg:bg-transparent grow"
+          id="ulMenu"
+        >
+          <li class="cursor-pointer group hover:text-mainColor transition-all">
+            <section class="flex gap-2 items-center">
+              <h3
+                class="font-bold transition-all duration-500 text-[14px] select-none"
+              >
+                Servicios
+              </h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-4 h-4 transition-all duration-500 transform rotate-0 group-hover:rotate-180"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </section>
+            <!-- dropdown Menu -->
+            <section
+              class="relative lg:fixed lg:top-[2.5rem] max-h-[0px] z-50 group-hover:max-h-[500px] lg:group-hover:translate-y-5 translate-y-0 transition-all duration-700 overflow-y-hidden lg:shadow-md lg:rounded-md w-full xl:w-1/2 text-black lg:right-0"
+            >
+              <article
+                class="py-3 lg:p-6 lg:rounded-md grid grid-cols-1 lg:grid-cols-2 w-full gap-6 lg:bg-white"
+              >
+                <section class="col-span-1 flex flex-col gap-3">
+                  <h2 class="text-xl font-bold">Servicios</h2>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                      />
+                    </svg>
+                    <h3 class="text-[14px]">Software Personalizado</h3>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
+                      />
+                    </svg>
+
+                    <h3 class="text-[14px]">Diseño</h3>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z"
+                      />
+                    </svg>
+
+                    <h3 class="text-[14px]">Almacenamiento</h3>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
+                      />
+                    </svg>
+
+                    <h3 class="text-[14px]">Banco</h3>
+                  </div>
+                </section>
+
+                <section class="col-span-1 flex flex-col gap-3">
+                  <h2 class="text-xl font-bold">Tecnologías</h2>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+                      />
+                    </svg>
+
+                    <h3 class="text-[14px]">Sharepoint</h3>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"
+                      />
+                    </svg>
+
+                    <h3 class="text-[14px]">Web design</h3>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
+                      />
+                    </svg>
+
+                    <h3 class="text-[14px]">Soporte</h3>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6 text-mainColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z"
+                      />
+                    </svg>
+
+                    <h3 class="text-[14px]">Google WorkSpace</h3>
+                  </div>
+                </section>
+              </article>
+            </section>
+            <!-- dropdown Menu -->
+          </li>
+          <li class="relative cursor-pointer">
+            <a
+              href="#portfolio"
+              class="font-bold transition-all duration-500 hover:text-mainColor text-[14px] select-none"
+            >
+              Portafolio
+            </a>
+          </li>
+          <li class="relative cursor-pointer">
+            <a href="#tramites">
+              <h3
+                class="font-bold transition-all duration-500 hover:text-mainColor text-[14px] select-none"
+              >
+                Trámites
+              </h3>
+            </a>
+          </li>
+          <!-- section input  -->
+          <article class="relative h-auto lg:w-1/3 xl:w-1/5">
+            <input
+              id="txtFilterNews"
+              type="text"
+              placeholder="Busca el nombre del trámite"
+              class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
+            />
+            <button
+              class="bg-mainColor hover:bg-black transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] md:top-[0.3rem] cursor-pointer p-1"
+              id="btnSearchInput"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-5 h-5 p-[3px] md:p-1"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </article>
+          <!-- section input  -->
+        </ul>
+        <!-- menu  -->
+      </section>
+    </nav>
+    <!-- navbar -->
+
+    <!-- header  -->
+
+    <!-- Logo gov  -->
+    <header class="w-full h-12 bg-[#3366CC] flex items-center">
+      <article class="lg:container mx-auto flex justify-between items-center">
+        <img src="./img/logo-gov.svg" class="w-32 h-32" alt="" />
+      </article>
+    </header>
+    <!-- Logo gov  -->
+
+    <!-- header  -->
+
+    <!-- main  -->
+    <main class="px-6 my-20">
+      <!-- slider info Section  -->
+      <section
+        class="lg:container mx-auto flex flex-col gap-8 lg:gap-10 mt-32 mb-20"
+      >
+        <article class="flex items-center justify-center gap-3 relative">
+          <h2 class="text-2xl md:text-3xl font-bold">
+            <span
+              class="before:absolute before:content-[''] md:before:w-1/4 xl:before:w-1/3 before:h-[1px] before:bg-black before:left-0 before:top-[1rem]"
+            ></span>
+            Información reciente
+            <span
+              class="after:absolute after:content-[''] md:after:w-1/4 xl:after:w-1/3 after:h-[1px] after:bg-black after:right-0 after:top-[1rem]"
+            ></span>
+          </h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 lg:w-8 lg:h-8 font-bold text-mainColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </article>
+
+        <!-- Swiper -->
+        <article class="w-full swiper mySwiperInfo h-auto xl:h-[400px]">
+          <div class="swiper-wrapper w-full h-full">
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Noteworthy technology acquisitions 2021
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem dolore deleniti odio totam illo, voluptate
+                  natus tenetur praesentium, saepe, earum quo ducimus aspernatur
+                  quod! Ad repellat natus enim animi mollitia?
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[1rem] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/926390/pexels-photo-926390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Noteworthy technology acquisitions 2021
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem dolore deleniti odio totam illo, voluptate
+                  natus tenetur praesentium, saepe, earum quo ducimus aspernatur
+                  quod! Ad repellat natus enim animi mollitia?
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Noteworthy technology acquisitions 2021
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 lg:w-8 lg:h-8 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 lg:w-8 lg:h-8 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem dolore deleniti odio totam illo, voluptate
+                  natus tenetur praesentium, saepe, earum quo ducimus aspernatur
+                  quod! Ad repellat natus enim animi mollitia?
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Noteworthy technology acquisitions 2021
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem dolore deleniti odio totam illo, voluptate
+                  natus tenetur praesentium, saepe, earum quo ducimus aspernatur
+                  quod! Ad repellat natus enim animi mollitia?
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/1595388/pexels-photo-1595388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Noteworthy technology acquisitions 2021
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem dolore deleniti odio totam illo, voluptate
+                  natus tenetur praesentium, saepe, earum quo ducimus aspernatur
+                  quod! Ad repellat natus enim animi mollitia?
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/261599/pexels-photo-261599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Noteworthy technology acquisitions 2021
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400"
+                >
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Exercitationem dolore deleniti odio totam illo, voluptate
+                  natus tenetur praesentium, saepe, earum quo ducimus aspernatur
+                  quod! Ad repellat natus enim animi mollitia?
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-button-next hidden lg:flex"></div>
+          <div class="swiper-button-prev hidden lg:flex"></div>
+        </article>
+        <!-- Swiper -->
+      </section>
+      <!-- slider info Section  -->
+
+      <!-- seccion de tramites  -->
+      <section
+        class="lg:container mx-auto my-10 md:my-20"
+        id="tramites"
+      ></section>
+      <!-- secccion de tramites  -->
+
+      <!-- seccion estadisticas  -->
+      <section
+        class="lg:container mx-auto bg-white h-auto grid grid-cols-1 xl:grid-cols-2 gap-6 p-6 rounded-lg p-6 text-black border w-full"
+        id="containerCounters"
+      >
+        <article class="col-span-1 flex flex-col gap-3">
+          <div class="flex flex-col md:flex-row gap-8 relative justify-center">
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="100"> 0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Licencia de Construcción</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="20">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Permiso de Uso de Suelo</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:p-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count text-count flex font-bold"
+              >
+                <span data-count="50">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">
+                Registro Civil de Nacimiento
+              </p>
+            </figure>
+          </div>
+          <div class="flex flex-col md:flex-row gap-8 relative justify-center">
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="100"> 0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">
+                Registro Civil de Matrimonio
+              </p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="20">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Licencia de Conducir</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:p-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count text-count flex font-bold"
+              >
+                <span data-count="50">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Pago de Impuestos Prediales</p>
+            </figure>
+          </div>
+        </article>
+        <article class="col-span-1 flex flex-col gap-3">
+          <div class="flex flex-col md:flex-row gap-8 relative justify-center">
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="100"> 0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Licencia de Construcción</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="20">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Permiso de Uso de Suelo</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:p-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count text-count flex font-bold"
+              >
+                <span data-count="50">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">
+                Registro Civil de Nacimiento
+              </p>
+            </figure>
+          </div>
+          <div class="flex flex-col md:flex-row gap-8 relative justify-center">
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="100"> 0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">
+                Registro Civil de Matrimonio
+              </p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count flex font-bold"
+              >
+                <span data-count="20">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Licencia de Conducir</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-6 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:p-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+              <h3
+                class="text-4xl lg:text-5xl xl:text-6xl text-count text-count flex font-bold"
+              >
+                <span data-count="50">0</span>
+                <div class="text-mainColor">+</div>
+              </h3>
+              <p class="text-[14px] text-center">Pago de Impuestos Prediales</p>
+            </figure>
+          </div>
+        </article>
+      </section>
+      <!-- seccion estadisticas  -->
+
+      <!-- section de eventos y estadisticas  -->
+      <section
+        class="lg:container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-8 my-20"
+      >
+        <article class="col-span-1 flex flex-col gap-3">
+          <article class="relative w-full">
+            <h3
+              class="font-bold text-2xl md:text-3xl flex items-center justify-center gap-2"
+            >
+              <span
+                class="before:absolute before:content-[''] lg:before:w-[15%] xl:before:w-1/4 before:h-[1px] before:bg-black before:left-0 before:top-[1rem]"
+              ></span>
+
+              Últimos eventos
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 lg:w-8 lg:h-8 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <span
+                class="after:absolute after:content-[''] lg:after:w-[15%] xl:after:w-1/4 after:h-[1px] after:bg-black after:right-0 after:top-[1rem]"
+              ></span>
+            </h3>
+          </article>
+          <section
+            class="relative border-s border-gray-200 dark:border-gray-700"
+          >
+            <div class="mb-10 ms-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+              ></div>
+              <time
+                class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >February 2022</time
+              >
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                Application UI code in Tailwind CSS
+              </h3>
+              <p
+                class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+              >
+                Get access to over 20+ pages including a dashboard layout,
+                charts, kanban board, calendar, and pre-order E-commerce &
+                Marketing pages.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                >Learn more
+                <svg
+                  class="w-3 h-3 ms-2 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="mb-10 ms-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+              ></div>
+              <time
+                class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >March 2022</time
+              >
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                Marketing UI design in Figma
+              </h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                All of the pages and components are first designed in Figma and
+                we keep a parity between the two versions even as we update the
+                project.
+              </p>
+            </div>
+            <div class="ms-4">
+              <div
+                class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+              ></div>
+              <time
+                class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                >April 2022</time
+              >
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                E-Commerce UI code in Tailwind CSS
+              </h3>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                Get started with dozens of web components and interactive
+                elements built on top of Tailwind CSS.
+              </p>
+            </div>
+          </section>
+        </article>
+
+        <article class="col-span-1 flex flex-col gap-3">
+          <article class="relative w-full">
+            <h3
+              class="font-bold text-2xl md:text-3xl flex items-center justify-center gap-2"
+            >
+              <span
+                class="before:absolute before:content-[''] lg:before:w-[10%] xl:before:w-1/6 before:h-[1px] before:bg-black before:left-0 before:top-[1rem]"
+              ></span>
+
+              Información de interes
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 lg:w-8 lg:h-8 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
+                />
+              </svg>
+
+              <span
+                class="after:absolute after:content-[''] lg:after:w-[10%] xl:after:w-1/6 after:h-[1px] after:bg-black after:right-0 after:top-[1rem]"
+              ></span>
+            </h3>
+          </article>
+
+          <div
+            class="bg-contain bg-no-repeat bg-center h-96 w-full"
+            style="background-image: url('../img/stadisticadesktop.png')"
+          ></div>
+        </article>
+      </section>
+      <!-- section de eventos y estadisticas  -->
+
+      <!-- seccion noticias  -->
+      <section
+        class="lg:container mx-auto my-20 flex flex-col items-center gap-10"
+      >
+        <div class="flex gap-3 items-center justify-center">
+          <h3 class="text-2xl md:text-3xl font-bold">Últimas noticias</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 lg:w-8 lg:h-8 text-mainColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z"
+            />
+          </svg>
+        </div>
+        <article
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full"
+        >
+          <figure
+            class="col-span-1 flex flex-col justify-between transition-all duration-500 transform hover:translate-y-[-5px] cursor-pointer"
+          >
+            <img
+              src="https://images.pexels.com/photos/8107183/pexels-photo-8107183.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              alt=""
+              class="rounded-t-lg w-full h-64 object-cover"
+            />
+            <figcaption
+              class="flex flex-col items-center gap-5 py-6 shadow-md rounded-lg"
+            >
+              <article class="flex gap-3 justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                  />
+                </svg>
+                <h3 class="text-[14px] font bold text-gray-400">12/01/24</h3>
+              </article>
+              <a
+                href="./internaNoticia.html"
+                class="hover:underline text-mainColor"
+                >Ver más información</a
+              >
+            </figcaption>
+          </figure>
+          <figure
+            class="col-span-1 flex flex-col justify-between transition-all duration-500 transform hover:translate-y-[-5px] cursor-pointer w-full"
+          >
+            <img
+              src="https://images.pexels.com/photos/760118/pexels-photo-760118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              class="rounded-t-lg w-full h-64 object-cover"
+            />
+            <figcaption
+              class="flex flex-col items-center gap-5 py-6 shadow-md rounded-lg"
+            >
+              <article class="flex gap-3 justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                  />
+                </svg>
+                <h3 class="text-[14px] font bold text-gray-400">12/01/24</h3>
+              </article>
+              <a
+                href="./internaNoticia.html"
+                class="hover:underline text-mainColor"
+                >Ver más información</a
+              >
+            </figcaption>
+          </figure>
+          <figure
+            class="col-span-1 md:col-span-2 xl:col-span-1 flex flex-col justify-between transition-all duration-500 transform hover:translate-y-[-5px] cursor-pointer w-full"
+          >
+            <img
+              src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              class="rounded-t-lg w-full h-64 object-cover"
+            />
+            <figcaption
+              class="flex flex-col items-center gap-5 py-6 shadow-md rounded-lg"
+            >
+              <article class="flex gap-3 justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6 text-gray-400"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                  />
+                </svg>
+                <h3 class="text-[14px] font bold text-gray-400">12/01/24</h3>
+              </article>
+              <a
+                href="./internaNoticia.html"
+                class="hover:underline text-mainColor"
+                >Ver más información</a
+              >
+            </figcaption>
+          </figure>
+        </article>
+        <a href="./news.html">
+          <button
+            class="bg-mainColor text-white text-[1rem] py-2 px-4 rounded-full transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+          >
+            Ver todas las noticias
+          </button>
+        </a>
+      </section>
+      <!-- seccion noticias  -->
+    </main>
+    <!-- main  -->
+
+    <!-- footer   -->
+    <footer class="mt-20 flex flex-col">
+      <section class="bg-mainColor px-6">
+        <article
+          class="lg:container mx-auto text-black rounded-lg bg-white p-8 py-20 transform translate-y-[-40px] border-t"
+        >
+          <article class="grid grid-cols-1 lg:grid-cols-3 gap-y-10">
+            <!-- seccion 1 -->
+            <div
+              class="col-span-1 lg:col-span-2 flex flex-col text-[1rem] gap-1 order-2 lg:order-1 gap-2 lg:gap-1"
+            >
+              <h3 class="text-xl text-mainColor font-bold">
+                Entidad TramyFast
+              </h3>
+
+              <p class="font-bold">
+                Edificio Murillo Toro Cra. 8a entre calles 12A y 12B Medellín-
+                Antioquía
+              </p>
+              <p>
+                Departamento:
+                <span class="underline text-mainColor font-semibold"
+                  >Medellín-Colombia</span
+                >.
+              </p>
+              <p>
+                Código Postal:
+                <span class="underline text-mainColor font-semibold">
+                  250051</span
+                >
+              </p>
+              <p>
+                Horario de Atención:
+                <span class="underline text-mainColor font-semibold">
+                  Lunes a Viernes de 7:00 a.m a 4:00 p.m, jornada
+                  continua.</span
+                >
+              </p>
+              <p>
+                Correo Institucional:
+                <span class="text-mainColor underline font-semibold">
+                  contactenos@alcaldiasoacha.gov.co</span
+                >
+              </p>
+              <p>
+                Número de Visitas:
+                <span class="underline text-mainColor font-semibold"
+                  >4861659</span
+                >
+              </p>
+              <p>
+                Línea Anticorrupción:
+                <span class="underline text-mainColor font-semibold"
+                  >01-800-0912667</span
+                >
+              </p>
+            </div>
+            <!-- seccion 1 -->
+            <!-- seccion 2  -->
+            <figure
+              class="col-span-1 flex gap-3 items-center justify-center order-1 lg:order-2"
+            >
+              <img src="./img/logo.png" alt="" class="w-16 object-contain" />
+              <h3 class="font-bold text-2xl">TramyFast</h3>
+            </figure>
+            <!-- seccion 2  -->
+            <!-- seccion redes  -->
+            <div class="col-span-1 lg:col-span-3 flex flex-wrap gap-3 order-3">
+              <a href="#" class="flex items-center gap-1 hover:underline">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 fill-mainColor"
+                >
+                  <path
+                    d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"
+                  ></path>
+                </svg>
+                @Facebook
+              </a>
+              <a href="#" class="flex items-center gap-1 hover:underline">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 fill-mainColor"
+                >
+                  <path
+                    d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                  ></path>
+                </svg>
+                @X
+              </a>
+              <a href="#" class="flex items-center gap-1 hover:underline">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 fill-mainColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"
+                  ></path>
+                </svg>
+                @Youtube
+              </a>
+              <a href="#" class="flex items-center gap-1 hover:underline">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 fill-mainColor"
+                >
+                  <path
+                    d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                  ></path>
+                </svg>
+                @Instagram
+              </a>
+            </div>
+            <!-- seccion redes  -->
+
+            <!-- seccion redes  -->
+            <div
+              class="col-span-1 lg:col-span-3 text-mainColor text-[1rem] flex flex-wrap gap-6 order-3 underline font-semibold"
+            >
+              <a href="#">Política de privacidad y condiciones de uso</a>
+              <a href="#"> Contacto</a>
+              <a href="#">Mapa del sitio</a>
+            </div>
+            <!-- seccion redes  -->
+          </article>
+        </article>
+      </section>
+      <section class="bg-govColor px-6">
+        <article
+          class="lg:container mx-auto text-white flex justify-center lg:justify-start gap-5 py-5"
+        >
+          <figure class="w-12">
+            <img
+              src="./img/logofooter.png"
+              class="w-full h-full object-contain"
+              alt=""
+            />
+          </figure>
+          <div class="w-[1px] h-auto bg-white"></div>
+          <img src="./img/logo-gov.svg" class="w-32" alt="" />
+        </article>
+      </section>
+    </footer>
+    <!-- footer  -->
+
+    <!-- Botón de Scroll -->
+    <button
+      id="scrollBtn"
+      class="fixed bottom-8 right-8 bg-mainColor hover:bg-black rounded-full text-white p-2 lg:p-3 transform translate-x-full opacity-0 transition-all duration-300 ease-in-out z-40 border"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 18.75 7.5-7.5 7.5 7.5"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 12.75 7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
+    <!-- main scripts  -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- main scripts  -->
+  </body>
+</html>
