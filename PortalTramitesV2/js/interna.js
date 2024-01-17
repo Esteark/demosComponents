@@ -11,10 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  const navbar = document.getElementById("nav");
-
   let scrollPosition = 0;
-
+  const navbar = document.getElementById("nav");
   window.addEventListener("scroll", function () {
     let currentPosition = window.scrollY;
 
@@ -27,10 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "shadow-md",
         "shadow-white"
       );
-      navbar.classList.remove("mb-10");
+      navbar.classList.remove("top-[3rem]");
     } else {
       // El usuario está haciendo scroll hacia arriba
       navbar.classList.remove("bg-white", "top-0", "shadow-md", "shadow-white");
+      navbar.classList.add("top-[3rem]");
     }
 
     scrollPosition = currentPosition;
