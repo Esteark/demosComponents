@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <script src="./js/tailwindcss3.3.3.js"></script>
+    <!-- main scripts  -->
+    <title>Portal Trámites 1cero1</title>
+  </head>
+  <body class="overflow-y-auto">
+    <!-- header  -->
+    <header class="flex flex-col gap-8 lg:gap-6">
+      <!-- Logo gov  -->
+      <section class="h-12 bg-[#3366CC] flex items-center px-6">
+        <article class="lg:container mx-auto flex justify-between items-center">
+          <img src="./img/logo-gov.svg" class="w-32 h-32" alt="" />
+        </article>
+      </section>
+      <!-- Logo gov  -->
+      <!-- sec logos and input search -->
+      <section
+        class="lg:container mx-auto px-6 xl:px-0 flex flex-wrap justify-center lg:justify-between items-center gap-6"
+      >
+        <article
+          class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start"
+        >
+          <figure class="w-20">
+            <img
+              src="./img/logoAlcaldia.png"
+              class="w-full h-full object-contain"
+              alt=""
+            />
+          </figure>
+          <h2 class="text-lg font-semibold text-center lg:text-start">
+            Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
+          </h2>
+        </article>
+
+        <!-- section input  -->
+        <article class="relative h-auto w-full lg:w-1/4 xl:w-1/5">
+          <input
+            id="txtFilterNews"
+            type="text"
+            placeholder="Buscar trámite"
+            class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
+          />
+          <button
+            class="bg-mainColor hover:bg-black transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] md:top-[0.3rem] cursor-pointer p-1"
+            id="btnSearchInput"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 p-[3px] md:p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+          </button>
+        </article>
+        <!-- section input  -->
+      </section>
+      <!-- sec logos and input search -->
+      <!-- navbar -->
+      <nav
+        class="transition-all duration-700 z-50 w-full border-b-2 border-mainColor bg-gris px-6 h-16"
+        id="nav"
+      >
+        <section
+          class="lg:container mx-auto flex flex-col gap-6 justify-center lg:gap-0 lg:flex-row items-center h-full"
+        >
+          <article
+            class="flex justify-between items-center w-full h-full lg:hidden"
+          >
+            <h3 class="font-semibold">Menú</h3>
+            <!-- boton menu mobile  -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 cursor-pointer"
+              id="btnMenu"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+            <!-- boton menu mobile  -->
+          </article>
+
+          <!-- menu  -->
+          <ul
+            class="fixed hidden top-0 lg:relative lg:justify-center flex flex-col lg:flex lg:items-center lg:flex-row lg:gap-0 w-full lg:w-auto h-screen lg:h-full transform transition-all duration-700 z-50 bg-white lg:bg-transparent lg:top-auto lg:z-auto lg:opacity-100 opacity-0"
+            id="ulMenu"
+          >
+            <article
+              class="w-full p-6 flex justify-between items-center lg:hidden"
+            >
+              <figure class="w-20">
+                <img
+                  src="./img/logoAlcaldia.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </figure>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 text-mainColor cursor-pointer"
+                id="btnMenuClose"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </article>
+            <section class="flex flex-col lg:flex-row h-full">
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 text-center"
+              >
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Inicio
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 text-center"
+              >
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Transparencia y acceso a la información pública
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 text-center"
+              >
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Trámites y servicios
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 text-center"
+              >
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Sobre nosotros
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 text-center"
+              >
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Ayuda
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 text-center"
+              >
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Portal principal
+                </a>
+              </li>
+            </section>
+          </ul>
+          <!-- menu  -->
+        </section>
+      </nav>
+      <!-- navbar -->
+    </header>
+    <!-- header  -->
+
+    <!-- main  -->
+    <main class="my-10 lg:my-20">
+      <!-- slider info Section  -->
+      <section
+        class="lg:container mx-auto flex flex-col gap-8 lg:gap-10 lg:mt-20 mb-10 px-6"
+      >
+        <article class="flex items-center justify-center gap-3 relative">
+          <h2 class="text-2xl md:text-3xl font-bold">
+            <span
+              class="before:absolute before:content-[''] md:before:w-1/5 xl:before:w-1/4 before:h-[1px] before:bg-black before:left-0 before:top-[1rem]"
+            ></span>
+            Información Importante
+            <span
+              class="after:absolute after:content-[''] md:after:w-1/5 xl:after:w-1/4 after:h-[1px] after:bg-black after:right-0 after:top-[1rem]"
+            ></span>
+          </h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 lg:w-8 lg:h-8 font-bold text-mainColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </article>
+
+        <!-- Swiper -->
+        <article class="w-full swiper mySwiperInfo h-auto xl:h-[400px]">
+          <div class="swiper-wrapper w-full h-full">
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/933964/pexels-photo-933964.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Innovación en trámites, tu experiencia más rápida y sencilla"
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400 line-clamp-3 overflow-hidden"
+                >
+                  Descubre cómo la modernización de los procesos administrativos
+                  ha dado paso a una era donde realizar trámites es más fácil
+                  que nunca. Con la implementación de nuevas tecnologías y
+                  enfoques, este artículo explora cómo se han eliminado
+                  obstáculos burocráticos para brindarte una experiencia más
+                  eficiente y sin complicaciones. Desde la simplificación de
+                  formularios hasta la digitalización de documentos, sumérgete
+                  en un mundo donde la eficiencia es la clave de una
+                  administración más amigable.
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[1rem] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/926390/pexels-photo-926390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Agilidad en acción, descubre las últimas mejoras para tus
+                  trámites
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400 line-clamp-3 overflow-hidden"
+                >
+                  Acompáñanos en un recorrido por las últimas actualizaciones
+                  que están transformando la manera en que llevas a cabo tus
+                  trámites diarios. Este artículo destaca las innovaciones más
+                  recientes en el ámbito administrativo, desde plataformas en
+                  línea hasta aplicaciones móviles diseñadas para simplificar tu
+                  experiencia. Con un enfoque en la agilidad, estas mejoras
+                  están diseñadas para ahorrar tiempo y minimizar el estrés
+                  asociado con los procesos burocráticos.
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/326502/pexels-photo-326502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  ¡Adiós a la burocracia! Novedades que simplifican tus
+                  gestiones
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 lg:w-8 lg:h-8 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 lg:w-8 lg:h-8 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400 line-clamp-3 overflow-hidden"
+                >
+                  La burocracia está en retirada gracias a las últimas novedades
+                  que hacen que tus gestiones sean más sencillas y directas.
+                  Este artículo destaca las soluciones más recientes que han
+                  desafiado la complejidad inherente a los trámites. Desde
+                  cambios legislativos hasta nuevas políticas gubernamentales,
+                  explora cómo estas innovaciones están allanando el camino
+                  hacia un panorama administrativo más claro y accesible para
+                  todos.
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/853151/pexels-photo-853151.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Innovación en trámites: Tu experiencia más rápida y sencilla
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400 line-clamp-3 overflow-hidden"
+                >
+                  Descubre cómo la innovación está transformando radicalmente la
+                  forma en que enfrentas los trámites cotidianos. Desde la
+                  introducción de tecnologías avanzadas hasta la implementación
+                  de sistemas más eficientes, este artículo destaca las
+                  herramientas digitales que están revolucionando la experiencia
+                  de realizar trámites. Sumérgete en un mundo donde la velocidad
+                  y la simplicidad son las principales prioridades, haciendo que
+                  tus gestiones sean más rápidas y sencillas que nunca.
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/1595388/pexels-photo-1595388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Trámites en la palma de tu mano: La revolución de las
+                  aplicaciones móviles
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400 line-clamp-3 overflow-hidden"
+                >
+                  Descubre cómo las aplicaciones móviles están llevando la
+                  comodidad y la accesibilidad a un nuevo nivel en el mundo de
+                  los trámites. Este artículo explora la revolución de las
+                  aplicaciones diseñadas específicamente para facilitar la
+                  realización de gestiones administrativas desde la comodidad de
+                  tu dispositivo móvil. Desde la presentación de documentos
+                  hasta el seguimiento en tiempo real del estado de tus
+                  trámites, sumérgete en la era donde la palma de tu mano se
+                  convierte en la llave maestra para simplificar y agilizar tus
+                  gestiones cotidianas.
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+            <a
+              href="./interna.html"
+              class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow xl:flex-row transition-all duration-500 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 h-full w-full swiper-slide"
+            >
+              <img
+                class="object-cover w-full h-[300px] md:h-[400px] xl:h-full rounded-t-lg xl:rounded-bl-lg xl:rounded-tr-none xl:grow"
+                src="https://images.pexels.com/photos/261599/pexels-photo-261599.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt=""
+              />
+              <div
+                class="flex flex-col justify-between gap-3 md:gap-8 p-6 leading-normal"
+              >
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Trámites en la palma de tu mano: La revolución de las
+                  aplicaciones móviles
+                </h5>
+                <article class="flex gap-3 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="font-bold text-[14px] text-gray-400">
+                    12/01/2024
+                  </h3>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] text-gray-400">Vistas</h3>
+                </article>
+                <p
+                  class="text-[14px] md:font-normal text-gray-700 dark:text-gray-400"
+                >
+                  Descubre cómo las aplicaciones móviles están llevando la
+                  comodidad y la accesibilidad a un nuevo nivel en el mundo de
+                  los trámites. Este artículo explora la revolución de las
+                  aplicaciones diseñadas específicamente para facilitar la
+                  realización de gestiones administrativas desde la comodidad de
+                  tu dispositivo móvil. Desde la presentación de documentos
+                  hasta el seguimiento en tiempo real del estado de tus
+                  trámites, sumérgete en la era donde la palma de tu mano se
+                  convierte en la llave maestra para simplificar y agilizar tus
+                  gestiones cotidianas.
+                </p>
+                <button
+                  class="bg-mainColor text-white text-[12px] py-2 px-3 rounded-md transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+                >
+                  Ver más información
+                </button>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-button-next hidden lg:flex"></div>
+          <div class="swiper-button-prev hidden lg:flex"></div>
+        </article>
+        <!-- Swiper -->
+      </section>
+      <!-- slider info Section  -->
+
+      <!-- seccion tramites  -->
+      <section
+        class="flex gap-6 flex-col bg-mainColor py-10 text-white px-6"
+        id="tramites"
+      >
+        <section class="lg:container mx-auto flex flex-col gap-y-10">
+          <article class="flex items-center justify-center gap-3 relative">
+            <h2 class="text-2xl md:text-3xl font-bold">
+              <span
+                class="before:absolute before:content-[''] md:before:w-1/5 xl:before:w-1/4 before:h-[1px] before:bg-white before:left-0 before:top-[1rem]"
+              ></span>
+              Nuestros trámites
+              <span
+                class="after:absolute after:content-[''] md:after:w-1/5 xl:after:w-1/4 after:h-[1px] after:bg-white after:right-0 after:top-[1rem]"
+              ></span>
+            </h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 lg:w-8 lg:h-8 font-bold"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75a4.5 4.5 0 0 1-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 1 1-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 0 1 6.336-4.486l-3.276 3.276a3.004 3.004 0 0 0 2.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852Z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4.867 19.125h.008v.008h-.008v-.008Z"
+              />
+            </svg>
+          </article>
+          <div
+            class="swiper-slide grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4"
+          >
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Pago de impuestos municipales
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Registro civil
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Licencias y permisos
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Pago de impuestos municipales
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Asesoría urbanística
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Ayudas sociales
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Registro de mascotas
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+            <figure
+              class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow text-center flex flex-col items-center justify-center transition-all transform hover:scale-90 col-span-1"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-10 h-10 text-gray-500 mb-3"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"
+                />
+              </svg>
+
+              <a href="#">
+                <h5
+                  class="mb-2 text-lg font-semibold tracking-tight text-gray-900"
+                >
+                  Registro Vivienda
+                </h5>
+              </a>
+
+              <a
+                href="#"
+                class="inline-flex items-center text-blue-600 hover:underline"
+              >
+                Ver más
+                <svg
+                  class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
+                  />
+                </svg>
+              </a>
+            </figure>
+          </div>
+          <a href="./internaCharts.html" class="text-center">
+            <button
+              class="bg-trasparent border text-white text-[1rem] py-2 px-4 rounded-lg transform transition-all duration-500 hover:bg-white hover:text-black lg:w-64"
+            >
+              Ver todos los trámites
+            </button>
+          </a>
+        </section>
+      </section>
+
+      <!-- section de eventos y estadisticas  -->
+      <section
+        class="lg:container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-8 my-10 lg:my-20 px-6"
+      >
+        <article
+          class="col-span-1 flex flex-col justify-between gap-6 xl:shadow-md p-6 rounded-md"
+        >
+          <article class="relative w-full">
+            <h3
+              class="font-bold text-2xl md:text-3xl flex items-center justify-center gap-2"
+            >
+              <span
+                class="before:absolute before:content-[''] lg:before:w-1/4 xl:before:w-1/6 before:h-[1px] before:bg-black before:left-0 before:top-[1rem]"
+              ></span>
+
+              Últimos eventos
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 lg:w-8 lg:h-8 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <span
+                class="after:absolute after:content-[''] lg:after:w-1/4 xl:after:w-1/6 after:h-[1px] after:bg-black after:right-0 after:top-[1rem]"
+              ></span>
+            </h3>
+          </article>
+          <section class="relative border-s border-gray-200">
+            <div class="mb-10 ms-4 flex flex-col gap-3">
+              <div
+                class="absolute w-3 h-3 bg-mainColor rounded-full mt-1.5 -start-1.5 border border-white"
+              ></div>
+              <time
+                class="mb-1 text-[12px] font-normal leading-none text-white bg-mainColor px-6 py-1 rounded-md w-32"
+                >Febrero 2024</time
+              >
+              <h3 class="text-lg font-semibold text-gray-900">
+                Páginas de Servicios Esenciales
+              </h3>
+              <p class="mb-4 text-base font-normal text-gray-500">
+                Hoy, les presentamos una oportunidad única para obtener acceso a
+                más de 20 páginas de servicios esenciales. Este evento trae
+                consigo un conjunto excepcional de herramientas diseñadas para
+                hacer que sus trámites sean más eficientes y convenientes
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-mainColor focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 w-32"
+                >Leer más
+                <svg
+                  class="w-3 h-3 ms-2 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="mb-10 ms-4 flex flex-col gap-3">
+              <div
+                class="absolute w-3 h-3 bg-bg-mainColor rounded-full mt-1.5 -start-1.5 border border-white"
+              ></div>
+              <time
+                class="mb-1 text-[12px] font-normal leading-none bg-mainColor text-white px-6 py-1 rounded-md w-32"
+                >Marzo 2024</time
+              >
+              <h3 class="text-lg font-semibold text-gray-900">
+                Coherencia en Actualizaciones
+              </h3>
+              <p class="text-base font-normal text-gray-500">
+                Mantenemos una paridad constante entre las dos versiones,
+                asegurándonos de que cada actualización del proyecto se refleje
+                de manera coherente en ambos entornos.
+              </p>
+            </div>
+            <div class="ms-4 flex flex-col gap-3">
+              <div
+                class="absolute w-3 h-3 bg-mainColor rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"
+              ></div>
+              <time
+                class="mb-1 text-[12px] font-normal leading-none bg-mainColor text-white px-6 py-1 rounded-md w-32"
+                >Abril 2024</time
+              >
+              <h3 class="text-lg font-semibold text-gray-900">
+                Transformando Trámites
+              </h3>
+              <p class="text-base font-normal text-gray-500">
+                Ofrecemos la posibilidad de explorar y aprovechar una variedad
+                de herramientas diseñadas para mejorar y simplificar.
+              </p>
+            </div>
+          </section>
+        </article>
+
+        <article
+          class="col-span-1 flex flex-col justify-between gap-6 xl:shadow-md p-6 rounded-md"
+          id="containerCounters"
+        >
+          <article class="relative w-full">
+            <h3
+              class="font-bold text-2xl md:text-3xl flex items-center justify-center gap-2 text-center"
+            >
+              <span
+                class="before:absolute before:content-[''] lg:before:w-1/4 xl:before:w-[15%] before:h-[1px] before:bg-black before:left-0 before:top-[1rem]"
+              ></span>
+
+              Cantidad de trámites
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 lg:w-8 lg:h-8 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"
+                />
+              </svg>
+
+              <span
+                class="after:absolute after:content-[''] lg:after:w-1/4 xl:after:w-[15%] after:h-[1px] after:bg-black after:right-0 after:top-[1rem]"
+              ></span>
+            </h3>
+          </article>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <figure
+              class="col-span-1 flex flex-col gap-4 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                />
+              </svg>
+
+              <h3 class="text-4xl lg:text-5xl text-count flex font-bold">
+                <span data-count="35"> 0</span>
+              </h3>
+              <p class="text-[14px] text-center">Trámite Haciencia</p>
+            </figure>
+            <figure
+              class="col-span-1 flex flex-col gap-4 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <h3 class="text-4xl lg:text-5xl text-count flex font-bold">
+                <span data-count="20">0</span>
+              </h3>
+              <p class="text-[14px] text-center">Recaudación Tributaria</p>
+            </figure>
+            <figure
+              class="col-span-1 flex flex-col gap-4 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:p-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+              <h3
+                class="text-4xl lg:text-5xl text-count text-count flex font-bold"
+              >
+                <span data-count="55">0</span>
+              </h3>
+              <p class="text-[14px] text-center">Participación Ciudadana</p>
+            </figure>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <figure
+              class="flex flex-col gap-4 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                />
+              </svg>
+
+              <h3 class="text-4xl lg:text-5xl text-count flex font-bold">
+                <span data-count="65"> 0</span>
+              </h3>
+              <p class="text-[14px] text-center">Despacho alcaldía</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-4 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:pr-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                />
+              </svg>
+
+              <h3 class="text-4xl lg:text-5xl text-count flex font-bold">
+                <span data-count="42">0</span>
+              </h3>
+              <p class="text-[14px] text-center">Educación y Cultura</p>
+            </figure>
+            <figure
+              class="flex flex-col gap-4 items-center border-b md:border-b-0 lg:border-0 pb-3 md:pb-0 md:pr-8 lg:p-0"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 text-mainColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"
+                />
+              </svg>
+              <h3
+                class="text-4xl lg:text-5xl text-count text-count flex font-bold"
+              >
+                <span data-count="50">0</span>
+              </h3>
+              <p class="text-[14px] text-center">
+                Dependencia Impuestos Prediales
+              </p>
+            </figure>
+          </div>
+          <a href="./internaCharts.html" class="text-center">
+            <button
+              class="bg-trasparent border text-black text-[1rem] py-2 px-4 rounded-lg transform transition-all duration-500 hover:bg-[#000] hover:text-white lg:w-64"
+            >
+              Ver más información
+            </button>
+          </a>
+        </article>
+      </section>
+      <!-- section de eventos y estadisticas  -->
+
+      <!-- seccion noticias  -->
+      <section
+        class="lg:container mx-auto my-10 lg:my-20 flex flex-col items-center gap-10 px-6 px-0"
+        id="news"
+      >
+        <div class="flex gap-3 items-center justify-center">
+          <h3 class="text-2xl md:text-3xl font-bold">Últimas noticias</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 lg:w-8 lg:h-8 text-mainColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z"
+            />
+          </svg>
+        </div>
+        <article
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full"
+        >
+          <figure
+            class="col-span-1 flex flex-col justify-between transition-all duration-500 transform hover:translate-y-[-5px] cursor-pointer"
+          >
+            <img
+              src="https://images.pexels.com/photos/8107183/pexels-photo-8107183.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+              alt=""
+              class="rounded-t-lg w-full h-64 object-cover"
+            />
+            <figcaption
+              class="flex flex-col items-center gap-5 py-6 shadow-md rounded-lg"
+            >
+              <article class="flex flex-col gap-3 justify-center px-6">
+                <div class="flex gap-3 self-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] font bold text-gray-400">12/01/24</h3>
+                </div>
+                <p
+                  class="text-[12px] line-clamp-4 md:line-clamp-1 lg:line-clamp-2 overflow-hidden text-center"
+                >
+                  Descubre cómo las aplicaciones móviles están llevando la
+                  comodidad y la accesibilidad a un nuevo nivel en el mundo de
+                  los trámites. Este artículo explora la revolución de las
+                  aplicaciones diseñadas específicamente para facilitar la
+                  realización de gestiones administrativas desde la comodidad de
+                  tu dispositivo móvil. Desde la presentación de documentos
+                  hasta el seguimiento en tiempo real del estado de tus
+                  trámites, sumérgete en la era donde la palma de tu mano se
+                  convierte en la llave maestra para simplificar y agilizar tus
+                  gestiones cotidianas.
+                </p>
+              </article>
+              <a
+                href="./internaNoticia.html"
+                class="hover:underline text-mainColor"
+                >Ver más información</a
+              >
+            </figcaption>
+          </figure>
+          <figure
+            class="col-span-1 flex flex-col justify-between transition-all duration-500 transform hover:translate-y-[-5px] cursor-pointer w-full"
+          >
+            <img
+              src="https://images.pexels.com/photos/760118/pexels-photo-760118.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              class="rounded-t-lg w-full h-64 object-cover"
+            />
+            <figcaption
+              class="flex flex-col items-center gap-5 py-6 shadow-md rounded-lg"
+            >
+              <article class="flex flex-col gap-3 justify-center px-6">
+                <div class="flex gap-3 self-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] font bold text-gray-400">12/01/24</h3>
+                </div>
+                <p
+                  class="text-[12px] line-clamp-4 md:line-clamp-1 lg:line-clamp-2 overflow-hidden text-center"
+                >
+                  Explora cómo la inteligencia artificial está transformando la
+                  manera en que llevas a cabo tus trámites. Desde chatbots que
+                  te guían a través de procesos complejos hasta sistemas de
+                  reconocimiento de documentos, este artículo destaca cómo la IA
+                  está simplificando la interacción entre los usuarios y las
+                  entidades administrativas. Descubre cómo estas tecnologías
+                  avanzadas están allanando el camino para una experiencia de
+                  trámite más eficiente, rápida y personalizada.
+                </p>
+              </article>
+
+              <a
+                href="./internaNoticia.html"
+                class="hover:underline text-mainColor"
+                >Ver más información</a
+              >
+            </figcaption>
+          </figure>
+          <figure
+            class="col-span-1 md:col-span-2 xl:col-span-1 flex flex-col justify-between transition-all duration-500 transform hover:translate-y-[-5px] cursor-pointer w-full"
+          >
+            <img
+              src="https://images.pexels.com/photos/1181405/pexels-photo-1181405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              class="rounded-t-lg w-full h-64 object-cover"
+            />
+            <figcaption
+              class="flex flex-col items-center gap-5 py-6 shadow-md rounded-lg"
+            >
+              <article class="flex flex-col gap-3 justify-center px-6">
+                <div class="flex gap-3 self-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 text-gray-400"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                    />
+                  </svg>
+                  <h3 class="text-[14px] font bold text-gray-400">12/01/24</h3>
+                </div>
+                <p
+                  class="text-[12px] line-clamp-4 md:line-clamp-1 lg:line-clamp-2 overflow-hidden text-center"
+                >
+                  Sumérgete en la intersección entre la sostenibilidad y la
+                  administración pública. Este artículo explora cómo la
+                  digitalización de los trámites no solo mejora la eficiencia,
+                  sino que también contribuye a la reducción del consumo de
+                  papel y la huella de carbono. Descubre las iniciativas
+                  gubernamentales y las innovaciones tecnológicas que están
+                  liderando el camino hacia un enfoque más sostenible en la
+                  realización de trámites, promoviendo un mundo más verde y
+                  ecológico.
+                </p>
+              </article>
+              <a
+                href="./internaNoticia.html"
+                class="hover:underline text-mainColor"
+                >Ver más información</a
+              >
+            </figcaption>
+          </figure>
+        </article>
+        <a href="./news.html">
+          <button
+            class="bg-mainColor text-white text-[1rem] py-2 px-4 rounded-full transform transition-all duration-500 hover:bg-[#000] lg:w-64"
+          >
+            Ver todas las noticias
+          </button>
+        </a>
+      </section>
+      <!-- seccion noticias  -->
+    </main>
+    <!-- main  -->
+
+    <!-- footer   -->
+    <footer class="mt-20 flex flex-col">
+      <section class="bg-mainColor px-6">
+        <article
+          class="lg:container mx-auto text-black rounded-lg bg-white p-8 py-10 lg:py-20 transform translate-y-[-40px] border-t"
+        >
+          <article class="grid grid-cols-1 lg:grid-cols-3 gap-y-10">
+            <!-- seccion 1 -->
+            <div
+              class="col-span-1 lg:col-span-2 flex flex-col text-[1rem] gap-1 order-2 lg:order-1 gap-2 lg:gap-1"
+            >
+              <h3 class="text-xl text-mainColor font-bold">
+                Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
+              </h3>
+
+              <p class="font-semibold">
+                Dirección:
+                <span class="font-normal"
+                  >Carrera 14 con Calle 12 Esquina- Santa Rosa de Cabal-
+                  Risaralda- Colombia</span
+                >.
+              </p>
+              <p class="font-semibold">
+                Horario de atención:
+                <span class="font-normal">
+                  Lunes a Jueves de 7:00 a. m. a 12:00 m y de 2:00 p.m. a 5:00
+                  p.m <br />Viernes de 7:00 a.m. a 3:00 p.m. Jornada
+                  Continua.</span
+                >.
+              </p>
+
+              <p class="font-semibold">
+                Teléfono Conmutador:
+                <span class="text-mainColor underline font-semibold">
+                  +57 606 3660600 ext. 101
+                </span>
+              </p>
+              <p class="font-semibold">
+                Código Postal:
+                <span class="underline text-mainColor font-semibold">
+                  661020</span
+                >
+              </p>
+              <p class="font-bold">
+                Teléfono móvil:
+                <span class="font-normal"> No disponible</span>
+              </p>
+              <p class="font-semibold">
+                Línea de atención gratuita:
+                <span class="text-mainColor underline font-semibold">
+                  +57 606 3660600</span
+                >
+              </p>
+              <p class="font-semibold">
+                Línea anticorrupción:
+                <span class="underline text-mainColor font-semibold"
+                  >+57 606 3655225</span
+                >
+              </p>
+              <p class="font-bold">
+                Fax:
+                <span class="font-normal">No disponible</span>
+              </p>
+              <p class="font-semibold">
+                Correo institucional:
+                <span class="text-mainColor underline font-semibold">
+                  contactenos@santarosadecabal-risaralda.gov.co
+                </span>
+              </p>
+              <p class="font-semibold">
+                Correo de notificaciones judiciales:
+                <span class="text-mainColor underline font-semibold">
+                  notificacionjudicial@santarosadecabal-risaralda.gov.co
+                </span>
+              </p>
+            </div>
+            <!-- seccion 1 -->
+            <!-- seccion 2  -->
+            <figure
+              class="col-span-1 flex flex-col gap-3 items-center justify-center order-1 lg:order-2"
+            >
+              <img
+                src="./img/logoAlcaldia.png"
+                alt=""
+                class="w-24 object-contain"
+              />
+              <h3 class="font-semibold text-lg text-center">
+                Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
+              </h3>
+            </figure>
+            <!-- seccion 2  -->
+            <!-- seccion redes  -->
+            <div class="col-span-1 lg:col-span-3 flex flex-wrap gap-3 order-3">
+              <a
+                href="#"
+                class="flex items-center gap-1 hover:underline text-mainColor"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 fill-mainColor"
+                >
+                  <path
+                    d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z"
+                  ></path>
+                </svg>
+                @Alcaldía de Santa Rosa de Cabal
+              </a>
+              <a
+                href="#"
+                class="flex items-center gap-1 hover:underline text-mainColor"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 fill-mainColor"
+                >
+                  <path
+                    d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                  ></path>
+                </svg>
+                @Alcaldía de Santa Rosa de Cabal
+              </a>
+              <a
+                href="#"
+                class="flex items-center gap-1 hover:underline text-mainColor"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-6 h-6 fill-mainColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"
+                  ></path>
+                </svg>
+                @Santa Rosa de Cabal
+              </a>
+              <!-- <a href="#" class="flex items-center gap-1 hover:underline">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-6 h-6 fill-mainColor"
+                >
+                  <path
+                    d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                  ></path>
+                </svg>
+                @Instagram
+              </a> -->
+            </div>
+            <!-- seccion redes  -->
+
+            <!-- seccion redes  -->
+            <div
+              class="col-span-1 lg:col-span-3 text-mainColor text-[1rem] flex flex-wrap gap-6 order-3 underline font-semibold"
+            >
+              <a href="#">Política de privacidad y condiciones de uso</a>
+              <a href="#"> Contacto</a>
+              <a href="#">Mapa del sitio</a>
+            </div>
+            <!-- seccion redes  -->
+          </article>
+        </article>
+      </section>
+      <section class="bg-govColor px-6">
+        <article
+          class="lg:container mx-auto text-white flex justify-center lg:justify-start gap-5 py-5"
+        >
+          <figure class="w-12">
+            <img
+              src="./img/logofooter.png"
+              class="w-full h-full object-contain"
+              alt=""
+            />
+          </figure>
+          <div class="w-[1px] h-auto bg-white"></div>
+          <img src="./img/logo-gov.svg" class="w-32" alt="" />
+        </article>
+      </section>
+    </footer>
+    <!-- footer  -->
+
+    <!-- Botón de chatbot -->
+    <button
+      class="fixed bottom-24 right-[5rem] lg:right-[5.8rem] bg-white hover:bg-black rounded-full hover:fill-[#fff] text-white p-4 lg:p-6 transform translate-x-full transition-all duration-500 z-40 bordeBotonChat border border-black"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6">
+        <path
+          d="M21.928 11.607c-.202-.488-.635-.605-.928-.633V8c0-1.103-.897-2-2-2h-6V4.61c.305-.274.5-.668.5-1.11a1.5 1.5 0 0 0-3 0c0 .442.195.836.5 1.11V6H5c-1.103 0-2 .897-2 2v2.997l-.082.006A1 1 0 0 0 1.99 12v2a1 1 0 0 0 1 1H3v5c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5a1 1 0 0 0 1-1v-1.938a1.006 1.006 0 0 0-.072-.455zM5 20V8h14l.001 3.996L19 12v2l.001.005.001 5.995H5z"
+        ></path>
+        <ellipse cx="8.5" cy="12" rx="1.5" ry="2"></ellipse>
+        <ellipse cx="15.5" cy="12" rx="1.5" ry="2"></ellipse>
+        <path d="M8 16h8v2H8z"></path>
+      </svg>
+    </button>
+
+    <!-- Botón de Scroll -->
+    <button
+      id="scrollBtn"
+      class="fixed bottom-8 right-8 bg-mainColor hover:bg-black rounded-full text-white p-2 lg:p-3 transform translate-x-full opacity-0 transition-all duration-300 ease-in-out z-40 border-black"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 18.75 7.5-7.5 7.5 7.5"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 12.75 7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
+    <!-- main scripts  -->
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- main scripts  -->
+  </body>
+</html>
