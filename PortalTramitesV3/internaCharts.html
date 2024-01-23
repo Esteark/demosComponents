@@ -25,13 +25,13 @@
         <article
           class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start"
         >
-          <figure class="w-20">
-            <img
-              src="./img/logoAlcaldia.png"
-              class="w-full h-full object-contain"
-              alt=""
-            />
-          </figure>
+        <a href="/" class="w-20">
+          <img
+            src="./img/logoAlcaldia.png"
+            class="w-full h-full object-contain"
+            alt=""
+          />
+        </a>
           <h2 class="text-lg font-semibold text-center lg:text-start">
             Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
           </h2>
@@ -231,9 +231,119 @@
           </svg>
         </article>
 
-        <article class="grid xl:gap-6 grid-cols-1 xl:grid-cols-3 border-t">
+        <article class="grid xl:gap-6 grid-cols-1 xl:grid-cols-3 border-t pt-6 ">
           <!-- seccion de filtros  -->
-          <div class="col-span-1"></div>
+          <div class="col-span-1 flex flex-col gap-3 shadow xl:shadow-md p-6">
+            <article class="flex  flex-col gap-3">
+              <h3 class="text-lg font-semibold text-colorMain">Buscar</h3>
+              <!-- section input  -->
+              <article class="relative h-auto w-full ">
+          <input
+            type="text"
+            placeholder="Buscar trámite"
+            class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
+          />
+          <button
+            class="bg-mainColor hover:bg-black transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] md:top-[0.3rem] cursor-pointer p-1"
+            id="btnSearchInput"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5 p-[3px] md:p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              />
+            </svg>
+          </button>
+              </article>
+              <!-- section input  -->
+            </article>
+            <article class="flex flex-col gap-3">
+              <h3 class="text-lg font-semibold text-colorMain">Filtrar por:</h3>
+              <!-- seccion filters -->
+              <section class="flex flex-col gap-3">
+                <!-- filtro  -->
+                <section class="flex flex-col gap-3 cursor-pointer secfilter">
+                  <div class="flex items-center gap-3 ">
+                    <h3 class="text-[15px]">Tipo gestión</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    
+                  </div>
+                   <div></div>
+                </section>
+                <!-- filtro  -->
+                <section class="flex flex-col gap-3 cursor-pointer secfilter">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-[15px]">Estado automatización</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    
+                  </div>
+                   <div></div>
+                </section>
+                <!-- filtro  -->
+                <!-- filtro  -->
+                <section class="flex flex-col gap-3 cursor-pointer secfilter">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-[15px]">Costo</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    
+                  </div>
+                   <div></div>
+                </section>
+                <!-- filtro  -->
+                <!-- filtro  -->
+                <section class="flex flex-col gap-3 cursor-pointer secfilter">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-[15px]">Dependencias</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    
+                  </div>
+                   <div></div>
+                </section>
+                <!-- filtro  -->
+                <!-- filtro  -->
+                <section class="flex flex-col gap-3 cursor-pointer secfilter">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-[15px]">Estado automatización</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    
+                  </div>
+                   <div></div>
+                </section>
+                <!-- filtro  -->
+                <!-- filtro  -->
+                <section class="flex flex-col gap-3 cursor-pointer secfilter">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-[15px]">Temáticas</h3>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    
+                  </div>
+                   <div></div>
+                </section>
+              </section>
+              <!-- seccion filters -->
+            </article>
+
+          </div>
           <!-- seccion de filtros  -->
           <div class="col-span-1 xl:col-span-2 flex flex-col">
             <article class="flex flex-col gap-y-6">
