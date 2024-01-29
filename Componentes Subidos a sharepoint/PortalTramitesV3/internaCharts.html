@@ -5,33 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
     <script src="./js/tailwindcss3.3.3.js"></script>
     <title>Portal interna Tramites</title>
   </head>
   <body>
-  <!-- header  -->
-  <header class="flex flex-col gap-8 lg:gap-6">
-    <!-- Logo gov  -->
-    <section class="h-12 bg-[#3366CC] flex items-center px-6">
-      <article class="lg:container mx-auto flex justify-between items-center">
-        <img src="./img/logo-gov.svg" class="w-32 h-32" alt="" />
-      </article>
-    </section>
-    <!-- Logo gov  -->
-    <!-- sec logos and input search -->
-    <section
-      class="lg:container mx-auto px-6 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6"
-    >
-      <article
-        class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start"
+    <!-- header  -->
+    <header class="flex flex-col gap-8 lg:gap-6">
+      <!-- Logo gov  -->
+      <section class="h-12 bg-[#3366CC] flex items-center px-6">
+        <article class="lg:container mx-auto flex justify-between items-center">
+          <img src="./img/logo-gov.svg" class="w-32 h-32" alt="" />
+        </article>
+      </section>
+      <!-- Logo gov  -->
+      <!-- sec logos and input search -->
+      <section
+        class="lg:container mx-auto px-6 flex flex-wrap justify-center lg:justify-between items-center gap-y-6 xl:gap-6"
       >
+        <article
+          class="flex gap-6 flex-col lg:flex-row items-center justify-center lg:justify-start"
+        >
         <a href="/" class="w-20">
           <img
             src="./img/logoAlcaldia.png"
@@ -39,19 +32,13 @@
             alt=""
           />
         </a>
-        <h2 class="text-lg font-semibold text-center lg:text-start">
-          Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
-        </h2>
-      </article>
+          <h2 class="text-lg font-semibold text-center lg:text-start">
+            Alcaldía Municipal de Santa Rosa de Cabal en Risaralda
+          </h2>
+        </article>
 
-      <section class="flex flex-col gap-3 w-full lg:w-1/4">
-        <a
-          href="/_layouts/15/Authenticate.aspx"
-          class="headerWeb__aut text-[12px] text-center lg:text-end hover:underline text-mainColor"
-          >Administrar Sitio</a
-        >
         <!-- section input  -->
-        <article class="relative h-auto w-full">
+        <article class="relative h-auto w-full lg:w-1/4 xl:w-1/5">
           <input
             id="txtFilterNews"
             type="text"
@@ -80,118 +67,138 @@
         </article>
         <!-- section input  -->
       </section>
-    </section>
-    <!-- sec logos and input search -->
-    <!-- navbar -->
-    <nav
-      class="transition-all duration-700 z-50 w-full border-b-2 border-mainColor bg-gris px-6 h-16"
-      id="nav"
-    >
-      <section
-        class="lg:container mx-auto flex flex-col gap-6 justify-center lg:gap-0 lg:flex-row items-center h-full"
+      <!-- sec logos and input search -->
+      <!-- navbar -->
+      <nav
+        class="transition-all duration-700 z-50 w-full border-b-2 border-mainColor bg-gris px-6 h-16"
+        id="nav"
       >
-        <article
-          class="flex justify-between items-center w-full h-full lg:hidden"
-        >
-          <h3 class="font-semibold">Menú</h3>
-          <!-- boton menu mobile  -->
-          <i
-            class="fas fa-bars cursor-pointer text-[1.3rem]"
-            id="btnMenu"
-          ></i>
-
-          <!-- boton menu mobile  -->
-        </article>
-
-        <!-- menu  -->
-        <ul
-          class="fixed hidden top-0 lg:relative lg:justify-center flex flex-col lg:flex lg:items-center lg:flex-row lg:gap-0 w-full lg:w-auto h-screen lg:h-full transform transition-all duration-700 z-50 bg-white lg:bg-transparent lg:top-auto lg:z-auto lg:opacity-100 opacity-0"
-          id="ulMenu"
+        <section
+          class="lg:container mx-auto flex flex-col gap-6 justify-center lg:gap-0 lg:flex-row items-center h-full"
         >
           <article
-            class="w-full p-6 flex justify-between items-center lg:hidden"
+            class="flex justify-between items-center w-full h-full lg:hidden"
           >
-            <figure class="w-20">
-              <img
-                src="./img/logoAlcaldia.png"
-                class="w-full h-full object-contain"
-                alt=""
+            <h3 class="font-semibold">Menú</h3>
+            <!-- boton menu mobile  -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6 cursor-pointer"
+              id="btnMenu"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
-            </figure>
-            <i
-              class="fas fa-times-circle text-[1.5rem] text-mainColor cursor-pointer"
-              id="btnMenuClose"
-            ></i>
+            </svg>
+            <!-- boton menu mobile  -->
           </article>
-          <section class="flex flex-col lg:flex-row h-full">
-            <li
-              class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
+
+          <!-- menu  -->
+          <ul
+            class="fixed hidden top-0 lg:relative lg:justify-center flex flex-col lg:flex lg:items-center lg:flex-row lg:gap-0 w-full lg:w-auto h-screen lg:h-full transform transition-all duration-700 z-50 bg-white lg:bg-transparent lg:top-auto lg:z-auto lg:opacity-100 opacity-0"
+            id="ulMenu"
+          >
+            <article
+              class="w-full p-6 flex justify-between items-center lg:hidden"
             >
-              <a
-                href="/"
-                class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+              <figure class="w-20">
+                <img
+                  src="./img/logoAlcaldia.png"
+                  class="w-full h-full object-contain"
+                  alt=""
+                />
+              </figure>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-8 h-8 text-mainColor cursor-pointer"
+                id="btnMenuClose"
               >
-                Inicio
-              </a>
-            </li>
-            <li
-              class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
-            >
-              <a
-                href="/"
-                class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </article>
+            <section class="flex flex-col lg:flex-row h-full">
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
               >
-                Transparencia y acceso a la información pública
-              </a>
-            </li>
-            <li
-              class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
-            >
-              <a
-                href="/"
-                class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Inicio
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
               >
-                Trámites y servicios
-              </a>
-            </li>
-            <li
-              class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
-            >
-              <a
-                href="/"
-                class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Transparencia y acceso a la información pública
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
               >
-                Sobre nosotros
-              </a>
-            </li>
-            <li
-              class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
-            >
-              <a
-                href="/"
-                class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Trámites y servicios
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
               >
-                Ayuda
-              </a>
-            </li>
-            <li
-              class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
-            >
-              <a
-                href="/"
-                class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Sobre nosotros
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
               >
-                Portal principal
-              </a>
-            </li>
-          </section>
-        </ul>
-        <!-- menu  -->
-      </section>
-    </nav>
-    <!-- navbar -->
-  </header>
-  <!-- header  -->
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Ayuda
+                </a>
+              </li>
+              <li
+                class="cursor-pointer hover:bg-mainColor hover:underline transition-all duration-300 py-6 lg:py-0 lg:h-full flex items-center group px-6 lg:text-center"
+              >
+                <a
+                  href="/"
+                  class="font-bold transition-all text-[14px] select-none group-hover:text-white"
+                >
+                  Portal principal
+                </a>
+              </li>
+            </section>
+          </ul>
+          <!-- menu  -->
+        </section>
+      </nav>
+      <!-- navbar -->
+    </header>
+    <!-- header  -->
 
 
     <main class="my-6 px-6 transform mb-40 items-center mt-10">

@@ -1,0 +1,126 @@
+/*fuente  principal*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainColor: #f6f7fa;
+  --mainblue: #004884;
+  --secondaryBlue: #e6effd;
+  --hoverblue: #3366cc;
+  --hoverBlue2: #306eea;
+  --thirdblue: #1d42ff;
+  --blue1cero1: #17599b;
+  --mainColorMunicipio: #038f67;
+  --white: #fff;
+  --black: #000;
+  --textbutton: #1c4884;
+  --gray: #e7e7e7;
+  --gray2: #757575;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Estilos carrusel */
+
+.mySwiperInfo .swiper-button-prev,
+.mySwiperInfo .swiper-button-next {
+  width: 30px; /* Ajusta el ancho según tus necesidades */
+  height: 30px;
+  background-color: var(--white);
+  font-size: 30px;
+  border-radius: 30px;
+  border: 1px solid var(--black);
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+
+.mySwiperInfo .swiper-button-next:after,
+.mySwiperInfo .swiper-button-prev:after {
+  color: var(--black);
+  font-size: 12px;
+}
+.mySwiperInfo .swiper-button-prev:hover,
+.mySwiperInfo .swiper-button-next:hover {
+  opacity: 1;
+}
+
+/* Estilos para las scroll bars  */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--mainColorMunicipio);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/*Estilos seccion de estadisticas*/
+
+/*Estilos seccion de estadisticas*/
+
+/* Animaciones para el header */
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Estilo de la transición de izquierda a derecha */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Estilo de la aparición gradual de la imagen */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilo de la transición de la barra de carga */
+@keyframes expandWidth {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
