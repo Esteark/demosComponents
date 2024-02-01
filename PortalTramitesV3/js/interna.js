@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
           govColor: "#3366cc",
           gris: "#f2f2f2",
         },
+        outlineWidth: {
+          1: "1px", // Puedes agregar más valores según tus necesidades
+          12: "12px",
+        },
       },
     },
   };

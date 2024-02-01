@@ -193,14 +193,14 @@
     </header>
     <!-- header  -->
 
-    <main class="my-6 px-6 transform mb-40">
+    <main class="my-10 2xl:my-20 px-6 transform mb-40">
       <section
         class="lg:container mx-auto flex justify-center items-center h-full"
       >
         <!-- sec main  -->
         <article class="grid grid-cols-1 lg:grid-cols-6 gap-6">
           <!-- sec Form -->
-          <div class="col-span-1 lg:col-span-5 flex flex-col gap-5">
+          <div class="col-span-1 lg:col-span-4 flex flex-col gap-y-8">
             <h1 class="text-xl lg:text-2xl font-bold text-mainColor">
               Actualización de datos de identificación en la base de datos para
               programar visita
@@ -208,27 +208,306 @@
             <h3 class="text-2xl font-semibold">Paso 2 - Hago mi solicitud</h3>
 
             <!-- sec progres  -->
-            <section class="flex flex-col gap-3 w-full md:w-1/2">
+            <section class="flex flex-col gap-3 w-full 2xl:w-[80%]">
               <section class="h-1 w-full bg-gray-300">
                 <div class="h-full w-32 bg-mainColor"></div>
               </section>
-              <section class="flex gap-3 text-gray-400">
-                <div
-                  class="flex items-center gap-2 transition-all hover:text-mainColor cursor-pointer"
+              <section
+                class="w-full flex flex-wrap justify-between gap-3 text-gray-400"
+              >
+                <article
+                  class="flex items-center gap-2 transition-all hover:text-mainColor cursor-pointer group numberProgress"
                 >
-                  <span
-                    class="w-7 h-7 flex items-center justify-center rounded-full text-white bg-gray-400 font-semibold text-[14px] group-hover:bg-mainColor"
-                    >1</span
+                  <div
+                    class="w-6 h-6 flex items-center justify-center rounded-full text-white bg-gray-400 font-semibold text-[14px] group-hover:bg-mainColor transition-all duration-500"
                   >
-                  <h3 class="font-semibold text-[14px]">Inicio</h3>
-                </div>
+                    1
+                  </div>
+                  <h3
+                    class="font-semibold text-[12px] group-hover:text-mainColor transition-all duration-500"
+                  >
+                    Inicio
+                  </h3>
+                </article>
+                <article
+                  class="flex items-center gap-2 transition-all hover:text-mainColor cursor-pointer group numberProgress"
+                >
+                  <div
+                    class="w-6 h-6 flex items-center justify-center rounded-full text-white bg-mainColor font-semibold text-[14px] group-hover:bg-mainColor transition-all duration-500"
+                  >
+                    2
+                  </div>
+                  <h3
+                    class="font-semibold text-[12px] group-hover:text-mainColor transition-all duration-500 text-mainColor"
+                  >
+                    Hago mi solicitud
+                  </h3>
+                </article>
+                <article
+                  class="flex items-center gap-2 transition-all hover:text-mainColor cursor-pointer group numberProgress"
+                >
+                  <div
+                    class="w-6 h-6 flex items-center justify-center rounded-full border border-gray-400 text-gray-400 font-semibold text-[14px] group-hover:bg-mainColor group-hover:text-white group-hover:border-mainColor transition-all duration-500"
+                  >
+                    3
+                  </div>
+                  <h3
+                    class="font-semibold text-[12px] group-hover:text-mainColor transition-all duration-500"
+                  >
+                    Procesan mi solicitud
+                  </h3>
+                </article>
+                <article
+                  class="flex items-center gap-2 transition-all hover:text-mainColor cursor-pointer group numberProgress"
+                >
+                  <div
+                    class="w-6 h-6 flex items-center justify-center rounded-full border border-gray-400 text-gray-400 font-semibold text-[14px] group-hover:bg-mainColor group-hover:text-white group-hover:border-mainColor transition-all duration-500"
+                  >
+                    4
+                  </div>
+                  <h3
+                    class="font-semibold text-[12px] group-hover:text-mainColor transition-all duration-500"
+                  >
+                    Procesan mi Respuesta
+                  </h3>
+                </article>
               </section>
             </section>
             <!-- sec progres  -->
+
+            <!-- sec invitacion -->
+            <section class="rounded-lg border border-mainColor px-3 py-4">
+              <h3 class="text-lg font-semibold">
+                Le invitamos a completar la información solicitada.
+              </h3>
+            </section>
+            <!-- sec invitacion -->
+
+            <!-- sec Form 1 -->
+            <section class="flex flex-col gap-3">
+              <h3 class="font-semibold text-[1rem]">
+                Encuesta del ciudadano inscrito en el SISBEN
+              </h3>
+              <form
+                class="border border-gray-300 flex flex-col gap-y-8 py-6 px-4 rounded-md"
+              >
+                <h3 class="text-mainColor font-semibold">
+                  Información básica de la solicitud
+                </h3>
+                <section class="flex flex-col gap-y-4">
+                  <label for="" class="flex flex-col gap-2">
+                    <h3 class="text-[12px] font-semibold">
+                      Primer Nombre:
+                      <span class="text-red-500 font-semibold text-[1rem]"
+                        >*</span
+                      >
+                    </h3>
+                    <input
+                      type="text"
+                      class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                    />
+                  </label>
+                  <label for="" class="flex flex-col gap-2">
+                    <h3 class="text-[12px] font-semibold">Segundo Nombre:</h3>
+                    <input
+                      type="text"
+                      class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                    />
+                  </label>
+                  <label for="" class="flex flex-col gap-2">
+                    <h3 class="text-[12px] font-semibold">
+                      Primer Apellido:
+                      <span class="text-red-500 font-semibold text-[1rem]"
+                        >*</span
+                      >
+                    </h3>
+                    <input
+                      type="text"
+                      class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                    />
+                  </label>
+                  <label for="" class="flex flex-col gap-2">
+                    <h3 class="text-[12px] font-semibold">Segundo Apellido:</h3>
+                    <input
+                      type="text"
+                      class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                    />
+                  </label>
+                  <label for="" class="flex flex-col gap-2">
+                    <h3 class="text-[12px] font-semibold">
+                      Correo electrónico:
+                      <span class="text-red-500 font-semibold text-[1rem]"
+                        >*</span
+                      >
+                    </h3>
+                    <input
+                      type="email"
+                      class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                    />
+                  </label>
+                  <label for="" class="flex flex-col gap-2">
+                    <h3 class="text-[12px] font-semibold">
+                      Número Teléfono Contacto:
+                    </h3>
+                    <input
+                      type="text"
+                      class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                    />
+                  </label>
+                  <label for="" class="flex flex-col gap-2">
+                    <h3 class="text-[12px] font-semibold">
+                      Descripción:
+                      <span class="text-red-500 font-semibold text-[1rem]"
+                        >*</span
+                      >
+                    </h3>
+                    <textarea
+                      class="max-h-40 resize-y border border-gray rounded-md p-2 text-[14px] focus:border-mainColor outline-none transition-all duration-500"
+                      placeholder="Escribe aquí"
+                    ></textarea>
+                  </label>
+                </section>
+              </form>
+            </section>
+            <!-- sec Form 1 -->
+
+            <!-- sec Form 2 -->
+            <form
+              class="border border-gray-300 flex flex-col gap-y-8 py-6 px-4 rounded-md"
+            >
+              <article class="flex flex-col gap-y-6">
+                <h3 class="text-mainColor font-semibold">
+                  Formulario de SISBEN para programar visita
+                </h3>
+                <p class="font-semibold text-[14px]">
+                  Solicitud del ciudadano para actualizar sus datos o
+                  registrarlos por primera vez.
+                </p>
+              </article>
+              <section class="flex flex-col gap-y-4">
+                <label for="" class="flex flex-col gap-2">
+                  <h3 class="text-[12px] font-semibold">
+                    Primer Nombre:
+                    <span class="text-red-500 font-semibold text-[1rem]"
+                      >*</span
+                    >
+                  </h3>
+                  <select
+                    id="countries"
+                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-main-Color w-full p-2.5 cursor-pointer outline-none"
+                  >
+                    <option selected>Seleccione...</option>
+                    <option value="">Encuesta nueva</option>
+                    <option value="">Reencuesta</option>
+                    <option value="">Verificación</option>
+                  </select>
+                </label>
+
+                <label for="" class="flex flex-col gap-2">
+                  <h3 class="text-[12px] font-semibold">
+                    Dirección:
+                    <span class="text-red-500 font-semibold text-[1rem]"
+                      >*</span
+                    >
+                  </h3>
+                  <input
+                    type="text"
+                    class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                  />
+                </label>
+
+                <label for="" class="flex flex-col gap-2">
+                  <h3 class="text-[12px] font-semibold">
+                    Celular:
+                    <span class="text-red-500 font-semibold text-[1rem]"
+                      >*</span
+                    >
+                  </h3>
+                  <input
+                    type="email"
+                    class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                  />
+                </label>
+                <label for="" class="flex flex-col gap-2">
+                  <h3 class="text-[12px] font-semibold">
+                    Zona:
+                    <span class="text-red-500 font-semibold text-[1rem]"
+                      >*</span
+                    >
+                  </h3>
+                  <select
+                    id="countries"
+                    class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-main-Color w-full p-2.5 cursor-pointer outline-none"
+                  >
+                    <option selected>Seleccione...</option>
+                    <option value="">Urbana</option>
+                    <option value="">Rural</option>
+                  </select>
+                </label>
+
+                <label for="file-input" class="flex flex-col gap-2 relative">
+                  <section class="flex justify-between items-center">
+                    <h3 class="text-[12px] font-semibold">
+                      Fotocopia del documento de identidad del Titular del LADO
+                      FRENTE :
+                      <span class="text-red-500 font-semibold text-[1rem]"
+                        >*</span
+                      >
+                    </h3>
+                    <i
+                      class="fas fa-trash-alt text-mainColor text-[1rem] cursor-pointer"
+                    ></i>
+                  </section>
+                  <section class="flex flex-col gap-3">
+                    <input
+                      type="file"
+                      name="file-input"
+                      id="file-input"
+                      class="border border-gray-300 shadow-sm rounded-lg text-[14px] file:mr-3 focus:z-10 focus:border-mainColor disabled:opacity-50 file:bg-mainColor file:border-0 file:text-white file:py-2 file:px-4 outline-none file:cursor-pointer file:outline-none"
+                    />
+                    <p class="text-gray-500 text-[12px]">
+                      Ampliada al 150%, el peso del archivo no debe exceder 2MB
+                    </p>
+                  </section>
+                </label>
+                <h3 class="text-[1rem] font-semibold my-2">
+                  Por favor en los siguientes campos adjunte las fotocopias de
+                  los demás miembros del núcleo familiar <br />
+                  (Si tiene).
+                </h3>
+                <label for="file-input" class="flex flex-col gap-2 relative">
+                  <section class="flex justify-between items-center">
+                    <h3 class="text-[12px] font-semibold">
+                      Fotocopia de otro integrante del núcleo familiar:
+                      <span class="text-red-500 font-semibold text-[1rem]"
+                        >*</span
+                      >
+                    </h3>
+                    <i
+                      class="fas fa-trash-alt text-mainColor text-[1rem] cursor-pointer"
+                    ></i>
+                  </section>
+                  <section class="flex flex-col gap-3">
+                    <input
+                      type="file"
+                      name="file-input"
+                      id=""
+                      class="border border-gray-300 shadow-sm rounded-lg text-[14px] file:mr-3 focus:z-10 focus:border-mainColor disabled:opacity-50 file:bg-mainColor file:border-0 file:text-white file:py-2 file:px-4 outline-none file:cursor-pointer file:outline-none"
+                      multiple="4"
+                    />
+                    <p class="text-gray-500 text-[12px]">
+                      Puede subir máximo 4 imágenes, el peso del archivo no debe
+                      exceder 2MB
+                    </p>
+                  </section>
+                </label>
+              </section>
+            </form>
+            <!-- sec Form 2 -->
           </div>
-          <!-- sec Form -->
+
           <!-- sec info  -->
-          <div class="col-span-1 flex flex-col">
+          <div class="col-span-1 lg:col-span-2 flex flex-col">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
             labore nesciunt. Sequi accusantium dolorem quibusdam et! Iste ea
             possimus repellendus aspernatur vitae, ipsum accusantium pariatur
