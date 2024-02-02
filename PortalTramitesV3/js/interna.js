@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
       extend: {
         colors: {
           mainColor: "#038f67",
+          darkColor: "#024d37",
+          clearGreen: "#F3FFFC",
           govColor: "#3366cc",
           gris: "#f2f2f2",
         },
