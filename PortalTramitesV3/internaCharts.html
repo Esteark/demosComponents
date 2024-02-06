@@ -12,7 +12,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-    <script src="./js/tailwindcss3.3.3.js"></script>
+  <script src="./js/tailwindCss/tailwindcss3.3.3.js"></script>
     <title>Portal interna Tramites</title>
   </head>
   <body>
@@ -224,120 +224,111 @@
           </svg>
         </article>
 
-        <article class="grid xl:gap-6 grid-cols-1 xl:grid-cols-3 border-t pt-6 ">
+        <article class="grid gap-y-6 xl:gap-6 grid-cols-1 xl:grid-cols-4 border-t pt-6 ">
           <!-- seccion de filtros  -->
-          <div class="col-span-1 flex flex-col gap-3 shadow xl:shadow-md p-6">
+          <div class="col-span-1 flex flex-col gap-6  p-6 bg-clearGreen ">
             <article class="flex  flex-col gap-3">
-              <h3 class="text-lg font-semibold text-colorMain">Buscar</h3>
+              <h3 class="text-lg font-bold text-colorMain">Buscar</h3>
               <!-- section input  -->
               <article class="relative h-auto w-full ">
           <input
             type="text"
             placeholder="Buscar trámite"
-            class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
+            class="text-[12px] border border-mainColor w-full rounded-md py-3 px-3 outline-none focus:shadow-md transition duration-300"
           />
           <button
-            class="bg-mainColor hover:bg-black transition duration-300 rounded-full text-white absolute right-2 top-[0.3rem] md:top-[0.3rem] cursor-pointer p-1"
+            class="bg-mainColor hover:bg-black transition duration-300 rounded-full text-white absolute right-2 top-[0.5rem] cursor-pointer p-1 w-7 h-7 flex justify-center items-center"
             id="btnSearchInput"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5 p-[3px] md:p-1"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
+          <i class="fas fa-search text-[12px] "></i>
+            
           </button>
               </article>
               <!-- section input  -->
             </article>
             <article class="flex flex-col gap-3">
-              <h3 class="text-lg font-semibold text-colorMain">Filtrar por:</h3>
+              <h3 class="text-lg font-bold text-colorMain">Filtrar por:</h3>
               <!-- seccion filters -->
-              <section class="flex flex-col gap-3">
+              <section class="flex flex-col" >
                 <!-- filtro  -->
-                <section class="flex flex-col gap-3 cursor-pointer secfilter">
-                  <div class="flex items-center gap-3 ">
-                    <h3 class="text-[15px]">Tipo gestión</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
+                <section class="flex flex-col  cursor-pointer secfilter overflow-y-hidden max-h-12 transition-all duration-500">
+                  <div class="flex items-center gap-3 hover:bg-mainColor hover:text-white transition-all duration-500 py-3 px-3 rounded-md group">
+                    <h3 class="text-[15px] font-semibold">Tipo gestión</h3>
+                    <i
+                    class="fa-solid text-mainColor fa-angle-down transform rotate-0 transition-all duration-500 iconDown group-hover:text-white"
+                  ></i>
                     
                   </div>
-                   <div></div>
+                   <div class="flex flex-col  px-3">
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">Todos</h3>
+                    </article>
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">Trámite</h3>
+                      <div class="rounded-full bg-mainColor text-white group-hover:bg-white group-hover:text-black text-[12px] p-1 font-semibold w-6 h-6 flex justify-center items-center">83</div>
+                    </article>
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">Servicio</h3>
+                      <div class="rounded-full bg-mainColor text-white group-hover:bg-white group-hover:text-black text-[12px] p-1 font-semibold w-6 h-6 flex justify-center items-center">1</div>
+                    </article>
+                  
+                   </div>
                 </section>
                 <!-- filtro  -->
-                <section class="flex flex-col gap-3 cursor-pointer secfilter">
-                  <div class="flex items-center gap-3">
-                    <h3 class="text-[15px]">Estado automatización</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
+                <section class="flex flex-col  cursor-pointer secfilter overflow-y-hidden max-h-12 transition-all duration-500">
+                  <div class="flex items-center gap-3 hover:bg-mainColor hover:text-white transition-all duration-500 py-3 px-3 rounded-md group">
+                    <h3 class="text-[15px] font-semibold">Estado automatización</h3>
+                    <i
+                    class="fa-solid text-mainColor fa-angle-down transform rotate-0 transition-all duration-500 iconDown group-hover:text-white"
+                  ></i>
                     
                   </div>
-                   <div></div>
-                </section>
-                <!-- filtro  -->
-                <!-- filtro  -->
-                <section class="flex flex-col gap-3 cursor-pointer secfilter">
-                  <div class="flex items-center gap-3">
-                    <h3 class="text-[15px]">Costo</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
+                   <div class="flex flex-col  px-3">
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">En línea</h3>
+                    </article>
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">Parcialmente en línea</h3>
+                      
+                    </article>
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">Presencial</h3>
                     
-                  </div>
-                   <div></div>
-                </section>
-                <!-- filtro  -->
-                <!-- filtro  -->
-                <section class="flex flex-col gap-3 cursor-pointer secfilter">
-                  <div class="flex items-center gap-3">
-                    <h3 class="text-[15px]">Dependencias</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
-                    
-                  </div>
-                   <div></div>
-                </section>
-                <!-- filtro  -->
-                <!-- filtro  -->
-                <section class="flex flex-col gap-3 cursor-pointer secfilter">
-                  <div class="flex items-center gap-3">
-                    <h3 class="text-[15px]">Estado automatización</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
-                    
-                  </div>
-                   <div></div>
+                    </article>
+                  
+                   </div>
                 </section>
                 <!-- filtro  -->
                 <!-- filtro  -->
-                <section class="flex flex-col gap-3 cursor-pointer secfilter">
-                  <div class="flex items-center gap-3">
-                    <h3 class="text-[15px]">Temáticas</h3>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-mainColor transform iconfilter">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                    </svg>
+                <section class="flex flex-col  cursor-pointer secfilter overflow-y-hidden max-h-12 transition-all duration-500">
+                  <div class="flex items-center gap-3 hover:bg-mainColor hover:text-white transition-all duration-500 py-3 px-3 rounded-md group">
+                    <h3 class="text-[15px] font-semibold">Costo</h3>
+                    <i
+                    class="fa-solid text-mainColor fa-angle-down transform rotate-0 transition-all duration-500 iconDown group-hover:text-white"
+                  ></i>
                     
                   </div>
-                   <div></div>
+                   <div class="flex flex-col  px-3">
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">Requieren Pago</h3>
+                    </article>
+                    <article class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md">
+                      <h3 class="underline font-semibold text-[14px]">No requieren Pago </h3>
+                     
+                    </article>
+                    
+                  
+                   </div>
                 </section>
+                <!-- filtro  -->
+              
               </section>
               <!-- seccion filters -->
             </article>
 
           </div>
           <!-- seccion de filtros  -->
+          <!-- seccion tramites  -->
           <div class="col-span-1 xl:col-span-2 flex flex-col">
             <article class="flex flex-col gap-y-6">
               <!-- tramite  -->
@@ -551,6 +542,90 @@
             </article>
             <!-- paginador  -->
           </div>
+          <!-- seccion tramites  -->
+          <!-- sec info  -->
+          <div class="col-span-1  flex flex-col gap-4">
+            <section
+              class="bg-clearGreen rounded-lg text-mainColor font-semibold p-4"
+            >
+              <a href="# " class="hover:underline text-[14px]"
+                >Te explicamos con tutoriales</a
+              >
+            </section>
+
+            <section
+              class="bg-clearGreen rounded-md max-h-14 overflow-hidden transition-all duration-500 text-mainColor cursor-poiner  secInfo"
+            >
+              <article class="p-4 flex flex-col gap-6">
+                <article
+                  class="flex justify-between items-center cursor-pointer secInfo"
+                >
+                  <h3 class="text-[14px] font-semibold">¿Tienes dudas?</h3>
+                  <i
+                    class="fa-solid fa-angle-down transform rotate-0 transition-all duration-500 iconDown"
+                  ></i>
+                </article>
+                <article class="flex flex-col gap-3">
+                  <h4 class="font-semibold text-[13px]">
+                    Sobre este trámite o consulta
+                  </h4>
+                  <div class="flex flex-wrap gap-3 items-center">
+                    <i class="fas fa-envelope"></i>
+                    <a
+                      href="mailto:soportemunicipios@gmail.com"
+                      class="text-[14px] underline"
+                      >Enviar correo</a
+                    >
+                  </div>
+                  <div class="flex flex-wrap gap-3 items-center">
+                    <i class="fas fa-headphones"></i>
+                    <a href="#" class="text-[14px] underline"
+                      >+ 57 604 560 6111</a
+                    >
+                  </div>
+                </article>
+              </article>
+            </section>
+
+            <section
+              class="bg-clearGreen rounded-md max-h-14 overflow-hidden transition-all duration-500 text-mainColor cursor-poiner secInfo"
+            >
+              <article class="py-0 py-1 px-4 lg:p-4 flex flex-col  gap-3">
+                <article
+                  class="flex justify-between items-center cursor-pointer secInfo  mt-3 lg:mt-0 transform lg:translate-y-[-10PX]"
+                >
+                  <h3 class="text-[14px] font-semibold">
+                    ¿Como fue tu experiencia durante el proceso?
+                  </h3>
+                  <i
+                    class="fa-solid fa-angle-down transform rotate-0 transition-all duration-500 iconDown"
+                  ></i>
+                </article>
+                <article class="py-6 flex flex-col gap-3 items-center">
+                  <div class="flex items-center justify-center gap-6">
+                    <section
+                      class="flex flex-col items-center gap-2 cursor-pointer"
+                    >
+                      <i class="fa-solid fa-circle-check text-[1.5rem]"></i>
+                      <h3 class="uppercase font-semibold">Fácil</h3>
+                    </section>
+                    <section
+                      class="flex flex-col items-center gap-2 cursor-pointer"
+                    >
+                      <i class="fa-solid fa-circle-xmark text-[1.5rem]"></i>
+                      <h3 class="uppercase font-semibold">Difícil</h3>
+                    </section>
+                  </div>
+                  <a
+                    href="#"
+                    class="py-2 px-4 border border-mainColor rounded-full text-[14px] hover:bg-mainColor hover:text-white transition-all duration-500 font-semibold"
+                    >Envia tus comentarios</a
+                  >
+                </article>
+              </article>
+            </section>
+          </div>
+          <!-- sec info  -->
         </article>
       </section>
     </main>
@@ -781,8 +856,8 @@
       </svg>
     </button>
     <!-- main scripts  -->
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/interna.js"></script>
+    <script src="./js/main/interna.js"></script>
+    <script src="./js/main/mainFilterTramites.js" type="module"></script>
     <!-- main scripts  -->
   </body>
 </html>
