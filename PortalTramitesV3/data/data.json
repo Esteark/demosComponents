@@ -1,0 +1,204 @@
+{
+  "tramites": [
+    {
+      "id": 1,
+      "title": "Encuesta de programas sociales – SISBEN",
+      "url": "formSisben.html",
+      "description": "Ser encuestado para ingresar a la base de datos del SISBEN en los siguientes casos: cuando la persona u hogar no han sido encuestados y lo requieren por primera vez, por cambio de domicilio dentro del mismo municipio o a otro municipio, cuando hay inconformidad con el puntaje obtenido o por inclusión de hogares nuevos en la unidad de vivienda.",
+      "type": 1,
+      "cost": false,
+      "duration": "Duración 15 dias",
+      "management": "Trámite"
+    },
+    {
+      "id": 2,
+      "title": "Impuesto de predial unificado",
+      "url": "formImpuestoPredial.html",
+      "description": "Pago que todo propietario, poseedor o quien disfrute del bien ajeno, debe realizar sobre los bienes inmuebles o predios ubicados en la respectiva jurisdicción del Municipio o Distrito.Puedes liquidar my pagar en linea el impuesto predial con la opcionde pago seguro por medio de PSE",
+      "type": 0,
+      "cost": false,
+      "duration": "Duración 1 día hábil",
+      "management": "Trámite"
+    },
+    {
+      "id": 3,
+      "title": "Préstamo de parques yo escenarios deportivos para realización de espectáculos de las artes escénicas",
+      "url": "formImpuestoPredial.html",
+      "description": "Obtener el préstamo o alquiler de los parques, estadios y/o escenarios deportivos Municipales o Distritales para la realización de espectáculos públicos de las artes escénicas. Los estadios o escenarios deportivos no se prestan más de una vez al mes y la duración del espectáculo no podrá ser mayor a 4 días.",
+      "type": 0,
+      "cost": false,
+      "duration": "Duración 15 días hábiles",
+      "management": "Trámite"
+    },
+    {
+      "id": 4,
+      "title": "Concepto de norma urbanística",
+      "url": "formNormaUrba.html",
+      "description": "Dictamen sobre las normas urbanísticas y demás vigentes aplicables a un predio que va a ser construido o intervenido.",
+      "type": 1,
+      "cost": true,
+      "duration": "Duración 8 días hábiles",
+      "management": "Trámite"
+    },
+    {
+      "id": 5,
+      "title": "Certificado de paz y salvo Predial.",
+      "url": "formPazYSalvo.html",
+      "description": "Obtener la certificación donde se manifiesta que el deudor se encuentra a paz y salvo con el impuesto predial.",
+      "type": 0,
+      "cost": false,
+      "duration": "Obtención inmediata",
+      "management": "Trámite"
+    },
+    {
+      "id": 6,
+      "title": "Liquidación del impuesto de vehículos públicos",
+      "url": "#",
+      "description": "Declaración y pago que recae sobre los propietarios o poseedores de vehículos de servicio particular nuevos, usados, los que se internen temporalmente en el territorio nacional y motocicletas cuyo cilindraje sea superior a 125 centímetros cúbicos.",
+      "type": 1,
+      "cost": true,
+      "duration": "Duración 2 días hábiles",
+      "management": "Trámite"
+    },
+    {
+      "id": 7,
+      "title": "Certificado de tradición de vehiculos",
+      "url": "#",
+      "description": "Obtener el certificado que determina la titularidad del dominio, las características del vehículo, medidas cautelares, limitaciones, gravámenes y un registro histórico donde se refleja todas las actuaciones y trámites realizados al automotor desde la fecha de expedición de la matrícula inicial.",
+      "type": 1,
+      "cost": true,
+      "duration": "Duración 1 día hábil",
+      "management": "Trámite"
+    },
+    {
+      "id": 8,
+      "title": "Esterilización canina y felina.",
+      "url": "#",
+      "description": "Esterilizar caninos o felinos mediante procedimiento quirúrgico para controlar el crecimiento poblacional.",
+      "type": 2,
+      "cost": false,
+      "duration": "",
+      "management": "Trámite"
+    },
+    {
+      "id": 9,
+      "title": "Asistencia técnica rural",
+      "url": "#",
+      "description": "Asesoría a los pequeños y medianos productores agrícolas, pecuarios, forestales y pesqueros, en los siguientes asuntos: la aptitud de los suelos, en la selección del tipo de actividad a desarrollar y en la planificación de las explotaciones; en la aplicación y uso de tecnologías y recursos adecuados a la naturaleza de la actividad productiva; en las posibilidades y procedimientos para acceder al financiamiento de la inversión; en el mercadeo apropiado de los bienes producidos y en la promoción de las formas de organización de los productores.",
+      "type": 1,
+      "cost": false,
+      "duration": "Obtención inmediata",
+      "management": "Trámite"
+    },
+    {
+      "id": 10,
+      "title": "Registro de contribuyentes del impuesto de industria y comercio",
+      "url": "#",
+      "description": "Incorporarse al mecanismo de identificación, ubicación y clasificación de los contribuyentes del impuesto de industria y comercio.",
+      "type": 1,
+      "cost": false,
+      "duration": "Duración 1 día hábil",
+      "management": "Trámite"
+    },
+    {
+      "id": 11,
+      "title": "Cancelación del registro de contribuyentes del impuesto de industria y comercio",
+      "url": "#",
+      "description": "Obtener la cancelación del registro de industria y comercio cuando cesen definitivamente el desarrollo de actividades industriales, comerciales o de servicios sujetas a dicho impuesto.",
+      "type": 0,
+      "cost": false,
+      "duration": "Duración 1 día hábil",
+      "management": "Trámite"
+    },
+    {
+      "id": 12,
+      "title": "Registro de ejemplares caninos de manejo especial.",
+      "url": "#",
+      "description": "Obtener el registro en el censo de caninos de razas de manejo especial y posterior permiso para poseer los ejemplares que presenten una o más de las siguientes características: 1. Caninos que han tenido episodios de agresiones a personas; o le hayan causado la muerte a otros perros",
+      "type": 0,
+      "cost": false,
+      "duration": "Duración 2 dias",
+      "management": "Trámite"
+    },
+    {
+      "id": 13,
+      "title": "Asignación de Nomenclatura.",
+      "url": "#",
+      "description": "Obtener el número de identificación único de los bienes raíces que se encuentren dentro de la jurisdicción.",
+      "type": 1,
+      "cost": true,
+      "duration": "Duración 10 días hábiles",
+      "management": "Trámite"
+    },
+    {
+      "id": 14,
+      "title": "Certificado de residencia.",
+      "url": "#",
+      "description": "Obtener una certificación sobre el lugar de residencia o domicilio en una determinada localidad o lugar del territorio.",
+      "type": 0,
+      "cost": false,
+      "duration": "Duración 8 días hábiles",
+      "management": "Trámite"
+    },
+    {
+      "id": 15,
+      "title": "Concepto de uso de suelos.",
+      "url": "#",
+      "description": "Trámite para obtener información oficial sobre cómo se puede utilizar un determinado terreno o propiedad.",
+      "type": 0,
+      "cost": false,
+      "duration": "",
+      "management": "Trámite"
+    },
+    {
+      "id": 16,
+      "title": "Certificado de estratificación socioeconómica.",
+      "url": "#",
+      "description": "Certificar el estrato socioeconómico oficial de uno o varios inmuebles residenciales, urbanos y rurales que se encuentren en jurisdicción del municipio.",
+      "type": 1,
+      "cost": false,
+      "duration": "Duración 8 días hábiles",
+      "management": "Trámite"
+    },
+    {
+      "id": 17,
+      "title": "Certificado de riesgo de predios.",
+      "url": "#",
+      "description": "Certificar el estrato socioeconómico oficial de uno o varios inmuebles residenciales, urbanos y rurales que se encuentren en jurisdicción del municipio.",
+      "type": 1,
+      "cost": false,
+      "duration": "Duración 8 días hábiles",
+      "management": "Trámite"
+    },
+    {
+      "id": 18,
+      "title": "Licencia de inhumación de cadáveres.",
+      "url": "#",
+      "description": "Autorización para enterrar o depositar cadáveres, restos óseos y partes humanas en los cementerios.",
+      "type": 1,
+      "cost": false,
+      "duration": "Obtención inmediata",
+      "management": "Trámite"
+    },
+    {
+      "id": 19,
+      "title": "Impuesto de industria y comercio y su complementario de avisos y tableros.",
+      "url": "#",
+      "description": "Declaración y pago del impuesto por el ejercicio de cualquier actividad comercial, industrial o de servicios, en forma permanente u ocasional en inmuebles determinados, con establecimientos de comercio o sin ellos.",
+      "type": 2,
+      "cost": true,
+      "duration": "Duración 1 hora",
+      "management": "Trámite"
+    },
+    {
+      "id": 20,
+      "title": "Impuesto a la publicidad visual exterior.",
+      "url": "#",
+      "description": "Declaración y pago del impuesto por la instalación y exhibición de toda publicidad exterior visual o medio masivo de comunicación destinado a informar o llamar la atención del público a través de elementos visuales como leyendas, inscripciones, dibujos, fotografías, signos o similares, visibles desde las vías de uso o dominio público, bien sean peatonales o vehiculares, terrestres, fluviales, marítimas o aéreas.",
+      "type": 2,
+      "cost": false,
+      "duration": "Duración 10 días hábiles",
+      "management": "Trámite"
+    }
+  ]
+}
