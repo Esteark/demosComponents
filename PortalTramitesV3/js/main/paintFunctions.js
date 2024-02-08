@@ -121,3 +121,21 @@ export const renderPagination = (array) => {
     }
   });
 };
+
+export const notify = (
+  mensaje = "Ocurrió un Error",
+  color1 = "#038f67",
+  color2 = "#024d37"
+) => {
+  Toastify({
+    text: `${mensaje}`,
+    duration: 3000,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: `linear-gradient(to right, ${color1}, ${color2})`,
+    },
+  }).showToast();
+};

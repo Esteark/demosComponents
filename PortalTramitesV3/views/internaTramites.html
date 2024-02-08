@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/toastify.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -53,7 +54,6 @@
           <!-- section input  -->
           <article class="relative h-auto w-full">
             <input
-              id="txtFilterNews"
               type="text"
               placeholder="Buscar trámite"
               class="text-[12px] border-2 w-full rounded-md py-2 px-3 outline-none focus:shadow-md transition duration-300"
@@ -193,7 +193,7 @@
     </header>
     <!-- header  -->
 
-    <main class="my-6 px-6 transform mb-40 items-center mt-10">
+    <main class="my-6 px-6 transform mb-20 items-center mt-10">
       <section
         class="lg:container mx-auto flex justify-center items-center h-full flex flex-col gap-y-10"
       >
@@ -228,18 +228,28 @@
         >
           <!-- seccion de filtros  -->
           <div class="col-span-1 flex flex-col gap-6 p-6 bg-clearGreen">
-            <article class="flex flex-col gap-3">
-              <h3 class="text-lg font-bold text-colorMain">Buscar</h3>
+            <article class="flex flex-col gap-4">
+              <section class="flex justify-between">
+                <h3 class="text-lg font-bold text-mainColor">Buscar</h3>
+                <button
+                  class="flex gap-3 items-center bg-mainColor text-white px-3 py-1 rounded-md hover:underline cursor-poiner transition-all ease-in-out hover:bg-darkColor duration-500 hidden opacity-0"
+                  id="btnclearFilters"
+                >
+                  <h3 class="text-[14px] font-semibold">Borrar filtros</h3>
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </section>
               <!-- section input  -->
               <article class="relative h-auto w-full">
                 <input
+                  id="txtFilterTramites"
                   type="text"
                   placeholder="Buscar trámite"
                   class="text-[12px] border border-mainColor w-full rounded-md py-3 px-3 outline-none focus:shadow-md transition duration-300"
                 />
                 <button
                   class="bg-mainColor hover:bg-black transition duration-300 rounded-full text-white absolute right-2 top-[0.5rem] cursor-pointer p-1 w-7 h-7 flex justify-center items-center"
-                  id="btnSearchInput"
+                  id="btnSearchTramite"
                 >
                   <i class="fas fa-search text-[12px]"></i>
                 </button>
@@ -247,7 +257,8 @@
               <!-- section input  -->
             </article>
             <article class="flex flex-col gap-3">
-              <h3 class="text-lg font-bold text-colorMain">Filtrar por:</h3>
+              <h3 class="text-lg font-bold text-mainColor">Filtrar por:</h3>
+
               <!-- seccion filters -->
               <section class="flex flex-col">
                 <!-- filtro  -->
@@ -264,30 +275,35 @@
                   </div>
                   <div class="flex flex-col px-3">
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="0"
                     >
                       <h3 class="underline font-semibold text-[14px]">Todos</h3>
                     </article>
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="1"
                     >
                       <h3 class="underline font-semibold text-[14px]">
                         Trámite
                       </h3>
                       <div
                         class="rounded-full bg-mainColor text-white group-hover:bg-white group-hover:text-black text-[12px] p-1 font-semibold w-6 h-6 flex justify-center items-center"
+                        id="countTra"
                       >
                         83
                       </div>
                     </article>
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="2"
                     >
                       <h3 class="underline font-semibold text-[14px]">
                         Servicio
                       </h3>
                       <div
                         class="rounded-full bg-mainColor text-white group-hover:bg-white group-hover:text-black text-[12px] p-1 font-semibold w-6 h-6 flex justify-center items-center"
+                        id="countSer"
                       >
                         1
                       </div>
@@ -299,7 +315,7 @@
                   class="flex flex-col cursor-pointer secfilter overflow-y-hidden max-h-12 transition-all duration-500"
                 >
                   <div
-                    class="flex items-center gap-3 hover:bg-mainColor hover:text-white transition-all duration-500 py-3 px-3 rounded-md group"
+                    class="flex items-center gap-3 hover:bg-mainColor hover:text-white transition-all duration-500 py-3 px-3 rounded-md group itemFilter"
                   >
                     <h3 class="text-[15px] font-semibold">
                       Estado automatización
@@ -310,21 +326,24 @@
                   </div>
                   <div class="flex flex-col px-3">
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="3"
                     >
                       <h3 class="underline font-semibold text-[14px]">
                         En línea
                       </h3>
                     </article>
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="4"
                     >
                       <h3 class="underline font-semibold text-[14px]">
                         Parcialmente en línea
                       </h3>
                     </article>
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="5"
                     >
                       <h3 class="underline font-semibold text-[14px]">
                         Presencial
@@ -338,7 +357,7 @@
                   class="flex flex-col cursor-pointer secfilter overflow-y-hidden max-h-12 transition-all duration-500"
                 >
                   <div
-                    class="flex items-center gap-3 hover:bg-mainColor hover:text-white transition-all duration-500 py-3 px-3 rounded-md group"
+                    class="flex items-center gap-3 hover:bg-mainColor hover:text-white transition-all duration-500 py-3 px-3 rounded-md group itemFilter"
                   >
                     <h3 class="text-[15px] font-semibold">Costo</h3>
                     <i
@@ -347,14 +366,16 @@
                   </div>
                   <div class="flex flex-col px-3">
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="6"
                     >
                       <h3 class="underline font-semibold text-[14px]">
                         Requieren Pago
                       </h3>
                     </article>
                     <article
-                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md"
+                      class="flex justify-between hover:bg-mainColor hover:text-white p-3 transition-all duration-500 rounded-md itemFilter"
+                      data-filter="7"
                     >
                       <h3 class="underline font-semibold text-[14px]">
                         No requieren Pago
@@ -489,7 +510,7 @@
             >
               <article class="py-0 py-1 px-4 lg:p-4 flex flex-col gap-3">
                 <article
-                  class="flex justify-between items-center cursor-pointer secInfo mt-3 lg:mt-0 transform lg:translate-y-[1px]"
+                  class="flex justify-between items-center cursor-pointer secInfo mt-3 lg:mt-0 transform translate-y-[-8px] lg:translate-y-[-5px] xl:translate-y-[-8px] 2xl:translate-y-[-8px]"
                 >
                   <h3 class="text-[14px] font-semibold">
                     ¿Como fue tu experiencia durante el proceso?
@@ -754,6 +775,7 @@
     </button>
     <!-- main scripts  -->
     <script src="../js/main/interna.js"></script>
+    <script src="../js/toastify/toastify-js.js"></script>
     <script src="../js/main/mainFilterTramites.js" type="module"></script>
     <script src="../js/main/actionTramites.js" type="module"></script>
     <!-- main scripts  -->
