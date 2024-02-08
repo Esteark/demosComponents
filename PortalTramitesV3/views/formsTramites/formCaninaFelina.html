@@ -193,7 +193,7 @@
     </header>
     <!-- header  -->
 
-    <main class="my-10 2xl:my-20 px-6 transform mb-40">
+    <main class="my-10 px-6 mb-20">
       <section
         class="lg:container mx-auto flex justify-center items-center h-full"
       >
@@ -202,8 +202,7 @@
           <!-- sec Form -->
           <div class="col-span-1 lg:col-span-4 flex flex-col gap-y-8">
             <h1 class="text-xl lg:text-2xl font-bold text-mainColor">
-              Actualización de datos de identificación en la base de datos para
-              programar visita
+              Esterilización Canina y Felina.
             </h1>
             <h3 class="text-2xl font-semibold">Paso 2 - Hago mi solicitud</h3>
 
@@ -285,7 +284,8 @@
 
             <section class="flex flex-col gap-3">
               <h3 class="font-semibold text-[1rem]">
-                Encuesta del ciudadano inscrito en el SISBEN
+                Esterilizar caninos o felinos mediante procedimiento quirúrgico
+                para controlar el crecimiento poblacional.
               </h3>
               <form class="flex flex-col gap-y-6">
                 <!-- sec Form 1 -->
@@ -378,17 +378,42 @@
                 >
                   <article class="flex flex-col gap-y-6">
                     <h3 class="text-mainColor font-semibold">
-                      Formulario de SISBEN para programar visita
+                      Datos del solicitante
                     </h3>
                     <p class="font-semibold text-[14px]">
-                      Solicitud del ciudadano para actualizar sus datos o
-                      registrarlos por primera vez.
+                      Verificación de la información adjuntada por el usuario y
+                      se asigna lugar, fecha y hora de la cita para el
+                      procedimiento. (Campañas)
                     </p>
                   </article>
                   <section class="flex flex-col gap-y-4">
                     <label for="" class="flex flex-col gap-2">
                       <h3 class="text-[12px] font-semibold">
-                        Primer Nombre:
+                        Nombres:
+                        <span class="text-red-500 font-semibold text-[1rem]"
+                          >*</span
+                        >
+                      </h3>
+                      <input
+                        type="text"
+                        class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                      />
+                    </label>
+                    <label for="" class="flex flex-col gap-2">
+                      <h3 class="text-[12px] font-semibold">
+                        Apellidos:
+                        <span class="text-red-500 font-semibold text-[1rem]"
+                          >*</span
+                        >
+                      </h3>
+                      <input
+                        type="text"
+                        class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                      />
+                    </label>
+                    <label for="" class="flex flex-col gap-2">
+                      <h3 class="text-[12px] font-semibold">
+                        Tipo de documento:
                         <span class="text-red-500 font-semibold text-[1rem]"
                           >*</span
                         >
@@ -398,9 +423,9 @@
                         class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-main-Color w-full p-2.5 cursor-pointer outline-none"
                       >
                         <option selected>Seleccione...</option>
-                        <option value="">Encuesta nueva</option>
-                        <option value="">Reencuesta</option>
-                        <option value="">Verificación</option>
+                        <option value="">C.C Cédula de ciudadania</option>
+                        <option value="">C.E Cédula de extranjería</option>
+                        <option value="">T.I Tarjeta de identidad</option>
                       </select>
                     </label>
 
@@ -416,10 +441,21 @@
                         class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
                       />
                     </label>
-
                     <label for="" class="flex flex-col gap-2">
                       <h3 class="text-[12px] font-semibold">
-                        Celular:
+                        Número de Teléfono:
+                        <span class="text-red-500 font-semibold text-[1rem]"
+                          >*</span
+                        >
+                      </h3>
+                      <input
+                        type="number"
+                        class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                      />
+                    </label>
+                    <label for="" class="flex flex-col gap-2">
+                      <h3 class="text-[12px] font-semibold">
+                        Correo Electrónico:
                         <span class="text-red-500 font-semibold text-[1rem]"
                           >*</span
                         >
@@ -431,7 +467,19 @@
                     </label>
                     <label for="" class="flex flex-col gap-2">
                       <h3 class="text-[12px] font-semibold">
-                        Zona:
+                        Nombre de la mascota:
+                        <span class="text-red-500 font-semibold text-[1rem]"
+                          >*</span
+                        >
+                      </h3>
+                      <input
+                        type="text"
+                        class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                      />
+                    </label>
+                    <label for="" class="flex flex-col gap-2">
+                      <h3 class="text-[12px] font-semibold">
+                        Tipo de mascota:
                         <span class="text-red-500 font-semibold text-[1rem]"
                           >*</span
                         >
@@ -441,10 +489,63 @@
                         class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-main-Color w-full p-2.5 cursor-pointer outline-none"
                       >
                         <option selected>Seleccione...</option>
-                        <option value="">Urbana</option>
-                        <option value="">Rural</option>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
                       </select>
                     </label>
+                    <label for="" class="flex flex-col gap-2">
+                      <h3 class="text-[12px] font-semibold">
+                        Genero:
+                        <span class="text-red-500 font-semibold text-[1rem]"
+                          >*</span
+                        >
+                      </h3>
+                      <select
+                        id="countries"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-main-Color w-full p-2.5 cursor-pointer outline-none"
+                      >
+                        <option selected>Seleccione...</option>
+                        <option value="Perro">Macho</option>
+                        <option value="Gato">Hembra</option>
+                      </select>
+                    </label>
+                    <label for="" class="flex flex-col gap-2">
+                      <h3 class="text-[12px] font-semibold">
+                        Edad de la mascota:
+                        <span class="text-red-500 font-semibold text-[1rem]"
+                          >*</span
+                        >
+                      </h3>
+                      <input
+                        type="number"
+                        class="border border-gray-300 rounded-md py-2 focus:border-mainColor outline-none px-3 text-[14px] transition-all duration-500"
+                      />
+                    </label>
+                    <label for="" class="flex flex-col gap-2">
+                      <h3 class="text-[12px] font-semibold">
+                        Tiene todas las vacunas:
+                        <span class="text-red-500 font-semibold text-[1rem]"
+                          >*</span
+                        >
+                      </h3>
+                      <select
+                        id="countries"
+                        class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:border-main-Color w-full p-2.5 cursor-pointer outline-none"
+                      >
+                        <option selected>Seleccione...</option>
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                      </select>
+                    </label>
+
+                    <section class="my-5 flex flex-col gap-3">
+                      <h3 class="font-semibold text-mainColor">
+                        Documentos adjuntos:
+                      </h3>
+                      <h3 class="font-semibold text-[14px]">
+                        Documentos Requeridos
+                      </h3>
+                    </section>
 
                     <label
                       for="file-input"
@@ -452,8 +553,7 @@
                     >
                       <section class="flex justify-between items-center">
                         <h3 class="text-[12px] font-semibold">
-                          Fotocopia del documento de identidad del Titular del
-                          LADO FRENTE :
+                          Fotocopia de cédula del propietario:
                           <span class="text-red-500 font-semibold text-[1rem]"
                             >*</span
                           >
@@ -475,18 +575,14 @@
                         </p>
                       </section>
                     </label>
-                    <h3 class="text-[1rem] font-semibold my-2">
-                      Por favor en los siguientes campos adjunte las fotocopias
-                      de los demás miembros del núcleo familiar <br />
-                      (Si tiene).
-                    </h3>
+
                     <label
                       for="file-input"
                       class="flex flex-col gap-2 relative"
                     >
                       <section class="flex justify-between items-center">
                         <h3 class="text-[12px] font-semibold">
-                          Fotocopia de otro integrante del núcleo familiar:
+                          Carnet de vacunación:
                           <span class="text-red-500 font-semibold text-[1rem]"
                             >*</span
                           >
@@ -504,8 +600,37 @@
                           multiple="4"
                         />
                         <p class="text-gray-500 text-[12px]">
-                          Puede subir máximo 4 imágenes, el peso del archivo no
-                          debe exceder 2MB
+                          Recuerda subir una imágen clara, el peso del archivo
+                          no debe exceder 2MB
+                        </p>
+                      </section>
+                    </label>
+                    <label
+                      for="file-input"
+                      class="flex flex-col gap-2 relative"
+                    >
+                      <section class="flex justify-between items-center">
+                        <h3 class="text-[12px] font-semibold">
+                          Fotografia del Ejemplar:
+                          <span class="text-red-500 font-semibold text-[1rem]"
+                            >*</span
+                          >
+                        </h3>
+                        <i
+                          class="fas fa-trash-alt text-mainColor text-[1rem] cursor-pointer"
+                        ></i>
+                      </section>
+                      <section class="flex flex-col gap-3" id="docs2">
+                        <input
+                          type="file"
+                          name="file-input"
+                          id=""
+                          class="border border-gray-300 shadow-sm rounded-lg text-[14px] file:mr-3 focus:z-10 focus:border-mainColor disabled:opacity-50 file:bg-mainColor file:border-0 file:text-white file:py-2 file:px-4 outline-none file:cursor-pointer file:outline-none"
+                          multiple="4"
+                        />
+                        <p class="text-gray-500 text-[12px]">
+                          Recuerda subir una imágen clara, el peso del archivo
+                          no debe exceder 2MB
                         </p>
                       </section>
                     </label>

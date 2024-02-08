@@ -96,21 +96,4 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Botón del scroll
-
-  // funcionalidad caruseles
-  const swiperInfo = () => {
-    const swiper = new Swiper(".mySwiperInfo", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      loop: true,
-      autoplay: {
-        delay: 5500,
-        disableOnInteraction: false,
-      },
-    });
-  };
-
-  swiperInfo();
 });
