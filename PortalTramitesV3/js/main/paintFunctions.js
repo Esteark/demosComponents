@@ -51,7 +51,7 @@ function paintCosto(costo) {
   >
     <i class="fa-solid fa-dollar-sign text-[12px]"></i>
     <div
-      class="absolute w-full h-full transform -rotate-45 border-t border-black translate-y-[6px] translate-x-[5px]"
+      class="absolute w-full h-full transform -rotate-45 border-t border-black translate-y-[6px] translate-x-[7px]"
     ></div>
   </div>
   <h3 class="text-[12px]">Trámite sin costo</h3>
