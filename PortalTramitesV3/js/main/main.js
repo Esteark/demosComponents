@@ -18,27 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  const navbar = document.getElementById("nav");
-  let scrollPosition = 0;
-
-  window.addEventListener("scroll", function () {
-    let currentPosition = window.scrollY;
-
-    if (currentPosition > 10) {
-      // El usuario está haciendo scroll hacia abajo
-      navbar.classList.add("fixed", "top-0");
-    } else {
-      // El usuario está haciendo scroll hacia arriba
-      navbar.classList.remove("top-0", "fixed");
-    }
-
-    scrollPosition = currentPosition;
-  });
-
-  //Acciones para el header
-
-  navbar.style.animation = "fadeIn 1s ease-out";
-
   //Acciones botón menu mobile
   const btnMenu = document.getElementById("btnMenu");
   const btnMenuClose = document.getElementById("btnMenuClose");
